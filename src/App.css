@@ -8,7 +8,7 @@
 .gameCanvas {
   height: 70%;
   aspect-ratio: 4 / 3;
-  border: 1px solid red;
+  border: 1px solid black;
   overflow: hidden;
 }
 

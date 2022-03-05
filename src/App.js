@@ -11,6 +11,7 @@ const App = () => {
   const [isLeftDoorOpen, setIsLeftDoorOpen] = useState(false);
   const [isRightDoorOpen, setIsRightDoorOpen] = useState(false);
   const [wasCarpetMoved, setWasCarpetMoved] = useState(false);
+  const [isLampOn, setIsLampOn] = useState(false);
   return (
     <div className="app">
       <div className="gameCanvas">
@@ -24,6 +25,7 @@ const App = () => {
             }}
             onWalkThrough={() => {
               console.log("walk through");
+              setIsLampOn(!isLampOn);
             }}
             position="-10"
           />
@@ -34,6 +36,7 @@ const App = () => {
             }}
             onWalkThrough={() => {
               console.log("walk through");
+              setIsLampOn(!isLampOn);
             }}
             position="63.5"
           />
@@ -43,7 +46,7 @@ const App = () => {
               setWasCarpetMoved(true);
             }}
           />
-          <Lamp />
+          <Lamp isOn={isLampOn} />
         </div>
       </div>
     </div>
