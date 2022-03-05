@@ -1,7 +1,45 @@
+import { useState } from "react";
+
+import Lamp from "./Lamp";
+import DoorLeft from "./DoorLeft";
+import DoorRight from "./DoorRight";
+
 import "./App.css";
 
 const App = () => {
-  return <div className="App"></div>;
+  const [isLeftDoorOpen, setIsLeftDoorOpen] = useState(false);
+  const [isRightDoorOpen, setIsRightDoorOpen] = useState(false);
+  return (
+    <div className="app">
+      <div className="gameCanvas">
+        <div className="scene">
+          <div className="ceiling"></div>
+          <div className="floor"></div>
+          <DoorLeft
+            isOpen={isLeftDoorOpen}
+            onOpen={() => {
+              setIsLeftDoorOpen(true);
+            }}
+            onWalkThrough={() => {
+              console.log("walk through");
+            }}
+            position="-10"
+          />
+          <DoorRight
+            isOpen={isRightDoorOpen}
+            onOpen={() => {
+              setIsRightDoorOpen(true);
+            }}
+            onWalkThrough={() => {
+              console.log("walk through");
+            }}
+            position="63.5"
+          />
+          <Lamp />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default App;
