@@ -3,7 +3,7 @@ const DoorLeft = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
     return (
       <svg
         viewBox="0 0 211.66667 158.75"
-        className="doorLeft"
+        className="gameObject"
         style={{ transform: `translateX(${position}%)` }}
       >
         <g style={{ pointerEvents: "none" }}>
@@ -78,7 +78,7 @@ const DoorLeft = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
   return (
     <svg
       viewBox="0 0 211.66667 158.75"
-      className="doorLeft"
+      className="gameObject"
       style={{ transform: `translateX(${position}%)` }}
     >
       <g style={{ pointerEvents: "none" }}>

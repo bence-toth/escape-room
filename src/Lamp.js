@@ -1,14 +1,7 @@
 const Lamp = () => (
-  <svg
-    className="lamp"
-    viewBox="0 0 211.66667 158.75"
-    version="1.1"
-    id="svg5"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg className="gameObject" viewBox="0 0 211.66667 158.75">
     <g>
       <path
-        id="rect2649"
         style={{
           fill: "#fff5cc",
           fillOpacity: 0.1,
@@ -19,7 +12,6 @@ const Lamp = () => (
         transform="scale(0.26458333)"
       />
       <path
-        id="rect2647"
         style={{
           fill: "#fff5cc",
           fillOpacity: 0.1,
@@ -35,13 +27,11 @@ const Lamp = () => (
           stroke: "none",
           strokeWidth: 0,
         }}
-        id="path2018"
         cx="105.83334"
         cy="33.109516"
         r="2.6458333"
       />
       <path
-        id="rect1782"
         style={{
           fill: "#784421",
           stroke: "none",
