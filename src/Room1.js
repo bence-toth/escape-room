@@ -4,13 +4,15 @@ import Lamp from "./Lamp";
 import DoorLeft from "./DoorLeft";
 import DoorRight from "./DoorRight";
 import Carpet from "./Carpet";
+import Key from "./Key";
 
 import { InventoryContext } from "./App";
 
 const Room1 = () => {
   const [isLeftDoorOpen, setIsLeftDoorOpen] = useState(false);
   const [isRightDoorOpen, setIsRightDoorOpen] = useState(false);
-  const [wasCarpetMoved, setWasCarpetMoved] = useState(false);
+  const [wasCarpetMoved, setWasCarpetMoved] = useState(0);
+  const [isKeyTaken, setIsKeyTaken] = useState(false);
   const [isLampOn, setIsLampOn] = useState(false);
 
   const inventory = useContext(InventoryContext);
@@ -22,34 +24,37 @@ const Room1 = () => {
       <DoorLeft
         isOpen={isLeftDoorOpen}
         onOpen={() => {
-          setIsLeftDoorOpen(true);
+          if (inventory.hasItem({ id: "key" })) {
+            setIsLeftDoorOpen(true);
+          }
         }}
         onWalkThrough={() => {
           console.log("walk through");
-          if (inventory.hasItem({ id: "key" })) {
-            setIsLampOn(!isLampOn);
-          }
         }}
         position="-20"
       />
       <DoorRight
         isOpen={isRightDoorOpen}
         onOpen={() => {
-          setIsRightDoorOpen(true);
-        }}
-        onWalkThrough={() => {
-          console.log("walk through");
-          if (inventory.hasItem({ id: "key" })) {
-            setIsLampOn(!isLampOn);
-          }
+          setIsLampOn(!isLampOn);
         }}
         position="20"
       />
+      {!isKeyTaken && (
+        <Key
+          onPickUp={() => {
+            inventory.addItem({ id: "key" });
+            setIsKeyTaken(true);
+          }}
+          position={"-20"}
+        />
+      )}
       <Carpet
-        position={wasCarpetMoved ? "30" : "0"}
+        position={
+          wasCarpetMoved === 2 ? "40" : wasCarpetMoved === 1 ? "10" : "0"
+        }
         onMove={() => {
-          setWasCarpetMoved(true);
-          inventory.addItem({ id: "key" });
+          setWasCarpetMoved(Math.min(wasCarpetMoved + 1, 2));
         }}
       />
       <Lamp isOn={isLampOn} />
