@@ -1,22 +1,22 @@
 import { useState } from "react";
 
 const useInventory = () => {
-  const [inventory, setInventory] = useState([]);
+  const [items, setItems] = useState([]);
 
   const addItem = (itemToAdd) => {
-    if (!inventory.some((item) => item.id === itemToAdd.id)) {
-      setInventory([...inventory, itemToAdd]);
+    if (!items.some((item) => item.id === itemToAdd.id)) {
+      setItems([...items, itemToAdd]);
     }
   };
 
   const removeItem = (itemToRemove) => {
-    setInventory(inventory.filter((item) => item.id !== itemToRemove.id));
+    setItems(items.filter((item) => item.id !== itemToRemove.id));
   };
 
   const hasItem = (itemToCheck) =>
-    inventory.some((item) => item.id === itemToCheck.id);
+    items.some((item) => item.id === itemToCheck.id);
 
-  return { addItem, removeItem, hasItem };
+  return { items, addItem, removeItem, hasItem };
 };
 
 export default useInventory;
