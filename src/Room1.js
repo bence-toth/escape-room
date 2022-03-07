@@ -30,7 +30,7 @@ const Room1 = () => {
             setIsLampOn(!isLampOn);
           }
         }}
-        position="-10"
+        position="-20"
       />
       <DoorRight
         isOpen={isRightDoorOpen}
@@ -43,7 +43,7 @@ const Room1 = () => {
             setIsLampOn(!isLampOn);
           }
         }}
-        position="63.5"
+        position="20"
       />
       <Carpet
         position={wasCarpetMoved ? "30" : "0"}
