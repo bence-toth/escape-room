@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const useInventory = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("game-inventory") ?? "[]")
+  );
+
+  useEffect(() => {
+    localStorage.setItem("game-inventory", JSON.stringify(items));
+  }, [items]);
 
   const addItem = (itemToAdd) => {
     if (!items.some((item) => item.id === itemToAdd.id)) {

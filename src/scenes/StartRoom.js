@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
@@ -9,29 +9,37 @@ import Carpet from "../objects/Carpet";
 import Key from "../objects/Key";
 import Picture from "../objects/Picture";
 
-import sky from "../assets/sky.png";
+import starMap from "../assets/StarMap.png";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
+import { GameStateContext } from "../App";
 
 const StartRoom = () => {
-  const [isLeftDoorOpen, setIsLeftDoorOpen] = useState(false);
-  const [isRightDoorOpen, setIsRightDoorOpen] = useState(false);
-  const [wasCarpetMoved, setWasCarpetMoved] = useState(0);
-  const [isKeyTaken, setIsKeyTaken] = useState(false);
-  const [isLampOn, setIsLampOn] = useState(true);
-
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
+  const { gameState, updateGameState } = useContext(GameStateContext);
+
+  const {
+    isLeftDoorOpen,
+    isRightDoorOpen,
+    wasCarpetMoved,
+    isKeyTaken,
+    isLampOn,
+  } = gameState.startRoom;
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.setItem("game-location", "/");
+  });
 
   return (
     <div className="scene">
       <Room
         styles={{
-          floorColor: "gray",
-          wallColor: "ivory",
+          floorColor: "hsl(23, 19%, 36%)",
+          wallColor: "hsl(23, 19%, 46%)",
         }}
       />
       <DoorLeft
@@ -39,7 +47,7 @@ const StartRoom = () => {
         onOpen={() => {
           if (inventory.hasItem({ id: "key" })) {
             inventory.removeItem({ id: "key" });
-            setIsLeftDoorOpen(true);
+            updateGameState("startRoom", "isLeftDoorOpen", true);
           } else {
             updateMessage("The door seems to be locked");
           }
@@ -47,25 +55,35 @@ const StartRoom = () => {
         onWalkThrough={() => {
           console.log("walk through");
         }}
-        styles={{ frameColor: "red", doorColor: "blue" }}
+        styles={{
+          frameColor: "hsl(23, 19%, 16%)",
+          doorColor: "hsl(23, 19%, 26%)",
+        }}
         position="-30"
       />
       <DoorRight
         isOpen={isRightDoorOpen}
         onOpen={() => {
-          setIsLampOn(!isLampOn);
+          updateGameState(
+            "startRoom",
+            "isLampOn",
+            !gameState.startRoom.isLampOn
+          );
         }}
-        styles={{ frameColor: "red", doorColor: "blue" }}
+        styles={{
+          frameColor: "hsl(23, 19%, 16%)",
+          doorColor: "hsl(23, 19%, 26%)",
+        }}
         position="30"
       />
       {!isKeyTaken && (
         <Key
           onPickUp={() => {
             inventory.addItem({ id: "key" });
-            setIsKeyTaken(true);
+            updateGameState("startRoom", "isKeyTaken", true);
           }}
           position={"-20"}
-          styles={{ color: "pink" }}
+          styles={{ color: "hsl(40, 100%, 44%)" }}
         />
       )}
       <Carpet
@@ -73,11 +91,15 @@ const StartRoom = () => {
           wasCarpetMoved === 2 ? "40" : wasCarpetMoved === 1 ? "10" : "0"
         }
         onMove={() => {
-          setWasCarpetMoved(Math.min(wasCarpetMoved + 1, 2));
+          updateGameState(
+            "startRoom",
+            "wasCarpetMoved",
+            Math.min(gameState.startRoom.wasCarpetMoved + 1, 2)
+          );
         }}
         styles={{
-          color: "red",
-          borderColor: "yellow",
+          color: "hsl(341, 90%, 23%)",
+          borderColor: "hsl(340, 73%, 36%)",
         }}
       />
       <Picture
@@ -85,12 +107,12 @@ const StartRoom = () => {
           navigate("/star-map");
         }}
         styles={{
-          frameColor: "yellow",
-          hangerColor: "blue",
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={sky}
+        src={starMap}
       />
-      <Lamp isOn={isLampOn} styles={{ color: "red" }} />
+      <Lamp isOn={isLampOn} styles={{ color: "hsl(23, 10%, 26%)" }} />
     </div>
   );
 };
