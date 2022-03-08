@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const useMessage = () => {
   const [message, setMessage] = useState("");
@@ -12,12 +12,14 @@ const useMessage = () => {
 
     let timeout = setTimeout(() => {
       setMessage("");
-    }, 5000);
+    }, 3000);
 
     setMessageTimeout(timeout);
   };
 
-  return { message, updateMessage };
+  const updateMessageRef = useRef(updateMessage);
+
+  return { message, updateMessage: updateMessageRef.current };
 };
 
 export default useMessage;

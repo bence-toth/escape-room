@@ -8,6 +8,9 @@ import DoorRight from "../objects/DoorRight";
 import Carpet from "../objects/Carpet";
 import Key from "../objects/Key";
 import Picture from "../objects/Picture";
+import Switch from "../objects/Switch";
+import TrapDoor from "../objects/TrapDoor";
+import TrapDoorCeiling from "../objects/TrapDoorCeiling";
 
 import starMap from "../assets/StarMap.png";
 
@@ -25,14 +28,16 @@ const StartRoom = () => {
     isRightDoorOpen,
     wasCarpetMoved,
     isKeyTaken,
-    isLampOn,
+    isSwitchOn,
+    isTrapDoorHandleInPlace,
+    isTrapDoorOpen,
   } = gameState.startRoom;
 
   const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("game-location", "/");
-  });
+  }, []);
 
   return (
     <div className="scene">
@@ -81,11 +86,53 @@ const StartRoom = () => {
           onPickUp={() => {
             inventory.addItem({ id: "key" });
             updateGameState("startRoom", "isKeyTaken", true);
+            updateMessage("You found a key");
           }}
           position={"-20"}
           styles={{ color: "hsl(40, 100%, 44%)" }}
         />
       )}
+      <Picture
+        onObserve={() => {
+          navigate("/star-map");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={starMap}
+      />
+      <Switch
+        position="45.5"
+        isOn={isSwitchOn}
+        onToggle={() => {
+          updateGameState("startRoom", "isSwitchOn", !isSwitchOn);
+        }}
+      />
+      <TrapDoor
+        hasHandle={isTrapDoorHandleInPlace}
+        isOpen={isTrapDoorOpen}
+        onOpen={() => {
+          if (inventory.hasItem({ id: "trapDoorHandle" })) {
+            inventory.removeItem({ id: "trapDoorHandle" });
+            updateGameState("startRoom", "isTrapDoorHandleInPlace", true);
+          } else if (isTrapDoorHandleInPlace) {
+            updateGameState("startRoom", "isTrapDoorOpen", true);
+            updateGameState("plantRoom", "isRemoteSwitchOn", false);
+          } else {
+            updateMessage("The trap door seems to be stuck");
+          }
+        }}
+        onWalkThrough={() => {
+          navigate("/basement");
+        }}
+        position="0"
+        styles={{
+          frameColor: "hsl(23, 19%, 16%)",
+          doorColor: "hsl(23, 19%, 26%)",
+          handleColor: "hsl(23, 55%, 43%)",
+        }}
+      />
       <Carpet
         position={
           wasCarpetMoved === 2 ? "40" : wasCarpetMoved === 1 ? "10" : "0"
@@ -102,18 +149,8 @@ const StartRoom = () => {
           borderColor: "hsl(340, 73%, 36%)",
         }}
       />
-      <Picture
-        onObserve={() => {
-          navigate("/star-map");
-        }}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={starMap}
-      />
       <Lamp
-        isOn={isLampOn}
+        isOn={isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />

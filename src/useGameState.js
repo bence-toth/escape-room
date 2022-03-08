@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const initialGameState = {
   startRoom: {
@@ -6,12 +6,14 @@ const initialGameState = {
     isRightDoorOpen: false,
     wasCarpetMoved: 0,
     isKeyTaken: false,
-    isLampOn: false,
+    isSwitchOn: true,
+    isTrapDoorHandleInPlace: false,
+    isTrapDoorOpen: false,
   },
   plantRoom: {
-    isLight1On: false,
-    isLight2On: false,
-    isLight3On: false,
+    isSwitchOn: false,
+    isRemoteSwitchOn: false,
+    isHandleTaken: false,
   },
 };
 
@@ -26,15 +28,15 @@ const useGameState = () => {
     localStorage.setItem("game-state", JSON.stringify(gameState));
   }, [gameState]);
 
-  const updateGameState = (scene, key, value) => {
-    setGameState({
-      ...gameState,
+  const updateGameState = useCallback((scene, key, value) => {
+    setGameState((previousGameState) => ({
+      ...previousGameState,
       [scene]: {
-        ...gameState[scene],
+        ...previousGameState[scene],
         [key]: value,
       },
-    });
-  };
+    }));
+  }, []);
 
   return { gameState, updateGameState };
 };

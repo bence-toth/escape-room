@@ -11,7 +11,7 @@ const StarMap = () => {
 
   useEffect(() => {
     localStorage.setItem("game-location", "/star-map");
-  });
+  }, []);
 
   return (
     <div className="scene">
