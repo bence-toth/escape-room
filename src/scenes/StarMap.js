@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import PictureBig from "./Picture-Big";
+import PictureBig from "../objects/PictureBig";
 
 const StarMap = () => {
   const navigate = useNavigate();

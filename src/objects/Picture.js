@@ -1,4 +1,4 @@
-import sky from "./sky.png";
+import sky from "../assets/sky.png";
 
 const Picture = ({ onObserve }) => (
   <svg className="gameObject" viewBox="0 0 211.66667 158.75">

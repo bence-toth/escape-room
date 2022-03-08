@@ -1,15 +1,15 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Lamp from "./Lamp";
-import DoorLeft from "./DoorLeft";
-import DoorRight from "./DoorRight";
-import Carpet from "./Carpet";
-import Key from "./Key";
-import Picture from "./Picture";
+import Lamp from "../objects/Lamp";
+import DoorLeft from "../objects/DoorLeft";
+import DoorRight from "../objects/DoorRight";
+import Carpet from "../objects/Carpet";
+import Key from "../objects/Key";
+import Picture from "../objects/Picture";
 
-import { InventoryContext } from "./App";
-import { MessageContext } from "./App";
+import { InventoryContext } from "../App";
+import { MessageContext } from "../App";
 
 const StartRoom = () => {
   const [isLeftDoorOpen, setIsLeftDoorOpen] = useState(false);

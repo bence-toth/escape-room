@@ -1,11 +1,12 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 import useInventory from "./useInventory";
 import useMessage from "./useMessage";
-import StartRoom from "./StartRoom";
-import StarMap from "./StarMap";
 import Inventory from "./Inventory";
-import { Routes, Route } from "react-router-dom";
+
+import StartRoom from "./scenes/StartRoom";
+import StarMap from "./scenes/StarMap";
 
 import "./App.css";
 
