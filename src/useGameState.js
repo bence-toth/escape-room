@@ -8,6 +8,11 @@ const initialGameState = {
     isKeyTaken: false,
     isLampOn: false,
   },
+  plantRoom: {
+    isLight1On: false,
+    isLight2On: false,
+    isLight3On: false,
+  },
 };
 
 const useGameState = () => {

@@ -1,5 +1,9 @@
-const Lamp = ({ isOn, styles }) => (
-  <svg className="gameObject" viewBox="0 0 211.66667 158.75">
+const Lamp = ({ isOn, styles, position }) => (
+  <svg
+    className="gameObject"
+    viewBox="0 0 211.66667 158.75"
+    style={{ transform: `translateX(${position}%)` }}
+  >
     {isOn && (
       <>
         <path

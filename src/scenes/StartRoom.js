@@ -53,7 +53,7 @@ const StartRoom = () => {
           }
         }}
         onWalkThrough={() => {
-          console.log("walk through");
+          navigate("/plant-room");
         }}
         styles={{
           frameColor: "hsl(23, 19%, 16%)",
@@ -112,7 +112,11 @@ const StartRoom = () => {
         }}
         src={starMap}
       />
-      <Lamp isOn={isLampOn} styles={{ color: "hsl(23, 10%, 26%)" }} />
+      <Lamp
+        isOn={isLampOn}
+        styles={{ color: "hsl(23, 10%, 26%)" }}
+        position="0"
+      />
     </div>
   );
 };
