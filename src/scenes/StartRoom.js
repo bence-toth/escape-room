@@ -1,12 +1,15 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import DoorLeft from "../objects/DoorLeft";
 import DoorRight from "../objects/DoorRight";
 import Carpet from "../objects/Carpet";
 import Key from "../objects/Key";
 import Picture from "../objects/Picture";
+
+import sky from "../assets/sky.png";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
@@ -25,9 +28,12 @@ const StartRoom = () => {
 
   return (
     <div className="scene">
-      <div className="ceiling"></div>
-      <div className="wall"></div>
-      <div className="floor"></div>
+      <Room
+        styles={{
+          floorColor: "gray",
+          wallColor: "ivory",
+        }}
+      />
       <DoorLeft
         isOpen={isLeftDoorOpen}
         onOpen={() => {
@@ -41,6 +47,7 @@ const StartRoom = () => {
         onWalkThrough={() => {
           console.log("walk through");
         }}
+        styles={{ frameColor: "red", doorColor: "blue" }}
         position="-30"
       />
       <DoorRight
@@ -48,6 +55,7 @@ const StartRoom = () => {
         onOpen={() => {
           setIsLampOn(!isLampOn);
         }}
+        styles={{ frameColor: "red", doorColor: "blue" }}
         position="30"
       />
       {!isKeyTaken && (
@@ -57,6 +65,7 @@ const StartRoom = () => {
             setIsKeyTaken(true);
           }}
           position={"-20"}
+          styles={{ color: "pink" }}
         />
       )}
       <Carpet
@@ -66,13 +75,22 @@ const StartRoom = () => {
         onMove={() => {
           setWasCarpetMoved(Math.min(wasCarpetMoved + 1, 2));
         }}
+        styles={{
+          color: "red",
+          borderColor: "yellow",
+        }}
       />
       <Picture
         onObserve={() => {
           navigate("/star-map");
         }}
+        styles={{
+          frameColor: "yellow",
+          hangerColor: "blue",
+        }}
+        src={sky}
       />
-      <Lamp isOn={isLampOn} />
+      <Lamp isOn={isLampOn} styles={{ color: "red" }} />
     </div>
   );
 };

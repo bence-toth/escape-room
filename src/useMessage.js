@@ -6,7 +6,6 @@ const useMessage = () => {
 
   const updateMessage = (newMessage) => {
     if (messageTimeout) {
-      console.log("clear timeout", messageTimeout);
       clearTimeout(messageTimeout);
     }
     setMessage(newMessage);

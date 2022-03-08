@@ -1,0 +1,6 @@
+.wallFull {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3vmax 2vmax 1vmax hsla(0, 0%, 0%, 0.1) inset;
+}

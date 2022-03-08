@@ -1,4 +1,11 @@
-const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
+const DoorRight = ({
+  isOpen,
+  isBack,
+  onOpen,
+  onWalkThrough,
+  position,
+  styles,
+}) => {
   if (isOpen) {
     return (
       <svg
@@ -7,7 +14,7 @@ const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
         style={{ transform: `translateX(${position}%)` }}
       >
         <rect
-          style={{ fill: "#002b22" }}
+          style={{ fill: styles.frameColor }}
           width="45.580338"
           height="72.928535"
           x="-128.6235"
@@ -26,7 +33,7 @@ const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
         {!isBack && (
           <g transform="translate(41.024581)">
             <rect
-              style={{ fill: "#005544" }}
+              style={{ fill: styles.doorColor }}
               width="41.022305"
               height="70.649529"
               x="-126.34448"
@@ -35,7 +42,7 @@ const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
             />
             <g transform="translate(36.079475)">
               <rect
-                style={{ fill: "#002b22" }}
+                style={{ fill: styles.frameColor }}
                 width="4.9428277"
                 height="8.3729486"
                 x="-90.265007"
@@ -87,7 +94,7 @@ const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
       style={{ transform: `translateX(${position}%)` }}
     >
       <rect
-        style={{ fill: "#002b22" }}
+        style={{ fill: styles.frameColor }}
         width="45.580338"
         height="72.928535"
         x="-128.6235"
@@ -95,7 +102,7 @@ const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
         transform="scale(-1,1)"
       />
       <rect
-        style={{ fill: "#005544" }}
+        style={{ fill: styles.doorColor }}
         width="41.022305"
         height="70.649529"
         x="-126.34448"
@@ -103,7 +110,7 @@ const DoorRight = ({ isOpen, isBack, onOpen, onWalkThrough, position }) => {
         transform="scale(-1,1)"
       />
       <rect
-        style={{ fill: "#002b22", pointerEvents: "auto" }}
+        style={{ fill: styles.frameColor, pointerEvents: "auto" }}
         onClick={onOpen}
         width="4.9428277"
         height="8.3729486"

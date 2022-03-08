@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { InventoryContext } from "./App";
 
+import "./Inventory.css";
+
 const Inventory = () => {
   const inventory = useContext(InventoryContext);
 

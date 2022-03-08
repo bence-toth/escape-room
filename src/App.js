@@ -1,17 +1,15 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 
 import useInventory from "./useInventory";
 import useMessage from "./useMessage";
 import Inventory from "./Inventory";
-
-import StartRoom from "./scenes/StartRoom";
-import StarMap from "./scenes/StarMap";
+import GameCanvas from "./GameCanvas";
+import Message from "./Message";
 
 import "./App.css";
 
 const InventoryContext = React.createContext([]);
-const MessageContext = React.createContext("");
+const MessageContext = React.createContext();
 
 const App = () => {
   const inventory = useInventory();
@@ -22,13 +20,8 @@ const App = () => {
       <MessageContext.Provider value={updateMessage}>
         <div className="app">
           <div className="game">
-            <div className="message">{message}</div>
-            <div className="gameCanvas">
-              <Routes>
-                <Route path="/" element={<StartRoom />} />
-                <Route path="/star-map" element={<StarMap />} />
-              </Routes>
-            </div>
+            <Message text={message} />
+            <GameCanvas />
             <Inventory />
           </div>
         </div>

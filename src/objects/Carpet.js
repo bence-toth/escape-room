@@ -1,4 +1,4 @@
-const Carpet = ({ onMove, position }) => {
+const Carpet = ({ onMove, position, styles }) => {
   return (
     <svg
       className="gameObject"
@@ -8,8 +8,8 @@ const Carpet = ({ onMove, position }) => {
       <path
         style={{
           strokeWidth: "1.32291667",
-          fill: "#aa0000",
-          stroke: "#f9f200",
+          fill: styles.color,
+          stroke: styles.borderColor,
           pointerEvents: "auto",
         }}
         onClick={onMove}

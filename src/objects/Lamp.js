@@ -1,4 +1,4 @@
-const Lamp = ({ isOn }) => (
+const Lamp = ({ isOn, styles }) => (
   <svg className="gameObject" viewBox="0 0 211.66667 158.75">
     {isOn && (
       <>
@@ -38,7 +38,7 @@ const Lamp = ({ isOn }) => (
     />
     <path
       style={{
-        fill: "#784421",
+        fill: styles.color,
         stroke: "none",
         strokeWidth: 0,
       }}
