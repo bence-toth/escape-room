@@ -18,7 +18,6 @@ const Picture = ({ onObserve }) => (
       width="37.014904"
       height="26.188044"
       xlinkHref={sky}
-      id="image2638"
       x="87.325874"
       y="74.033035"
     />

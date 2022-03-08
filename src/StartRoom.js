@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Lamp from "./Lamp";
 import DoorLeft from "./DoorLeft";
@@ -10,7 +11,7 @@ import Picture from "./Picture";
 import { InventoryContext } from "./App";
 import { MessageContext } from "./App";
 
-const Room1 = () => {
+const StartRoom = () => {
   const [isLeftDoorOpen, setIsLeftDoorOpen] = useState(false);
   const [isRightDoorOpen, setIsRightDoorOpen] = useState(false);
   const [wasCarpetMoved, setWasCarpetMoved] = useState(0);
@@ -19,6 +20,8 @@ const Room1 = () => {
 
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className="scene">
@@ -64,10 +67,14 @@ const Room1 = () => {
           setWasCarpetMoved(Math.min(wasCarpetMoved + 1, 2));
         }}
       />
-      <Picture />
+      <Picture
+        onObserve={() => {
+          navigate("/star-map");
+        }}
+      />
       <Lamp isOn={isLampOn} />
     </div>
   );
 };
 
-export default Room1;
+export default StartRoom;

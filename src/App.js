@@ -2,8 +2,10 @@ import React from "react";
 
 import useInventory from "./useInventory";
 import useMessage from "./useMessage";
-import Room1 from "./Room1";
+import StartRoom from "./StartRoom";
+import StarMap from "./StarMap";
 import Inventory from "./Inventory";
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -21,7 +23,10 @@ const App = () => {
           <div className="game">
             <div className="message">{message}</div>
             <div className="gameCanvas">
-              <Room1 />
+              <Routes>
+                <Route path="/" element={<StartRoom />} />
+                <Route path="/star-map" element={<StarMap />} />
+              </Routes>
             </div>
             <Inventory />
           </div>
