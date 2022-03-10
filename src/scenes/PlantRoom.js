@@ -46,6 +46,17 @@ const StartRoom = () => {
         }}
         position="30"
       />
+      <DoorRight
+        isOpen={false}
+        onWalkThrough={() => {
+          navigate("/");
+        }}
+        styles={{
+          frameColor: "hsl(120, 29%, 16%)",
+          doorColor: "hsl(120, 29%, 26%)",
+        }}
+        position="-20"
+      />
       <Plant />
       <Switch
         position="-45.5"
