@@ -15,6 +15,9 @@ const initialGameState = {
     isRemoteSwitchOn: false,
     isHandleTaken: false,
   },
+  basement: {
+    isKeyTaken: false,
+  },
 };
 
 const useGameState = () => {

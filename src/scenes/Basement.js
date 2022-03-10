@@ -4,15 +4,20 @@ import { useNavigate } from "react-router-dom";
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import TrapDoorCeiling from "../objects/TrapDoorCeiling";
+import DoorRight from "../objects/DoorRight";
+import Sofa from "../objects/Sofa";
+import Key from "../objects/Key";
 
-// import { InventoryContext } from "../App";
+import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 
 const StartRoom = () => {
-  // const inventory = useContext(InventoryContext);
+  const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
+
+  const { isKeyTaken } = gameState.basement;
 
   const navigate = useNavigate();
 
@@ -23,7 +28,7 @@ const StartRoom = () => {
       updateMessage("It's dark in here");
     }
 
-    console.log("%cSome message here with a clue", "font-size:24px");
+    console.log("%c3 8 6 4 3 4", "font-size:24px");
   }, [gameState.plantRoom.isRemoteSwitchOn, updateMessage]);
 
   return (
@@ -45,6 +50,33 @@ const StartRoom = () => {
           handleColor: "hsl(23, 55%, 33%)",
         }}
       />
+      <DoorRight
+        // isOpen={isRightDoorOpen}
+        onOpen={() => {}}
+        styles={{
+          frameColor: "hsl(23, 19%, 12%)",
+          doorColor: "hsl(23, 19%, 16%)",
+        }}
+        position="20"
+      />
+      <Sofa position="-25" />
+      {!isKeyTaken && (
+        <Key
+          onPickUp={() => {
+            if (gameState.plantRoom.isRemoteSwitchOn) {
+              inventory.addItem({ id: "key2" });
+              updateGameState("basement", "isKeyTaken", true);
+              updateMessage("You found a key");
+            }
+          }}
+          position={"-45"}
+          styles={{
+            color: gameState.plantRoom.isRemoteSwitchOn
+              ? "hsl(40, 100%, 44%)"
+              : "hsl(23, 10%, 14%)",
+          }}
+        />
+      )}
       <Lamp
         isOn={gameState.plantRoom.isRemoteSwitchOn}
         styles={{ color: "hsl(23, 10%, 16%)" }}
@@ -66,7 +98,10 @@ const StartRoom = () => {
       >
         I feel really disappointed.
         <br />
-        Will you <em>console</em> me?
+        Will you <em style={{ textDecoration: "underline double" }}>
+          console
+        </em>{" "}
+        me?
       </p>
     </div>
   );

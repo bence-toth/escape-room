@@ -10,7 +10,6 @@ import Key from "../objects/Key";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import TrapDoor from "../objects/TrapDoor";
-import TrapDoorCeiling from "../objects/TrapDoorCeiling";
 
 import starMap from "../assets/StarMap.png";
 
@@ -69,11 +68,12 @@ const StartRoom = () => {
       <DoorRight
         isOpen={isRightDoorOpen}
         onOpen={() => {
-          updateGameState(
-            "startRoom",
-            "isLampOn",
-            !gameState.startRoom.isLampOn
-          );
+          if (inventory.hasItem({ id: "key2" })) {
+            inventory.removeItem({ id: "key2" });
+            updateGameState("startRoom", "isRightDoorOpen", true);
+          } else {
+            updateMessage("The door seems to be locked");
+          }
         }}
         styles={{
           frameColor: "hsl(23, 19%, 16%)",
@@ -103,7 +103,7 @@ const StartRoom = () => {
         src={starMap}
       />
       <Switch
-        position="45.5"
+        position="17"
         isOn={isSwitchOn}
         onToggle={() => {
           updateGameState("startRoom", "isSwitchOn", !isSwitchOn);
