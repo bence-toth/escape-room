@@ -5,6 +5,8 @@ const useInventory = () => {
     JSON.parse(localStorage.getItem("game-inventory") ?? "[]")
   );
 
+  const [selectedItem, setSelectedItem] = useState(null);
+
   useEffect(() => {
     localStorage.setItem("game-inventory", JSON.stringify(items));
   }, [items]);
@@ -22,7 +24,24 @@ const useInventory = () => {
   const hasItem = (itemToCheck) =>
     items.some((item) => item.id === itemToCheck.id);
 
-  return { items, addItem, removeItem, hasItem };
+  const selectItem = (itemToSelect) => {
+    console.log(itemToSelect);
+    setSelectedItem(itemToSelect.id);
+  };
+
+  const deselectItem = () => {
+    setSelectedItem(null);
+  };
+
+  return {
+    items,
+    addItem,
+    removeItem,
+    hasItem,
+    selectItem,
+    deselectItem,
+    selectedItem,
+  };
 };
 
 export default useInventory;

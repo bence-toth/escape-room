@@ -1,6 +1,21 @@
-/*
 .inventory {
-  height: 5%;
-  background-color: red;
+  height: 12.5%;
   width: 100%;
-} */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5vh;
+  padding: 0.5vh;
+  background-color: hsl(0, 0%, 10%);
+}
+
+.inventory .slot {
+  background-color: hsl(0, 0%, 20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inventory .slot[data-selected="true"] {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  box-shadow: 0 0 1vh 1vh hsl(0deg 0% 100% / 5%) inset;
+}

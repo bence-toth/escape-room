@@ -64,7 +64,7 @@ const StartRoom = () => {
         <Key
           onPickUp={() => {
             if (gameState.plantRoom.isRemoteSwitchOn) {
-              inventory.addItem({ id: "key2" });
+              inventory.addItem({ id: "key2", picture: "key" });
               updateGameState("basement", "isKeyTaken", true);
               updateMessage("You found a key");
             }

@@ -10,7 +10,7 @@
 .game {
   height: 90%;
   aspect-ratio: 1 / 1;
-  border: 5px solid black;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }

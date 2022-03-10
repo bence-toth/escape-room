@@ -76,7 +76,7 @@ const StartRoom = () => {
       {!isTrapDoorHandleTaken && (
         <TrapDoorHandle
           onPickUp={() => {
-            inventory.addItem({ id: "trapDoorHandle" });
+            inventory.addItem({ id: "trapDoorHandle", picture: "metalRing" });
             updateGameState("plantRoom", "isTrapDoorHandleTaken", true);
             updateMessage("You found a weird metal ring");
           }}
