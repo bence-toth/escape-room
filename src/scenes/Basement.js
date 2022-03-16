@@ -12,6 +12,8 @@ import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 
+let wasCatLogged = false;
+
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
@@ -28,7 +30,24 @@ const StartRoom = () => {
       updateMessage("It's dark in here");
     }
 
-    console.log("%c3 8 6 4 3 4", "font-size:24px");
+    if (!wasCatLogged) {
+      const logLines = [
+        " _______________________",
+        "/ You can do it, Zsófi! \\",
+        "\\       2 3 4 2 3       /",
+        " -----------------------",
+        "   \\",
+        "    \\",
+        "",
+        "     |\\_/|",
+        "     |o o|__",
+        "     --*--__\\",
+        "     C_C_(___)",
+        "",
+      ];
+      logLines.forEach((line) => console.log(line));
+      wasCatLogged = true;
+    }
   }, [gameState.plantRoom.isRemoteSwitchOn, updateMessage]);
 
   return (

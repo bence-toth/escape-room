@@ -25,7 +25,6 @@ const useInventory = () => {
     items.some((item) => item.id === itemToCheck.id);
 
   const selectItem = (itemToSelect) => {
-    console.log(itemToSelect);
     setSelectedItem(itemToSelect.id);
   };
 
