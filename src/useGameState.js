@@ -18,6 +18,9 @@ const initialGameState = {
   basement: {
     isKeyTaken: false,
   },
+  combination: {
+    code: "                     ",
+  },
 };
 
 const useGameState = () => {

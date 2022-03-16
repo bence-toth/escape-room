@@ -75,6 +75,9 @@ const StartRoom = () => {
             updateMessage("The door seems to be locked");
           }
         }}
+        onWalkThrough={() => {
+          navigate("/combination-room");
+        }}
         styles={{
           frameColor: "hsl(23, 19%, 16%)",
           doorColor: "hsl(23, 19%, 26%)",

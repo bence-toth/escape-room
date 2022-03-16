@@ -1,8 +1,12 @@
 import "./Wall.css";
 
-const Wall = ({ styles }) => (
+const Wall = ({ styles, onClick = () => {} }) => (
   <>
-    <div className="wallFull" style={{ backgroundColor: styles.color }}></div>
+    <div
+      className="wallFull"
+      style={{ backgroundColor: styles.color }}
+      onClick={onClick}
+    ></div>
   </>
 );
 
