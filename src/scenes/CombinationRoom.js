@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import DoorLeft from "../objects/DoorLeft";
+import WallRight from "../objects/WallRight";
+import WallLeft from "../objects/WallLeft";
 import CombinationLock from "../objects/CombinationLock";
 import { GameStateContext } from "../App";
 
@@ -35,6 +37,21 @@ const CombinationRoom = () => {
           doorColor: "hsl(23, 19%, 26%)",
         }}
         position="-30"
+      />
+      <WallRight
+        styles={{
+          doorColor: "hsl(23, 19%, 26%)",
+          frameColor: "hsl(23, 19%, 16%)",
+          wallColor: "hsl(63, 19%, 40%)",
+        }}
+        withDoor
+        isDoorOpen
+        onOpen={() => {
+          console.log("open");
+        }}
+        onWalkThrough={() => {
+          console.log("walk through");
+        }}
       />
       <CombinationLock
         code={gameState.combination.code}
