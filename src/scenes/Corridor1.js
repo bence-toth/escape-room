@@ -6,6 +6,8 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 
+import WallDrawing from "../assets/WallDrawing.png";
+
 const CombinationRoom = () => {
   const navigate = useNavigate();
 
@@ -47,39 +49,16 @@ const CombinationRoom = () => {
           navigate("/corridor-2");
         }}
       />
-      <p
+      <img
+        src={WallDrawing}
         style={{
-          color: "rgb(62, 55, 50)",
           position: "absolute",
-          top: "50%",
+          height: "60%",
+          top: "52%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-          textAlign: "center",
-          fontSize: "2vh",
-          fontFamily: "'Shadows Into Light', cursive",
-          lineHeight: 1.25,
         }}
-      >
-        Day #1
-        <br />
-        we could ever ask for...
-        <br />
-        What do they believe?
-        <br />
-        Where are all their fathers?
-        <br />
-        Where are all their mothers?
-        <br />
-        It's hard to reach across the
-        <br />
-        unbelievable distances between
-        <br />
-        what we really are
-        <br />
-        and who we claim to be.
-        <br />
-      </p>
+      />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>
   );
