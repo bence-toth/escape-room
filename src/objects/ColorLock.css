@@ -1,0 +1,46 @@
+.colorLock {
+  position: absolute;
+  width: 20%;
+  height: 6%;
+  left: 60%;
+  top: 32%;
+  display: flex;
+  align-items: stretch;
+}
+
+.colorLock > button {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+}
+
+.colorLock > button > div {
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  background-color: hsl(0, 0%, 25%);
+  border: 2px solid hsl(0, 0%, 20%);
+  border-radius: 50%;
+}
+
+.colorLock > button.red > div {
+  background-color: hsl(0, 100%, 35%);
+  border-color: hsl(0, 100%, 20%);
+}
+
+.colorLock > button.green > div {
+  background-color: hsl(120, 100%, 35%);
+  border-color: hsl(120, 100%, 20%);
+}
+
+.colorLock > button.blue > div {
+  background-color: hsl(200, 100%, 35%);
+  border-color: hsl(200, 100%, 20%);
+}
+
+.colorLock > button.yellow > div {
+  background-color: hsl(50, 100%, 35%);
+  border-color: hsl(50, 100%, 20%);
+}

@@ -7,6 +7,7 @@ import TrapDoorCeiling from "../objects/TrapDoorCeiling";
 import DoorRight from "../objects/DoorRight";
 import Sofa from "../objects/Sofa";
 import Key from "../objects/Key";
+import ColorLock from "../objects/ColorLock";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
@@ -19,7 +20,7 @@ const StartRoom = () => {
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
-  const { isKeyTaken } = gameState.basement;
+  const { isKeyTaken, colors } = gameState.basement;
 
   const navigate = useNavigate();
 
@@ -70,8 +71,7 @@ const StartRoom = () => {
         }}
       />
       <DoorRight
-        // isOpen={isRightDoorOpen}
-        onOpen={() => {}}
+        isOpen={gameState.basement.isDoorOpen}
         styles={{
           frameColor: "hsl(23, 19%, 12%)",
           doorColor: "hsl(23, 19%, 16%)",
@@ -96,6 +96,16 @@ const StartRoom = () => {
           }}
         />
       )}
+      <ColorLock
+        colors={colors}
+        updateColors={(colors) => {
+          updateGameState("basement", "colors", colors);
+          if (colors.join(",") === "red,green,yellow,red,blue") {
+            console.log("door opens");
+            updateGameState("basement", "isDoorOpen", true);
+          }
+        }}
+      />
       <Lamp
         isOn={gameState.plantRoom.isRemoteSwitchOn}
         styles={{ color: "hsl(23, 10%, 16%)" }}

@@ -17,6 +17,8 @@ const initialGameState = {
   },
   basement: {
     isKeyTaken: false,
+    colors: ["gray", "gray", "gray", "gray", "gray"],
+    isDoorOpen: false,
   },
   combinationRoom: {
     isSwitchOn: false,
