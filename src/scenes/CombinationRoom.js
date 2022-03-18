@@ -5,7 +5,6 @@ import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import DoorLeft from "../objects/DoorLeft";
 import WallRight from "../objects/WallRight";
-import WallLeft from "../objects/WallLeft";
 import CombinationLock from "../objects/CombinationLock";
 import { GameStateContext } from "../App";
 
@@ -45,12 +44,12 @@ const CombinationRoom = () => {
           wallColor: "hsl(63, 19%, 40%)",
         }}
         withDoor
-        isDoorOpen
+        isDoorOpen={gameState.combination.isPuzzleSolved}
         onOpen={() => {
           console.log("open");
         }}
         onWalkThrough={() => {
-          console.log("walk through");
+          navigate("/corridor-1");
         }}
       />
       <CombinationLock

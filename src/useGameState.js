@@ -20,6 +20,7 @@ const initialGameState = {
   },
   combination: {
     code: "                     ",
+    isPuzzleSolved: false,
   },
 };
 

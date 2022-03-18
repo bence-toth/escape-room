@@ -5,6 +5,7 @@ import Wall from "../objects/Wall";
 import CombinationLock from "../objects/CombinationLock";
 
 import { GameStateContext } from "../App";
+import { MessageContext } from "../App";
 
 const Combination = () => {
   const navigate = useNavigate();
@@ -14,9 +15,14 @@ const Combination = () => {
   }, []);
 
   const { gameState, updateGameState } = useContext(GameStateContext);
+  const updateMessage = useContext(MessageContext);
 
   const onChangeCode = (code) => {
     updateGameState("combination", "code", code);
+    if (code === "111111111111111111111") {
+      updateMessage("You hear something clicking");
+      updateGameState("combination", "isPuzzleSolved", true);
+    }
   };
 
   return (
