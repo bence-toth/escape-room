@@ -6,10 +6,14 @@ import Lamp from "../objects/Lamp";
 import DoorLeft from "../objects/DoorLeft";
 import WallRight from "../objects/WallRight";
 import CombinationLock from "../objects/CombinationLock";
+import Switch from "../objects/Switch";
+
 import { GameStateContext } from "../App";
+import { MessageContext } from "../App";
 
 const CombinationRoom = () => {
-  const { gameState } = useContext(GameStateContext);
+  const { gameState, updateGameState } = useContext(GameStateContext);
+  const updateMessage = useContext(MessageContext);
 
   const navigate = useNavigate();
 
@@ -36,6 +40,18 @@ const CombinationRoom = () => {
           doorColor: "hsl(23, 19%, 26%)",
         }}
         position="-30"
+      />
+      <Switch
+        position="-45"
+        isOn={gameState.combinationRoom.isSwitchOn}
+        onToggle={() => {
+          updateMessage("The switch does not seem to do anything");
+          updateGameState(
+            "combinationRoom",
+            "isSwitchOn",
+            !gameState.combinationRoom.isSwitchOn
+          );
+        }}
       />
       <WallRight
         styles={{

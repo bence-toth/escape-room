@@ -1,4 +1,4 @@
-const Plant = ({ position }) => (
+const Plant = ({ position = 0, showColors }) => (
   <svg
     className="gameObject"
     viewBox="0 0 211.66667 158.75"
@@ -124,8 +124,8 @@ const Plant = ({ position }) => (
       />
       <path
         style={{
-          fill: "#ed8a19",
-          stroke: "#efce4a",
+          fill: showColors ? "hsl(0, 100%, 50%)" : "#ed8a19",
+          stroke: showColors ? "hsl(0, 100%, 40%)" : "#efce4a",
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
@@ -134,8 +134,8 @@ const Plant = ({ position }) => (
       />
       <path
         style={{
-          fill: "#ed8a19",
-          stroke: "#efce4a",
+          fill: showColors ? "hsl(120, 100%, 50%)" : "#ed8a19",
+          stroke: showColors ? "hsl(120, 100%, 40%)" : "#efce4a",
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
@@ -144,8 +144,8 @@ const Plant = ({ position }) => (
       />
       <path
         style={{
-          fill: "#ed8a19",
-          stroke: "#efce4a",
+          fill: showColors ? "hsl(200, 100%, 50%)" : "#ed8a19",
+          stroke: showColors ? "hsl(200, 100%, 40%)" : "#efce4a",
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
@@ -154,8 +154,8 @@ const Plant = ({ position }) => (
       />
       <path
         style={{
-          fill: "#ed8a19",
-          stroke: "#efce4a",
+          fill: showColors ? "hsl(0, 100%, 50%)" : "#ed8a19",
+          stroke: showColors ? "hsl(0, 100%, 40%)" : "#efce4a",
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
@@ -164,8 +164,8 @@ const Plant = ({ position }) => (
       />
       <path
         style={{
-          fill: "#ed8a19",
-          stroke: "#efce4a",
+          fill: showColors ? "hsl(50, 100%, 50%)" : "#ed8a19",
+          stroke: showColors ? "hsl(50, 100%, 40%)" : "#efce4a",
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,

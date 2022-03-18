@@ -30,8 +30,8 @@ const StartRoom = () => {
     <div className="scene">
       <Room
         styles={{
-          floorColor: "hsl(120, 29%, 36%)",
-          wallColor: "hsl(120, 29%, 46%)",
+          floorColor: "hsl(50, 29%, 36%)",
+          wallColor: "hsl(50, 29%, 46%)",
         }}
       />
       <DoorRight
@@ -41,8 +41,8 @@ const StartRoom = () => {
           navigate("/");
         }}
         styles={{
-          frameColor: "hsl(120, 29%, 16%)",
-          doorColor: "hsl(120, 29%, 26%)",
+          frameColor: "hsl(50, 29%, 16%)",
+          doorColor: "hsl(50, 29%, 26%)",
         }}
         position="30"
       />
@@ -52,12 +52,18 @@ const StartRoom = () => {
           navigate("/");
         }}
         styles={{
-          frameColor: "hsl(120, 29%, 16%)",
-          doorColor: "hsl(120, 29%, 26%)",
+          frameColor: "hsl(50, 29%, 16%)",
+          doorColor: "hsl(50, 29%, 26%)",
         }}
         position="-20"
       />
-      <Plant />
+      <Plant
+        showColors={
+          isSwitchOn &&
+          !gameState.startRoom.isSwitchOn &&
+          gameState.combinationRoom.isSwitchOn
+        }
+      />
       <Switch
         position="-45.5"
         isOn={isSwitchOn}
@@ -85,17 +91,17 @@ const StartRoom = () => {
       )}
       <Lamp
         isOn={!gameState.startRoom.isSwitchOn}
-        styles={{ color: "hsl(120, 20%, 26%)" }}
+        styles={{ color: "hsl(50, 20%, 26%)" }}
         position="-30"
       />
       <Lamp
-        isOn={false}
-        styles={{ color: "hsl(120, 20%, 26%)" }}
+        isOn={gameState.combinationRoom.isSwitchOn}
+        styles={{ color: "hsl(50, 20%, 26%)" }}
         position="0"
       />
       <Lamp
         isOn={isSwitchOn}
-        styles={{ color: "hsl(120, 20%, 26%)" }}
+        styles={{ color: "hsl(50, 20%, 26%)" }}
         position="30"
       />
     </div>

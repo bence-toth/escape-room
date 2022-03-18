@@ -18,6 +18,9 @@ const initialGameState = {
   basement: {
     isKeyTaken: false,
   },
+  combinationRoom: {
+    isSwitchOn: false,
+  },
   combination: {
     code: "                     ",
     isPuzzleSolved: false,
