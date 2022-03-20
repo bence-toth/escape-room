@@ -5,12 +5,15 @@ import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
+import Picture from "../objects/Picture";
+
+import starMap from "../assets/StarMap.png";
 
 const CombinationRoom = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem("game-location", "/corridor-1");
+    localStorage.setItem("game-location", "/gallery-1");
   }, []);
 
   return (
@@ -31,7 +34,7 @@ const CombinationRoom = () => {
         isDoorOpen
         isBack
         onWalkThrough={() => {
-          navigate("/combination-room");
+          navigate("/gallery-2");
         }}
       />
       <WallRight
@@ -44,42 +47,35 @@ const CombinationRoom = () => {
         isDoorOpen
         isBack
         onWalkThrough={() => {
-          navigate("/corridor-2");
+          navigate("/plant-room");
         }}
       />
-      <p
-        style={{
-          color: "rgb(62, 55, 50)",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-          textAlign: "center",
-          fontSize: "2vh",
-          fontFamily: "'Shadows Into Light', cursive",
-          lineHeight: 1.25,
+      <Picture
+        onObserve={() => {}}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
         }}
-      >
-        Day #1
-        <br />
-        we could ever ask for...
-        <br />
-        What do they believe?
-        <br />
-        Where are all their fathers?
-        <br />
-        Where are all their mothers?
-        <br />
-        It's hard to reach across the
-        <br />
-        unbelievable distances between
-        <br />
-        what we really are
-        <br />
-        and who we claim to be.
-        <br />
-      </p>
+        src={starMap}
+        position={-22.5}
+      />
+      <Picture
+        onObserve={() => {}}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={starMap}
+      />
+      <Picture
+        onObserve={() => {}}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={starMap}
+        position={22.5}
+      />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>
   );

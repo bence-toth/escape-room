@@ -47,9 +47,9 @@ const StartRoom = () => {
         position="30"
       />
       <DoorRight
-        isOpen={false}
+        isOpen
         onWalkThrough={() => {
-          navigate("/");
+          navigate("/gallery-1");
         }}
         styles={{
           frameColor: "hsl(50, 29%, 16%)",

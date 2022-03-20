@@ -17,6 +17,10 @@ import Corridor7 from "./scenes/Corridor7";
 import Corridor8 from "./scenes/Corridor8";
 import Corridor9 from "./scenes/Corridor9";
 import Corridor10 from "./scenes/Corridor10";
+import Gallery1 from "./scenes/Gallery1";
+import Gallery2 from "./scenes/Gallery2";
+import Gallery3 from "./scenes/Gallery3";
+import Gallery4 from "./scenes/Gallery4";
 
 import "./GameCanvas.css";
 
@@ -40,6 +44,10 @@ const GameCanvas = () => (
       <Route path="/corridor-8" element={<Corridor8 />} />
       <Route path="/corridor-9" element={<Corridor9 />} />
       <Route path="/corridor-10" element={<Corridor10 />} />
+      <Route path="/gallery-1" element={<Gallery1 />} />
+      <Route path="/gallery-2" element={<Gallery2 />} />
+      <Route path="/gallery-3" element={<Gallery3 />} />
+      <Route path="/gallery-4" element={<Gallery4 />} />
     </Routes>
   </div>
 );
