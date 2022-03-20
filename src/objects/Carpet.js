@@ -3,7 +3,10 @@ const Carpet = ({ onMove, position, styles }) => {
     <svg
       className="gameObject"
       viewBox="0 0 211.66667 158.75"
-      style={{ transform: `translateX(${position}%)` }}
+      style={{
+        transform: `translateX(${position}%)`,
+        transition: "transform 0.5s",
+      }}
     >
       <path
         style={{

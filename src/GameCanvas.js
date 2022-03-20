@@ -6,6 +6,7 @@ import PlantRoom from "./scenes/PlantRoom";
 import Basement from "./scenes/Basement";
 import CombinationRoom from "./scenes/CombinationRoom";
 import Combination from "./scenes/Combination";
+import DrawingRoom from "./scenes/DrawingRoom";
 import Corridor1 from "./scenes/Corridor1";
 import Corridor2 from "./scenes/Corridor2";
 import Corridor3 from "./scenes/Corridor3";
@@ -28,6 +29,7 @@ const GameCanvas = () => (
       <Route path="/basement" element={<Basement />} />
       <Route path="/combination-room" element={<CombinationRoom />} />
       <Route path="/combination" element={<Combination />} />
+      <Route path="/drawing-room" element={<DrawingRoom />} />
       <Route path="/corridor-1" element={<Corridor1 />} />
       <Route path="/corridor-2" element={<Corridor2 />} />
       <Route path="/corridor-3" element={<Corridor3 />} />

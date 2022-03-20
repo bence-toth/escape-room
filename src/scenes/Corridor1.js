@@ -49,16 +49,39 @@ const CombinationRoom = () => {
           navigate("/corridor-2");
         }}
       />
-      <img
-        src={WallDrawing}
+      <p
         style={{
+          color: "rgb(62, 55, 50)",
           position: "absolute",
-          height: "60%",
-          top: "52%",
+          top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
+          pointerEvents: "none",
+          textAlign: "center",
+          fontSize: "2vh",
+          fontFamily: "'Shadows Into Light', cursive",
+          lineHeight: 1.25,
         }}
-      />
+      >
+        Day #1
+        <br />
+        we could ever ask for...
+        <br />
+        What do they believe?
+        <br />
+        Where are all their fathers?
+        <br />
+        Where are all their mothers?
+        <br />
+        It's hard to reach across the
+        <br />
+        unbelievable distances between
+        <br />
+        what we really are
+        <br />
+        and who we claim to be.
+        <br />
+      </p>
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>
   );

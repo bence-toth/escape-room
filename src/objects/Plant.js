@@ -129,6 +129,7 @@ const Plant = ({ position = 0, showColors }) => (
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
+          transition: "fill 1.5s, stroke 1.5s",
         }}
         d="m 38.694,21.388 v 0 c -2.209,0 -4,-1.791 -4,-4 v 0 c 0,-5.958 11,-7 11,-7 0,0 0,11 -7,11 z"
       />
@@ -139,6 +140,7 @@ const Plant = ({ position = 0, showColors }) => (
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
+          transition: "fill 1.5s, stroke 1.5s",
         }}
         d="m 19.694,21.388 v 0 c 2.209,0 4,-1.791 4,-4 v 0 c 0,-5.958 -11,-7 -11,-7 0,0 0,11 7,11 z"
       />
@@ -149,6 +151,7 @@ const Plant = ({ position = 0, showColors }) => (
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
+          transition: "fill 1.5s, stroke 1.5s",
         }}
         d="m 38.694,34.388 v 0 c -2.209,0 -4,-1.791 -4,-4 v 0 c 0,-5.958 11,-7 11,-7 0,0 0,11 -7,11 z"
       />
@@ -159,6 +162,7 @@ const Plant = ({ position = 0, showColors }) => (
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
+          transition: "fill 1.5s, stroke 1.5s",
         }}
         d="m 19.694,34.388 v 0 c 2.209,0 4,-1.791 4,-4 v 0 c 0,-5.958 -11,-7 -11,-7 0,0 0,11 7,11 z"
       />
@@ -169,6 +173,7 @@ const Plant = ({ position = 0, showColors }) => (
           strokeWidth: 2,
           strokeLinecap: "round",
           strokeMiterlimit: 10,
+          transition: "fill 1.5s, stroke 1.5s",
         }}
         d="m 31.694,13.116 v 0 c -1.562,1.562 -4.095,1.562 -5.657,0 v 0 C 21.824,8.903 28.693,1.388 28.693,1.388 c 0,0 7.951,6.778 3.001,11.728 z"
       />

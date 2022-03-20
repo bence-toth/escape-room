@@ -76,6 +76,9 @@ const StartRoom = () => {
           frameColor: "hsl(23, 19%, 12%)",
           doorColor: "hsl(23, 19%, 16%)",
         }}
+        onWalkThrough={() => {
+          navigate("/drawing-room");
+        }}
         position="20"
       />
       <Sofa position="-25" />
