@@ -7,7 +7,9 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 
-import starMap from "../assets/StarMap.png";
+import MountainOfTheDead from "../assets/07-MountainOfTheDead.jpg";
+import Alexandria from "../assets/08-Alexandria.jpg";
+import Aswan from "../assets/09-Aswan.jpg";
 
 const Gallery3 = () => {
   const navigate = useNavigate();
@@ -20,15 +22,15 @@ const Gallery3 = () => {
     <div className="scene">
       <Room
         styles={{
-          floorColor: "hsl(63, 19%, 36%)",
-          wallColor: "hsl(63, 19%, 46%)",
+          floorColor: "hsl(150, 19%, 36%)",
+          wallColor: "hsl(150, 19%, 46%)",
         }}
       />
       <WallLeft
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          wallColor: "hsl(150, 19%, 40%)",
         }}
         withDoor
         isDoorOpen
@@ -41,7 +43,7 @@ const Gallery3 = () => {
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          wallColor: "hsl(150, 19%, 40%)",
         }}
         withDoor
         isDoorOpen
@@ -51,30 +53,39 @@ const Gallery3 = () => {
         }}
       />
       <Picture
-        onObserve={() => {}}
+        onObserve={() => {
+          navigate("/gallery-picture-7");
+        }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={starMap}
-        position={-22.5}
-      />
-      <Picture
-        onObserve={() => {}}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={starMap}
-      />
-      <Picture
-        onObserve={() => {}}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={starMap}
+        src={MountainOfTheDead}
         position={22.5}
+        withLabel
+      />
+      <Picture
+        onObserve={() => {
+          navigate("/gallery-picture-8");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={Alexandria}
+        withLabel
+      />
+      <Picture
+        onObserve={() => {
+          navigate("/gallery-picture-9");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={Aswan}
+        position={-22.5}
+        withLabel
       />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>

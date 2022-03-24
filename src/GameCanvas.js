@@ -24,6 +24,15 @@ import Gallery4 from "./scenes/Gallery4";
 import GalleryPicture1 from "./scenes/GalleryPicture1";
 import GalleryPicture2 from "./scenes/GalleryPicture2";
 import GalleryPicture3 from "./scenes/GalleryPicture3";
+import GalleryPicture4 from "./scenes/GalleryPicture4";
+import GalleryPicture5 from "./scenes/GalleryPicture5";
+import GalleryPicture6 from "./scenes/GalleryPicture6";
+import GalleryPicture7 from "./scenes/GalleryPicture7";
+import GalleryPicture8 from "./scenes/GalleryPicture8";
+import GalleryPicture9 from "./scenes/GalleryPicture9";
+import GalleryPicture10 from "./scenes/GalleryPicture10";
+import GalleryPicture11 from "./scenes/GalleryPicture11";
+import GalleryPicture12 from "./scenes/GalleryPicture12";
 import PlanetRoom from "./scenes/PlanetRoom";
 
 import "./GameCanvas.css";
@@ -55,6 +64,15 @@ const GameCanvas = () => (
       <Route path="/gallery-picture-1" element={<GalleryPicture1 />} />
       <Route path="/gallery-picture-2" element={<GalleryPicture2 />} />
       <Route path="/gallery-picture-3" element={<GalleryPicture3 />} />
+      <Route path="/gallery-picture-4" element={<GalleryPicture4 />} />
+      <Route path="/gallery-picture-5" element={<GalleryPicture5 />} />
+      <Route path="/gallery-picture-6" element={<GalleryPicture6 />} />
+      <Route path="/gallery-picture-7" element={<GalleryPicture7 />} />
+      <Route path="/gallery-picture-8" element={<GalleryPicture8 />} />
+      <Route path="/gallery-picture-9" element={<GalleryPicture9 />} />
+      <Route path="/gallery-picture-10" element={<GalleryPicture10 />} />
+      <Route path="/gallery-picture-11" element={<GalleryPicture11 />} />
+      <Route path="/gallery-picture-12" element={<GalleryPicture12 />} />
       <Route path="/planet-room" element={<PlanetRoom />} />
     </Routes>
   </div>

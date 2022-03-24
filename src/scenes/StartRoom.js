@@ -30,6 +30,7 @@ const StartRoom = () => {
     isSwitchOn,
     isTrapDoorHandleInPlace,
     isTrapDoorOpen,
+    isGalleryKeyTaken,
   } = gameState.startRoom;
 
   const navigate = useNavigate();
@@ -152,6 +153,17 @@ const StartRoom = () => {
           borderColor: "hsl(340, 73%, 36%)",
         }}
       />
+      {!isGalleryKeyTaken && (
+        <Key
+          onPickUp={() => {
+            inventory.addItem({ id: "key3", picture: "key" });
+            updateGameState("startRoom", "isGalleryKeyTaken", true);
+            updateMessage("You found a key");
+          }}
+          position={"10"}
+          styles={{ color: "hsl(40, 100%, 44%)" }}
+        />
+      )}
       <Lamp
         isOn={isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

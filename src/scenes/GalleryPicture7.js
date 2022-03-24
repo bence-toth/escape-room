@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Kotor from "../assets/03-Kotor.jpg";
+import MountainOfTheDead from "../assets/07-MountainOfTheDead.jpg";
 
-const GalleryPicture3 = () => {
+const GalleryPicture7 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem("game-location", "/gallery-picture-3");
+    localStorage.setItem("game-location", "/gallery-picture-7");
   }, []);
 
   return (
@@ -18,13 +18,13 @@ const GalleryPicture3 = () => {
       <Wall styles={{ color: "hsl(23, 19%, 46%)" }} />
       <PictureBig
         onLeave={() => {
-          navigate("/gallery-1");
+          navigate("/gallery-3");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Kotor}
+        src={MountainOfTheDead}
       />
       <p
         style={{
@@ -38,12 +38,12 @@ const GalleryPicture3 = () => {
           textAlign: "right",
         }}
       >
-        I am a fort. Will you occupy me?
+        I am a mass tomb. Will you desecrate me?
         <br />
-        <em>Kotor, Montenegro</em>
+        <em>Siwa, Egypt</em>
       </p>
     </div>
   );
 };
 
-export default GalleryPicture3;
+export default GalleryPicture7;

@@ -17,7 +17,7 @@ const StartRoom = () => {
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
-  const { isSwitchOn, isRemoteSwitchOn, isTrapDoorHandleTaken } =
+  const { isSwitchOn, isRemoteSwitchOn, isTrapDoorHandleTaken, isDoorOpen } =
     gameState.plantRoom;
 
   const navigate = useNavigate();
@@ -47,7 +47,15 @@ const StartRoom = () => {
         position="30"
       />
       <DoorRight
-        isOpen
+        isOpen={isDoorOpen}
+        onOpen={() => {
+          if (inventory.selectedItem === "key3") {
+            inventory.removeItem({ id: "key3" });
+            updateGameState("plantRoom", "isDoorOpen", true);
+          } else {
+            updateMessage("The door seems to be locked");
+          }
+        }}
         onWalkThrough={() => {
           navigate("/gallery-1");
         }}

@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Kotor from "../assets/03-Kotor.jpg";
+import Blank from "../assets/10-Blank.jpg";
 
-const GalleryPicture3 = () => {
+const GalleryPicture10 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem("game-location", "/gallery-picture-3");
+    localStorage.setItem("game-location", "/gallery-picture-10");
   }, []);
 
   return (
@@ -18,13 +18,13 @@ const GalleryPicture3 = () => {
       <Wall styles={{ color: "hsl(23, 19%, 46%)" }} />
       <PictureBig
         onLeave={() => {
-          navigate("/gallery-1");
+          navigate("/gallery-4");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Kotor}
+        src={Blank}
       />
       <p
         style={{
@@ -38,12 +38,12 @@ const GalleryPicture3 = () => {
           textAlign: "right",
         }}
       >
-        I am a fort. Will you occupy me?
+        --
         <br />
-        <em>Kotor, Montenegro</em>
+        <em>--, --</em>
       </p>
     </div>
   );
 };
 
-export default GalleryPicture3;
+export default GalleryPicture10;

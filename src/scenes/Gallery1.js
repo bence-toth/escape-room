@@ -22,15 +22,15 @@ const Gallery1 = () => {
     <div className="scene">
       <Room
         styles={{
-          floorColor: "hsl(63, 19%, 36%)",
-          wallColor: "hsl(63, 19%, 46%)",
+          floorColor: "hsl(100, 19%, 36%)",
+          wallColor: "hsl(100, 19%, 46%)",
         }}
       />
       <WallLeft
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          wallColor: "hsl(100, 19%, 40%)",
         }}
         withDoor
         isDoorOpen
@@ -43,7 +43,7 @@ const Gallery1 = () => {
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          wallColor: "hsl(100, 19%, 40%)",
         }}
         withDoor
         isDoorOpen
@@ -61,7 +61,7 @@ const Gallery1 = () => {
           hangerColor: "hsl(23, 10%, 26%)",
         }}
         src={Kullaberg}
-        position={-22.5}
+        position={22.5}
         withLabel
       />
       <Picture
@@ -84,7 +84,7 @@ const Gallery1 = () => {
           hangerColor: "hsl(23, 10%, 26%)",
         }}
         src={Kotor}
-        position={22.5}
+        position={-22.5}
         withLabel
       />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />

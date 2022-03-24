@@ -9,6 +9,7 @@ const initialGameState = {
     isSwitchOn: true,
     isTrapDoorHandleInPlace: false,
     isTrapDoorOpen: false,
+    isGalleryKeyTaken: false,
   },
   plantRoom: {
     isSwitchOn: false,
