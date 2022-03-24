@@ -1,5 +1,4 @@
 import { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
@@ -10,12 +9,13 @@ import Switch from "../objects/Switch";
 
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
+import { LocationChangeContext } from "../App";
 
 const CombinationRoom = () => {
   const { gameState, updateGameState } = useContext(GameStateContext);
   const updateMessage = useContext(MessageContext);
 
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/combination-room");

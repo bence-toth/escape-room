@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useContext } from "react";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
@@ -11,8 +10,10 @@ import Blank1 from "../assets/10-Blank.jpg";
 import Blank2 from "../assets/11-Blank.jpg";
 import Future from "../assets/12-Future.jpg";
 
+import { LocationChangeContext } from "../App";
+
 const Gallery4 = () => {
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/gallery-4");

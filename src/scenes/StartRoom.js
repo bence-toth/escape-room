@@ -1,5 +1,4 @@
 import { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
@@ -16,11 +15,13 @@ import starMap from "../assets/StarMap.png";
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
+import { LocationChangeContext } from "../App";
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
+  const navigate = useContext(LocationChangeContext);
 
   const {
     isLeftDoorOpen,
@@ -32,8 +33,6 @@ const StartRoom = () => {
     isTrapDoorOpen,
     isGalleryKeyTaken,
   } = gameState.startRoom;
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("game-location", "/");

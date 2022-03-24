@@ -1,13 +1,14 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useContext } from "react";
 
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
 import MountainOfTheDead from "../assets/07-MountainOfTheDead.jpg";
 
+import { LocationChangeContext } from "../App";
+
 const GalleryPicture7 = () => {
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/gallery-picture-7");

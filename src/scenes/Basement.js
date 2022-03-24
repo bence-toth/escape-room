@@ -1,5 +1,4 @@
 import { useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
@@ -12,6 +11,7 @@ import ColorLock from "../objects/ColorLock";
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
+import { LocationChangeContext } from "../App";
 
 let wasCatLogged = false;
 
@@ -22,7 +22,7 @@ const StartRoom = () => {
 
   const { isKeyTaken, colors } = gameState.basement;
 
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/basement");

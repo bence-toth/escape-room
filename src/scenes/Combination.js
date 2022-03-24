@@ -1,14 +1,14 @@
 import { useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Wall from "../objects/Wall";
 import CombinationLock from "../objects/CombinationLock";
 
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
+import { LocationChangeContext } from "../App";
 
 const Combination = () => {
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/combination");

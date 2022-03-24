@@ -1,13 +1,14 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useContext } from "react";
 
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
 import EgerVolgy from "../assets/04-Egervolgy.jpg";
 
+import { LocationChangeContext } from "../App";
+
 const GalleryPicture4 = () => {
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/gallery-picture-4");

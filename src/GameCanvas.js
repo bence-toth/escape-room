@@ -37,8 +37,8 @@ import PlanetRoom from "./scenes/PlanetRoom";
 
 import "./GameCanvas.css";
 
-const GameCanvas = () => (
-  <div className="gameCanvas">
+const GameCanvas = ({ isRendered }) => (
+  <div className="gameCanvas" data-rendered={isRendered}>
     <Routes>
       <Route path="/" element={<StartRoom />} />
       <Route path="/star-map" element={<StarMap />} />

@@ -13,4 +13,5 @@
   border: 1px solid black;
   display: flex;
   flex-direction: column;
+  background-color: hsl(0, 0%, 10%);
 }

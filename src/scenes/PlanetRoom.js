@@ -1,5 +1,4 @@
 import { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
 import WallRight from "../objects/WallRight";
@@ -15,6 +14,7 @@ import PlanetTextureCyan from "../assets/PlanetTexture-Cyan.jpg";
 import PlanetTextureYellow from "../assets/PlanetTexture-Yellow.jpg";
 
 import { GameStateContext } from "../App";
+import { LocationChangeContext } from "../App";
 
 const ellipseAttrsToPath = (rx, cx, ry, cy) =>
   `M${cx - rx},${cy}a${rx},${ry} 0 1,0 ${rx * 2},0a${rx},${ry} 0 1,0 -${
@@ -29,7 +29,7 @@ const planetTextures = [
 ];
 
 const PlanetRoom = () => {
-  const navigate = useNavigate();
+  const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/planet-room");
