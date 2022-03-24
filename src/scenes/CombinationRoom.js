@@ -61,9 +61,6 @@ const CombinationRoom = () => {
         }}
         withDoor
         isDoorOpen={gameState.combination.isPuzzleSolved}
-        onOpen={() => {
-          console.log("open");
-        }}
         onWalkThrough={() => {
           navigate("/corridor-1");
         }}

@@ -20,6 +20,7 @@ const Combination = () => {
   const onChangeCode = (code) => {
     updateGameState("combination", "code", code);
     if (code === "111111111111111111111") {
+      // TODO: Replace code "127492020397316804710"
       updateMessage("You hear something clicking");
       updateGameState("combination", "isPuzzleSolved", true);
     }

@@ -10,7 +10,7 @@ const GalleryPicture9 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem("game-location", "/gallery-picture-7");
+    localStorage.setItem("game-location", "/gallery-picture-9");
   }, []);
 
   return (
@@ -38,7 +38,7 @@ const GalleryPicture9 = () => {
           textAlign: "right",
         }}
       >
-        I am a coffee. Will you drink me?
+        I am a cup of coffee. Will you drink me?
         <br />
         <em>Aswan, Egypt</em>
       </p>

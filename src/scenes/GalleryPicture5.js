@@ -38,7 +38,7 @@ const GalleryPicture5 = () => {
           textAlign: "right",
         }}
       >
-        I am a pyramid. Will you explore me?
+        It is all about the <em>one</em> on the top of the pyramid.
         <br />
         <em>Cairo, Egypt</em>
       </p>

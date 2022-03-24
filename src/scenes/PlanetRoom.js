@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Room from "../objects/Room";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
-import Switch from "../objects/Switch";
+import Lever from "../objects/Lever";
 
 import "./PlanetRoom.css";
 import Stars from "../assets/Stars.jpg";
@@ -82,16 +82,17 @@ const PlanetRoom = () => {
           navigate("/gallery-4");
         }}
       />
-      <Switch
+      <Lever
         position="0"
-        isOn={gameState.planetRoom.arePlanetsMoving}
-        onToggle={() => {
+        isTurned={gameState.planetRoom.arePlanetsMoving}
+        onTurn={() => {
           updateGameState(
             "planetRoom",
             "arePlanetsMoving",
             !gameState.planetRoom.arePlanetsMoving
           );
         }}
+        hasLever
       />
       <div className="orbitWrapper">
         <div

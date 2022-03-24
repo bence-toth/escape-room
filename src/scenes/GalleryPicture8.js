@@ -10,7 +10,7 @@ const GalleryPicture8 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem("game-location", "/gallery-picture-7");
+    localStorage.setItem("game-location", "/gallery-picture-8");
   }, []);
 
   return (

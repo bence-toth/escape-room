@@ -2,7 +2,7 @@ const WallRight = ({
   withDoor,
   isBack,
   isDoorOpen,
-  onOpen,
+  onOpen = () => {},
   onWalkThrough,
   styles,
 }) => (

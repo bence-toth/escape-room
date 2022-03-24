@@ -35,7 +35,7 @@ const StartRoom = () => {
       const logLines = [
         " _______________________",
         "/ You can do it, Zsófi! \\",
-        "\\       2 3 4 2 3       /",
+        "\\         4 9 2         /",
         " -----------------------",
         "   \\",
         "    \\",
@@ -104,7 +104,6 @@ const StartRoom = () => {
         updateColors={(colors) => {
           updateGameState("basement", "colors", colors);
           if (colors.join(",") === "red,green,yellow,red,blue") {
-            console.log("door opens");
             updateGameState("basement", "isDoorOpen", true);
           }
         }}
