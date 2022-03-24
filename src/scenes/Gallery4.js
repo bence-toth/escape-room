@@ -5,15 +5,20 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
+import Switch from "../objects/Switch";
 
 import Blank1 from "../assets/10-Blank.jpg";
 import Blank2 from "../assets/11-Blank.jpg";
 import Future from "../assets/12-Future.jpg";
 
 import { LocationChangeContext } from "../App";
+import { GameStateContext } from "../App";
+import { MessageContext } from "../App";
 
 const Gallery4 = () => {
   const navigate = useContext(LocationChangeContext);
+  const { gameState, updateGameState } = useContext(GameStateContext);
+  const updateMessage = useContext(MessageContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/gallery-4");
@@ -87,6 +92,18 @@ const Gallery4 = () => {
         src={Future}
         position={-22.5}
         withLabel
+      />
+      <Switch
+        position="-35.25"
+        isOn={gameState.gallery.isSwitchOn}
+        onToggle={() => {
+          updateMessage("The switch does not seem to do anything");
+          updateGameState(
+            "gallery",
+            "isSwitchOn",
+            !gameState.gallery.isSwitchOn
+          );
+        }}
       />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>

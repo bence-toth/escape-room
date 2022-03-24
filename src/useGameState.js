@@ -34,6 +34,9 @@ const initialGameState = {
   drawingRoom: {
     isSwitchOn: false,
   },
+  gallery: {
+    isSwitchOn: false,
+  },
 };
 
 const useGameState = () => {
