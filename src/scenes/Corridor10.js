@@ -4,6 +4,7 @@ import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
+import PlanetLock from "../objects/PlanetLock";
 
 import { LocationChangeContext } from "../App";
 
@@ -48,40 +49,8 @@ const CombinationRoom = () => {
           navigate("/corridor-2");
         }}
       />
-      <p
-        style={{
-          color: "rgb(62, 55, 50)",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-          textAlign: "center",
-          fontSize: "2vh",
-          fontFamily: "'Shadows Into Light', cursive",
-          lineHeight: 1.25,
-        }}
-      >
-        Day #10
-        <br />
-        we could ever ask for...
-        <br />
-        What do they believe?
-        <br />
-        Where are all their fathers?
-        <br />
-        Where are all their mothers?
-        <br />
-        It's hard to reach across the
-        <br />
-        unbelievable distances between
-        <br />
-        what we really are
-        <br />
-        and who we claim to be.
-        <br />
-      </p>
-      <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      <PlanetLock />
+      {/* <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" /> */}
     </div>
   );
 };

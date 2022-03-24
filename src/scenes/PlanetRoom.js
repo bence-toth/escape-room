@@ -55,25 +55,25 @@ const PlanetRoom = () => {
       style={{
         backgroundImage: `url(${Stars})`,
         backgroundSize: "cover",
-        boxShadow: "0 0 20vh 15vh inset hsla(236, 68%, 10%, 0.8)",
+        boxShadow: "0 0 20vh 15vh inset hsla(235, 29%, 40%, 0.6)",
       }}
     >
       <Room
         styles={{
-          floorColor: "hsl(235, 79%, 6%)",
+          floorColor: "hsl(235, 29%, 26%)",
           wallColor: "transparent",
         }}
       />
       <WallLeft
         styles={{
-          wallColor: "hsl(235, 79%, 8%)",
+          wallColor: "hsl(235, 29%, 28%)",
         }}
       />
       <WallRight
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(234, 41%, 15%)",
-          wallColor: "hsl(235, 79%, 8%)",
+          wallColor: "hsl(235, 29%, 28%)",
         }}
         withDoor
         isDoorOpen

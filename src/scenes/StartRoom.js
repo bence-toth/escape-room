@@ -17,6 +17,15 @@ import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
+// TODO:
+// Fix gallery picture wall colors
+// Misplace lever
+// Engagement survey number (send physical letter)
+// Add random objects in random rooms
+// Add columns
+// QR code for the game
+// Create wall writings on the corridor (day numbers should also be a code)
+
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
