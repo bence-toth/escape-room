@@ -1,4 +1,10 @@
-const Picture = ({ onObserve, styles, src, position = 0 }) => (
+const Picture = ({
+  onObserve,
+  styles,
+  src,
+  position = 0,
+  withLabel = false,
+}) => (
   <svg
     className="gameObject"
     viewBox="0 0 211.66667 158.75"
@@ -25,6 +31,15 @@ const Picture = ({ onObserve, styles, src, position = 0 }) => (
       x="87.325874"
       y="74.033035"
     />
+    {withLabel && (
+      <rect
+        style={{ fill: "hsl(0, 0%, 90%)" }}
+        width="10"
+        height="3"
+        x="114"
+        y="102"
+      />
+    )}
   </svg>
 );
 

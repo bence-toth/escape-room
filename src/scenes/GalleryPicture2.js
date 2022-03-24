@@ -26,6 +26,22 @@ const GalleryPicture2 = () => {
         }}
         src={DeerPark}
       />
+      <p
+        style={{
+          position: "absolute",
+          backgroundColor: "hsl(0, 0%, 90%)",
+          right: "13.5vh",
+          bottom: "1.3vh",
+          height: "5vh",
+          fontSize: "1.15vh",
+          padding: "0.75vh 1.25vh",
+          textAlign: "right",
+        }}
+      >
+        I am a deer. Will you feed me?
+        <br />
+        <em>Dyrehaven, Denmark</em>
+      </p>
     </div>
   );
 };

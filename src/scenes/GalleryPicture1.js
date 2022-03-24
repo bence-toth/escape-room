@@ -33,9 +33,8 @@ const GalleryPicture1 = () => {
           right: "13.5vh",
           bottom: "1.3vh",
           height: "5vh",
-          width: "25vh",
           fontSize: "1.15vh",
-          padding: "0.75vh",
+          padding: "0.75vh 1.25vh",
           textAlign: "right",
         }}
       >

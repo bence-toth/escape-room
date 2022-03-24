@@ -54,14 +54,15 @@ const Gallery1 = () => {
       />
       <Picture
         onObserve={() => {
-          navigate("/gallery-picture-3");
+          navigate("/gallery-picture-1");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Kotor}
-        position={22.5}
+        src={Kullaberg}
+        position={-22.5}
+        withLabel
       />
       <Picture
         onObserve={() => {
@@ -72,18 +73,19 @@ const Gallery1 = () => {
           hangerColor: "hsl(23, 10%, 26%)",
         }}
         src={DeerPark}
+        withLabel
       />
-
       <Picture
         onObserve={() => {
-          navigate("/gallery-picture-1");
+          navigate("/gallery-picture-3");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Kullaberg}
-        position={-22.5}
+        src={Kotor}
+        position={22.5}
+        withLabel
       />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>
