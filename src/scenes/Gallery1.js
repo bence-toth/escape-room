@@ -7,7 +7,9 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 
-import starMap from "../assets/StarMap.png";
+import Kullaberg from "../assets/01-Kullaberg.jpg";
+import DeerPark from "../assets/02-DeerPark.jpg";
+import Kotor from "../assets/03-Kotor.jpg";
 
 const Gallery1 = () => {
   const navigate = useNavigate();
@@ -51,30 +53,37 @@ const Gallery1 = () => {
         }}
       />
       <Picture
-        onObserve={() => {}}
+        onObserve={() => {
+          navigate("/gallery-picture-3");
+        }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={starMap}
-        position={-22.5}
-      />
-      <Picture
-        onObserve={() => {}}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={starMap}
-      />
-      <Picture
-        onObserve={() => {}}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={starMap}
+        src={Kotor}
         position={22.5}
+      />
+      <Picture
+        onObserve={() => {
+          navigate("/gallery-picture-2");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={DeerPark}
+      />
+
+      <Picture
+        onObserve={() => {
+          navigate("/gallery-picture-1");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={Kullaberg}
+        position={-22.5}
       />
       <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
     </div>

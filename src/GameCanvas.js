@@ -21,6 +21,9 @@ import Gallery1 from "./scenes/Gallery1";
 import Gallery2 from "./scenes/Gallery2";
 import Gallery3 from "./scenes/Gallery3";
 import Gallery4 from "./scenes/Gallery4";
+import GalleryPicture1 from "./scenes/GalleryPicture1";
+import GalleryPicture2 from "./scenes/GalleryPicture2";
+import GalleryPicture3 from "./scenes/GalleryPicture3";
 import PlanetRoom from "./scenes/PlanetRoom";
 
 import "./GameCanvas.css";
@@ -49,6 +52,9 @@ const GameCanvas = () => (
       <Route path="/gallery-2" element={<Gallery2 />} />
       <Route path="/gallery-3" element={<Gallery3 />} />
       <Route path="/gallery-4" element={<Gallery4 />} />
+      <Route path="/gallery-picture-1" element={<GalleryPicture1 />} />
+      <Route path="/gallery-picture-2" element={<GalleryPicture2 />} />
+      <Route path="/gallery-picture-3" element={<GalleryPicture3 />} />
       <Route path="/planet-room" element={<PlanetRoom />} />
     </Routes>
   </div>
