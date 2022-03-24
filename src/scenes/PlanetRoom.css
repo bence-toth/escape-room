@@ -24,6 +24,9 @@
   position: absolute;
   animation-play-state: paused;
 }
+.play .orbit {
+  animation-play-state: running;
+}
 .orbit:nth-child(1) {
   width: 2vh;
   animation-duration: 14s;
@@ -55,19 +58,22 @@
 .orbit > .flash {
   position: absolute;
   inset: 0;
-  animation: flash 1.5s linear 1;
   border-radius: 50%;
 }
-.orbit:nth-child(1) > .flash {
+.play .orbit:nth-child(1) > .flash {
+  animation: flash 1.5s linear 1;
   animation-delay: 3s;
 }
-.orbit:nth-child(2) > .flash {
+.play .orbit:nth-child(2) > .flash {
+  animation: flash 1.5s linear 1;
   animation-delay: 6s;
 }
-.orbit:nth-child(3) > .flash {
+.play .orbit:nth-child(3) > .flash {
+  animation: flash 1.5s linear 1;
   animation-delay: 9s;
 }
-.orbit:nth-child(4) > .flash {
+.play .orbit:nth-child(4) > .flash {
+  animation: flash 1.5s linear 1;
   animation-delay: 12s;
 }
 

@@ -27,6 +27,12 @@ const initialGameState = {
     code: "                     ",
     isPuzzleSolved: false,
   },
+  planetRoom: {
+    arePlanetsMoving: false,
+  },
+  drawingRoom: {
+    isSwitchOn: false,
+  },
 };
 
 const useGameState = () => {

@@ -9,7 +9,7 @@ import Picture from "../objects/Picture";
 
 import starMap from "../assets/StarMap.png";
 
-const CombinationRoom = () => {
+const Gallery4 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -81,4 +81,4 @@ const CombinationRoom = () => {
   );
 };
 
-export default CombinationRoom;
+export default Gallery4;

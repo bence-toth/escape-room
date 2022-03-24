@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
+import Switch from "../objects/Switch";
 
 import "./PlanetRoom.css";
 import Stars from "../assets/Stars.jpg";
@@ -12,6 +13,8 @@ import PlanetTextureRed from "../assets/PlanetTexture-Red.jpg";
 import PlanetTextureBlue from "../assets/PlanetTexture-Blue.jpg";
 import PlanetTextureCyan from "../assets/PlanetTexture-Cyan.jpg";
 import PlanetTextureYellow from "../assets/PlanetTexture-Yellow.jpg";
+
+import { GameStateContext } from "../App";
 
 const ellipseAttrsToPath = (rx, cx, ry, cy) =>
   `M${cx - rx},${cy}a${rx},${ry} 0 1,0 ${rx * 2},0a${rx},${ry} 0 1,0 -${
@@ -25,7 +28,7 @@ const planetTextures = [
   PlanetTextureYellow,
 ];
 
-const CombinationRoom = () => {
+const PlanetRoom = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,6 +46,8 @@ const CombinationRoom = () => {
       setCanvasHeight(document.querySelector(".gameCanvas")?.offsetHeight);
     });
   }, []);
+
+  const { gameState, updateGameState } = useContext(GameStateContext);
 
   return (
     <div
@@ -77,12 +82,23 @@ const CombinationRoom = () => {
           navigate("/gallery-4");
         }}
       />
+      <Switch
+        position="0"
+        isOn={gameState.planetRoom.arePlanetsMoving}
+        onToggle={() => {
+          updateGameState(
+            "planetRoom",
+            "arePlanetsMoving",
+            !gameState.planetRoom.arePlanetsMoving
+          );
+        }}
+      />
       <div className="orbitWrapper">
         <div
           className="sun"
           style={{ backgroundImage: `url(${SunTexture})` }}
         ></div>
-        <div>
+        <div className={gameState.planetRoom.arePlanetsMoving ? "play" : ""}>
           {[0, 1, 2, 3].map((index) => (
             <div
               className="orbit"
@@ -106,4 +122,4 @@ const CombinationRoom = () => {
   );
 };
 
-export default CombinationRoom;
+export default PlanetRoom;

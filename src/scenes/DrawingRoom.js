@@ -1,12 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
+import Switch from "../objects/Switch";
 
 import WallDrawing from "../assets/WallDrawing.png";
+
+import { GameStateContext } from "../App";
 
 const CombinationRoom = () => {
   const navigate = useNavigate();
@@ -14,6 +17,8 @@ const CombinationRoom = () => {
   useEffect(() => {
     localStorage.setItem("game-location", "/drawing-room");
   }, []);
+
+  const { gameState, updateGameState } = useContext(GameStateContext);
 
   return (
     <div className="scene">
@@ -49,9 +54,25 @@ const CombinationRoom = () => {
           top: "52%",
           left: "50%",
           transform: "translate(-50%, -50%)",
+          opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.1,
         }}
       />
-      <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      <Switch
+        position="-37"
+        isOn={gameState.drawingRoom.isSwitchOn}
+        onToggle={() => {
+          updateGameState(
+            "drawingRoom",
+            "isSwitchOn",
+            !gameState.drawingRoom.isSwitchOn
+          );
+        }}
+      />
+      <Lamp
+        isOn={gameState.drawingRoom.isSwitchOn}
+        styles={{ color: "hsl(23, 10%, 26%)" }}
+        position="0"
+      />
     </div>
   );
 };
