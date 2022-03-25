@@ -8,7 +8,7 @@ const WallRight = ({
 }) => (
   <svg className="gameObject" viewBox="0 0 211.66667 158.75">
     <path
-      style={{ fill: styles.wallColor }}
+      style={{ fill: styles.wallColor, transition: "fill 0.5s" }}
       d="M 22.94395,134.94364 V 15.875822 L 0,0.24424343 V 158.75 Z"
     />
     {withDoor && (

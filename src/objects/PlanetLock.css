@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   height: 90%;
   aspect-ratio: 1 / 1;
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(235, 100%, 10%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -18,36 +18,32 @@
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   transition: transform 2.5s;
-  transition-timing-function: cubic-bezier(0.5, -0.5, 0.4, 1.5);
+  transition-timing-function: cubic-bezier(0.46, -0.45, 0.35, 1);
 }
 
 .ring1 {
   width: 85%;
-  background-color: hsl(0, 0%, 15%);
+  background-color: hsl(235, 90%, 15%);
 }
 
 .ring2 {
   width: 70%;
-  background-color: green;
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(235, 80%, 20%);
 }
 
 .ring3 {
   width: 55%;
-  background-color: yellow;
-  background-color: hsl(0, 0%, 25%);
+  background-color: hsl(235, 70%, 25%);
 }
 
 .ring4 {
   width: 40%;
-  background-color: magenta;
-  background-color: hsl(0, 0%, 30%);
+  background-color: hsl(235, 60%, 30%);
 }
 
 .ring5 {
   width: 25%;
-  background-color: purple;
-  background-color: hsl(0, 0%, 35%);
+  background-color: hsl(235, 50%, 35%);
 }
 
 .ring6 {
@@ -79,26 +75,22 @@
   top: 0.75vh;
   left: 50%;
   transform: translateX(-50%);
-  background-color: red;
 }
 
 .ring .gem2 {
   top: 50%;
   right: 0.75vh;
   transform: translateY(-50%);
-  background-color: green;
 }
 
 .ring .gem3 {
   bottom: 0.75vh;
   left: 50%;
   transform: translateX(-50%);
-  background-color: blue;
 }
 
 .ring .gem4 {
   top: 50%;
   left: 0.75vh;
   transform: translateY(-50%);
-  background-color: yellow;
 }

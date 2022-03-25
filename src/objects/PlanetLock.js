@@ -32,6 +32,9 @@ const PlanetLock = ({
         className="ring ring1"
         style={{ transform: `rotate(${ring1 * 90}deg)` }}
         onClick={() => {
+          setRing4(ring4 + 1);
+          setRing3(ring3 + 1);
+          setRing2(ring2 + 1);
           setRing1(ring1 + 1);
         }}
       >
@@ -56,6 +59,8 @@ const PlanetLock = ({
         className="ring ring2"
         style={{ transform: `rotate(${ring2 * 90}deg)` }}
         onClick={() => {
+          setRing4(ring4 + 1);
+          setRing3(ring3 + 1);
           setRing2(ring2 + 1);
         }}
       >
@@ -80,6 +85,7 @@ const PlanetLock = ({
         className="ring ring3"
         style={{ transform: `rotate(${ring3 * 90}deg)` }}
         onClick={() => {
+          setRing4(ring4 + 1);
           setRing3(ring3 + 1);
         }}
       >
@@ -127,7 +133,10 @@ const PlanetLock = ({
       <div className="ring ring5"></div>
       <div
         className="ring ring6"
-        style={{ backgroundImage: `url(${SunTexture})` }}
+        style={{
+          backgroundImage: `url(${SunTexture})`,
+          boxShadow: `0 0 10vh 10vh hsla(35, 100%, 50%, 0.2)`,
+        }}
       ></div>
       <div className="rectangle"></div>
     </div>

@@ -55,25 +55,32 @@ const PlanetRoom = () => {
       style={{
         backgroundImage: `url(${Stars})`,
         backgroundSize: "cover",
-        boxShadow: "0 0 20vh 15vh inset hsla(235, 29%, 40%, 0.6)",
       }}
     >
       <Room
         styles={{
-          floorColor: "hsl(235, 29%, 26%)",
-          wallColor: "transparent",
+          floorColor: gameState.planetRoom.arePlanetsMoving
+            ? "hsla(235, 29%, 26%, 0.5)"
+            : "hsl(195, 19%, 36%)",
+          wallColor: gameState.planetRoom.arePlanetsMoving
+            ? "hsla(235, 29%, 26%, 0.25)"
+            : "hsl(195, 19%, 46%)",
         }}
       />
       <WallLeft
         styles={{
-          wallColor: "hsl(235, 29%, 28%)",
+          wallColor: gameState.planetRoom.arePlanetsMoving
+            ? "hsla(235, 29%, 28%, 0.5)"
+            : "hsl(195, 19%, 42%)",
         }}
       />
       <WallRight
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(234, 41%, 15%)",
-          wallColor: "hsl(235, 29%, 28%)",
+          wallColor: gameState.planetRoom.arePlanetsMoving
+            ? "hsla(235, 29%, 28%, 0.5)"
+            : "hsl(195, 19%, 42%)",
         }}
         withDoor
         isDoorOpen
@@ -94,7 +101,10 @@ const PlanetRoom = () => {
         }}
         hasLever
       />
-      <div className="orbitWrapper">
+      <div
+        className="orbitWrapper"
+        data-visible={gameState.planetRoom.arePlanetsMoving}
+      >
         <div
           className="sun"
           style={{ backgroundImage: `url(${SunTexture})` }}
@@ -111,10 +121,16 @@ const PlanetRoom = () => {
                   (index + 3) * (canvasWidth / 50),
                   canvasHeight / 4
                 )}")`,
-                backgroundImage: `url(${planetTextures[index]})`,
               }}
             >
-              <div className="flash"></div>
+              <div className="flash">
+                <div
+                  className="surface"
+                  style={{
+                    backgroundImage: `url(${planetTextures[index]})`,
+                  }}
+                ></div>
+              </div>
             </div>
           ))}
         </div>
