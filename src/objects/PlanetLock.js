@@ -5,15 +5,35 @@ import PlanetTextureRed from "../assets/PlanetTexture-Red.jpg";
 import PlanetTextureBlue from "../assets/PlanetTexture-Blue.jpg";
 import PlanetTextureCyan from "../assets/PlanetTexture-Cyan.jpg";
 import PlanetTextureYellow from "../assets/PlanetTexture-Yellow.jpg";
+import GemTextureGray from "../assets/GemTexture-Gray.jpg";
+import GemTextureOrange from "../assets/GemTexture-Orange.jpg";
+import GemTexturePurple from "../assets/GemTexture-Purple.jpg";
+import GemTextureRainbow from "../assets/GemTexture-Rainbow.jpg";
 
 import "./PlanetLock.css";
 
 const planetTextures = [
-  PlanetTextureRed,
+  GemTextureGray,
   PlanetTextureBlue,
   PlanetTextureCyan,
+  GemTextureOrange,
+  GemTexturePurple,
   PlanetTextureYellow,
+  GemTextureRainbow,
+  PlanetTextureRed,
 ];
+
+const RingContent = () => (
+  <>
+    {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+      <div
+        key={index}
+        className={`gem gem${index}`}
+        style={{ backgroundImage: `url(${planetTextures[index - 1]})` }}
+      ></div>
+    ))}
+  </>
+);
 
 const PlanetLock = ({
   code,
@@ -30,105 +50,45 @@ const PlanetLock = ({
     <div className={`planetLock ${isSmall ? "small" : ""}`} onClick={onView}>
       <div
         className="ring ring1"
-        style={{ transform: `rotate(${ring1 * 90}deg)` }}
+        style={{ transform: `rotate(${ring1 * 45}deg)` }}
         onClick={() => {
-          setRing4(ring4 + 1);
-          setRing3(ring3 + 1);
-          setRing2(ring2 + 1);
+          setRing4(ring4 + 4);
+          setRing3(ring3 + 3);
+          setRing2(ring2 + 2);
           setRing1(ring1 + 1);
         }}
       >
-        <div
-          className="gem gem1"
-          style={{ backgroundImage: `url(${planetTextures[0]})` }}
-        ></div>
-        <div
-          className="gem gem2"
-          style={{ backgroundImage: `url(${planetTextures[1]})` }}
-        ></div>
-        <div
-          className="gem gem3"
-          style={{ backgroundImage: `url(${planetTextures[2]})` }}
-        ></div>
-        <div
-          className="gem gem4"
-          style={{ backgroundImage: `url(${planetTextures[3]})` }}
-        ></div>
+        <RingContent />
       </div>
       <div
         className="ring ring2"
-        style={{ transform: `rotate(${ring2 * 90}deg)` }}
+        style={{ transform: `rotate(${ring2 * 45}deg)` }}
         onClick={() => {
-          setRing4(ring4 + 1);
-          setRing3(ring3 + 1);
+          setRing4(ring4 + 3);
+          setRing3(ring3 + 2);
           setRing2(ring2 + 1);
         }}
       >
-        <div
-          className="gem gem1"
-          style={{ backgroundImage: `url(${planetTextures[0]})` }}
-        ></div>
-        <div
-          className="gem gem2"
-          style={{ backgroundImage: `url(${planetTextures[1]})` }}
-        ></div>
-        <div
-          className="gem gem3"
-          style={{ backgroundImage: `url(${planetTextures[2]})` }}
-        ></div>
-        <div
-          className="gem gem4"
-          style={{ backgroundImage: `url(${planetTextures[3]})` }}
-        ></div>
+        <RingContent />
       </div>
       <div
         className="ring ring3"
-        style={{ transform: `rotate(${ring3 * 90}deg)` }}
+        style={{ transform: `rotate(${ring3 * 45}deg)` }}
         onClick={() => {
-          setRing4(ring4 + 1);
+          setRing4(ring4 + 2);
           setRing3(ring3 + 1);
         }}
       >
-        <div
-          className="gem gem1"
-          style={{ backgroundImage: `url(${planetTextures[0]})` }}
-        ></div>
-        <div
-          className="gem gem2"
-          style={{ backgroundImage: `url(${planetTextures[1]})` }}
-        ></div>
-        <div
-          className="gem gem3"
-          style={{ backgroundImage: `url(${planetTextures[2]})` }}
-        ></div>
-        <div
-          className="gem gem4"
-          style={{ backgroundImage: `url(${planetTextures[3]})` }}
-        ></div>
+        <RingContent />
       </div>
       <div
         className="ring ring4"
-        style={{ transform: `rotate(${ring4 * 90}deg)` }}
+        style={{ transform: `rotate(${ring4 * 45}deg)` }}
         onClick={() => {
           setRing4(ring4 + 1);
         }}
       >
-        <div
-          className="gem gem1"
-          style={{ backgroundImage: `url(${planetTextures[0]})` }}
-        ></div>
-        <div
-          className="gem gem2"
-          style={{ backgroundImage: `url(${planetTextures[1]})` }}
-        ></div>
-        <div
-          className="gem gem3"
-          style={{ backgroundImage: `url(${planetTextures[2]})` }}
-        ></div>
-        <div
-          className="gem gem4"
-          style={{ backgroundImage: `url(${planetTextures[3]})` }}
-        ></div>
+        <RingContent />
       </div>
       <div className="ring ring5"></div>
       <div

@@ -24,21 +24,25 @@
 .ring1 {
   width: 85%;
   background-color: hsl(235, 90%, 15%);
+  transition-duration: 1.75s;
 }
 
 .ring2 {
   width: 70%;
   background-color: hsl(235, 80%, 20%);
+  transition-duration: 2s;
 }
 
 .ring3 {
   width: 55%;
   background-color: hsl(235, 70%, 25%);
+  transition-duration: 2.25s;
 }
 
 .ring4 {
   width: 40%;
   background-color: hsl(235, 60%, 30%);
+  transition-duration: 2.5s;
 }
 
 .ring5 {
@@ -72,25 +76,45 @@
 }
 
 .ring .gem1 {
-  top: 0.75vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ring .gem2 {
   top: 50%;
   right: 0.75vh;
   transform: translateY(-50%);
 }
 
+.ring .gem2 {
+  bottom: 15%;
+  right: 15%;
+}
+
 .ring .gem3 {
-  bottom: 0.75vh;
   left: 50%;
+  bottom: 0.75vh;
   transform: translateX(-50%);
 }
 
 .ring .gem4 {
+  bottom: 15%;
+  left: 15%;
+}
+
+.ring .gem5 {
   top: 50%;
   left: 0.75vh;
   transform: translateY(-50%);
+}
+
+.ring .gem6 {
+  top: 15%;
+  left: 15%;
+}
+
+.ring .gem7 {
+  top: 0.75vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ring .gem8 {
+  top: 15%;
+  right: 15%;
 }
