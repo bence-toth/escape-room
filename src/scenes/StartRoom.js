@@ -26,6 +26,10 @@ import { LocationChangeContext } from "../App";
 // Add random objects in random rooms
 // Add columns room
 // QR code for the game
+// Add random objects that can be picked up:
+//   - ring
+//   - apple
+// Add missing paintings
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
