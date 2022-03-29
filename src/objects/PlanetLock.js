@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 import SunTexture from "../assets/SunTexture.jpg";
 import PlanetTextureRed from "../assets/PlanetTexture-Red.jpg";
@@ -40,11 +40,17 @@ const PlanetLock = ({
   onChangeCode = () => {},
   isSmall,
   onView = () => {},
+  isPuzzleSolved,
 }) => {
-  const [ring1, setRing1] = useState(0);
-  const [ring2, setRing2] = useState(0);
-  const [ring3, setRing3] = useState(0);
-  const [ring4, setRing4] = useState(0);
+  const codes = code.split("");
+  const [ring1, setRing1] = useState(+codes[0]);
+  const [ring2, setRing2] = useState(+codes[1]);
+  const [ring3, setRing3] = useState(+codes[2]);
+  const [ring4, setRing4] = useState(+codes[3]);
+
+  useEffect(() => {
+    onChangeCode([ring1 % 8, ring2 % 8, ring3 % 8, ring4 % 8].join(""));
+  }, [onChangeCode, ring1, ring2, ring3, ring4]);
 
   return (
     <div className={`planetLock ${isSmall ? "small" : ""}`} onClick={onView}>
@@ -52,6 +58,9 @@ const PlanetLock = ({
         className="ring ring1"
         style={{ transform: `rotate(${ring1 * 45}deg)` }}
         onClick={() => {
+          if (isSmall || isPuzzleSolved) {
+            return;
+          }
           setRing4(ring4 + 4);
           setRing3(ring3 + 3);
           setRing2(ring2 + 2);
@@ -64,6 +73,9 @@ const PlanetLock = ({
         className="ring ring2"
         style={{ transform: `rotate(${ring2 * 45}deg)` }}
         onClick={() => {
+          if (isSmall || isPuzzleSolved) {
+            return;
+          }
           setRing4(ring4 + 3);
           setRing3(ring3 + 2);
           setRing2(ring2 + 1);
@@ -75,6 +87,9 @@ const PlanetLock = ({
         className="ring ring3"
         style={{ transform: `rotate(${ring3 * 45}deg)` }}
         onClick={() => {
+          if (isSmall || isPuzzleSolved) {
+            return;
+          }
           setRing4(ring4 + 2);
           setRing3(ring3 + 1);
         }}
@@ -85,6 +100,9 @@ const PlanetLock = ({
         className="ring ring4"
         style={{ transform: `rotate(${ring4 * 45}deg)` }}
         onClick={() => {
+          if (isSmall || isPuzzleSolved) {
+            return;
+          }
           setRing4(ring4 + 1);
         }}
       >

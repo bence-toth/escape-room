@@ -17,6 +17,7 @@ import Corridor7 from "./scenes/Corridor7";
 import Corridor8 from "./scenes/Corridor8";
 import Corridor9 from "./scenes/Corridor9";
 import Corridor10 from "./scenes/Corridor10";
+import PlanetLock from "./scenes/PlanetLockClose";
 import Gallery1 from "./scenes/Gallery1";
 import Gallery2 from "./scenes/Gallery2";
 import Gallery3 from "./scenes/Gallery3";
@@ -74,6 +75,7 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/gallery-picture-11" element={<GalleryPicture11 />} />
       <Route path="/gallery-picture-12" element={<GalleryPicture12 />} />
       <Route path="/planet-room" element={<PlanetRoom />} />
+      <Route path="/planet-lock" element={<PlanetLock />} />
     </Routes>
   </div>
 );

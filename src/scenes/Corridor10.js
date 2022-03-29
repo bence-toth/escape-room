@@ -46,13 +46,19 @@ const CombinationRoom = () => {
           wallColor: "hsl(63, 19%, 40%)",
         }}
         withDoor
-        isDoorOpen={false}
+        isDoorOpen={gameState.corridor10.isPuzzleSolved}
         isBack
         onWalkThrough={() => {
-          navigate("/corridor-2");
+          // navigate("/corridor-2");
         }}
       />
-      <PlanetLock />
+      <PlanetLock
+        code={gameState.corridor10.code}
+        isSmall
+        onView={() => {
+          navigate("/planet-lock");
+        }}
+      />
       <Switch
         position="-35.25"
         isOn={gameState.corridor10.isSwitchOn}

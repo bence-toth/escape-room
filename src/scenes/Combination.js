@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useCallback } from "react";
 
 import Wall from "../objects/Wall";
 import CombinationLock from "../objects/CombinationLock";
@@ -17,14 +17,17 @@ const Combination = () => {
   const { gameState, updateGameState } = useContext(GameStateContext);
   const updateMessage = useContext(MessageContext);
 
-  const onChangeCode = (code) => {
-    updateGameState("combination", "code", code);
-    if (code === "111111111111111111111") {
-      // TODO: Replace code "127492020397316804710"
-      updateMessage("You hear something clicking");
-      updateGameState("combination", "isPuzzleSolved", true);
-    }
-  };
+  const onChangeCode = useCallback(
+    (code) => {
+      updateGameState("combination", "code", code);
+      if (code === "111111111111111111111") {
+        // TODO: Replace code "127492020397316804710"
+        updateMessage("You hear something clicking");
+        updateGameState("combination", "isPuzzleSolved", true);
+      }
+    },
+    [updateGameState, updateMessage]
+  );
 
   return (
     <div className="scene">

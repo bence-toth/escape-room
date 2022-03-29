@@ -79,6 +79,8 @@ const initialGameState = {
   },
   corridor10: {
     isSwitchOn: true,
+    code: "00000",
+    isPuzzleSolved: false,
   },
 };
 
