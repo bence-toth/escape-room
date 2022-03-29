@@ -18,13 +18,14 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
-// Misplace lever
-// Engagement survey number (send physical letter)
-// Add random objects in random rooms
-// Add columns
-// QR code for the game
+// Add long carpets to gallery
 // Create wall writings on the corridor (day numbers should also be a code)
 // Add more drawings to random rooms
+
+// Engagement survey number (send physical letter)
+// Add random objects in random rooms
+// Add columns room
+// QR code for the game
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);

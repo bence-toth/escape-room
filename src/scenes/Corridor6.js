@@ -5,16 +5,21 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import LeverHandle from "../objects/LeverHandle";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
+import { InventoryContext } from "../App";
+import { MessageContext } from "../App";
 
 const CombinationRoom = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
+  const inventory = useContext(InventoryContext);
+  const updateMessage = useContext(MessageContext);
 
   useEffect(() => {
-    localStorage.setItem("game-location", "/corridor-5");
+    localStorage.setItem("game-location", "/corridor-6");
   }, []);
 
   return (
@@ -84,6 +89,16 @@ const CombinationRoom = () => {
         and who we claim to be.
         <br />
       </p>
+      {!gameState.corridor6.isLeverHandleTaken && (
+        <LeverHandle
+          position={35}
+          onTake={() => {
+            inventory.addItem({ id: "leverHandle", picture: "leverHandle" });
+            updateMessage("You found a lever handle");
+            updateGameState("corridor6", "isLeverHandleTaken", true);
+          }}
+        />
+      )}
       <Switch
         position="-35.25"
         isOn={gameState.corridor6.isSwitchOn}

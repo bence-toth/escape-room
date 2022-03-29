@@ -30,6 +30,7 @@ const initialGameState = {
     isPuzzleSolved: false,
   },
   planetRoom: {
+    isLeverInPlace: false,
     arePlanetsMoving: false,
     isSwitchOn: true,
   },

@@ -3,6 +3,7 @@ import { InventoryContext } from "./App";
 
 import key from "./inventoryItems/key.png";
 import metalRing from "./inventoryItems/metal-ring.png";
+import leverHandle from "./inventoryItems/lever-handle.png";
 
 import "./Inventory.css";
 
@@ -11,6 +12,7 @@ const numberOfSlots = 10;
 const inventoryItems = {
   key,
   metalRing,
+  leverHandle,
 };
 
 const Inventory = () => {

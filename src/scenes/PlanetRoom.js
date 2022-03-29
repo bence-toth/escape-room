@@ -16,8 +16,10 @@ import PlanetTextureCyan from "../assets/PlanetTexture-Cyan.jpg";
 import PlanetTextureYellow from "../assets/PlanetTexture-Yellow.jpg";
 import WallDrawing from "../assets/WallDrawing-Planets.png";
 
+import { InventoryContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
+import { MessageContext } from "../App";
 
 const ellipseAttrsToPath = (rx, cx, ry, cy) =>
   `M${cx - rx},${cy}a${rx},${ry} 0 1,0 ${rx * 2},0a${rx},${ry} 0 1,0 -${
@@ -33,6 +35,8 @@ const planetTextures = [
 
 const PlanetRoom = () => {
   const navigate = useContext(LocationChangeContext);
+  const inventory = useContext(InventoryContext);
+  const updateMessage = useContext(MessageContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/planet-room");
@@ -115,7 +119,15 @@ const PlanetRoom = () => {
             !gameState.planetRoom.arePlanetsMoving
           );
         }}
-        hasLever
+        onTouch={() => {
+          if (inventory.selectedItem === "leverHandle") {
+            inventory.removeItem({ id: "leverHandle" });
+            updateGameState("planetRoom", "isLeverInPlace", true);
+          } else {
+            updateMessage("Something is missing from here");
+          }
+        }}
+        hasLever={gameState.planetRoom.isLeverInPlace}
       />
       <div
         style={{
