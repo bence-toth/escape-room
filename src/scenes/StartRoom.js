@@ -18,7 +18,6 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
-// Fix gallery picture wall colors
 // Misplace lever
 // Engagement survey number (send physical letter)
 // Add random objects in random rooms

@@ -16,7 +16,7 @@ const GalleryPicture1 = () => {
 
   return (
     <div className="scene">
-      <Wall styles={{ color: "hsl(23, 19%, 46%)" }} />
+      <Wall styles={{ color: "hsl(100, 19%, 46%)" }} />
       <PictureBig
         onLeave={() => {
           navigate("/gallery-1");
