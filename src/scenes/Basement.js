@@ -76,6 +76,9 @@ const StartRoom = () => {
           frameColor: "hsl(23, 19%, 12%)",
           doorColor: "hsl(23, 19%, 16%)",
         }}
+        onOpen={() => {
+          updateMessage("The door seems to be locked");
+        }}
         onWalkThrough={() => {
           navigate("/drawing-room");
         }}

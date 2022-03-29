@@ -95,17 +95,32 @@ const Gallery4 = () => {
       />
       <Switch
         position="-35.25"
-        isOn={gameState.gallery.isSwitchOn}
+        isOn={gameState.gallery4.isRemoteSwitchOn}
         onToggle={() => {
           updateMessage("The switch does not seem to do anything");
           updateGameState(
-            "gallery",
-            "isSwitchOn",
-            !gameState.gallery.isSwitchOn
+            "gallery4",
+            "isRemoteSwitchOn",
+            !gameState.gallery4.isRemoteSwitchOn
           );
         }}
       />
-      <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      <Switch
+        position="35.25"
+        isOn={gameState.gallery4.isSwitchOn}
+        onToggle={() => {
+          updateGameState(
+            "gallery4",
+            "isSwitchOn",
+            !gameState.gallery4.isSwitchOn
+          );
+        }}
+      />
+      <Lamp
+        isOn={gameState.gallery4.isSwitchOn}
+        styles={{ color: "hsl(23, 10%, 26%)" }}
+        position="0"
+      />
     </div>
   );
 };

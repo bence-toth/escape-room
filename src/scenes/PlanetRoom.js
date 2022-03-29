@@ -5,6 +5,7 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Lever from "../objects/Lever";
+import Switch from "../objects/Switch";
 
 import "./PlanetRoom.css";
 import Stars from "../assets/Stars.jpg";
@@ -120,9 +121,27 @@ const PlanetRoom = () => {
         style={{
           transition: "opacity 1s",
           opacity: gameState.planetRoom.arePlanetsMoving ? 0 : 1,
+          pointerEvents: gameState.planetRoom.arePlanetsMoving
+            ? "none"
+            : "auto",
         }}
       >
-        <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+        <Switch
+          position="35.25"
+          isOn={gameState.planetRoom.isSwitchOn}
+          onToggle={() => {
+            updateGameState(
+              "planetRoom",
+              "isSwitchOn",
+              !gameState.planetRoom.isSwitchOn
+            );
+          }}
+        />
+        <Lamp
+          isOn={gameState.planetRoom.isSwitchOn}
+          styles={{ color: "hsl(23, 10%, 26%)" }}
+          position="0"
+        />
       </div>
       <div
         className="orbitWrapper"

@@ -5,15 +5,18 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
+import Switch from "../objects/Switch";
 
 import EgerVolgy from "../assets/04-Egervolgy.jpg";
 import Pyramids from "../assets/05-Pyramids.jpg";
 import Oasis from "../assets/06-Oasis.jpg";
 
 import { LocationChangeContext } from "../App";
+import { GameStateContext } from "../App";
 
 const Gallery2 = () => {
   const navigate = useContext(LocationChangeContext);
+  const { gameState, updateGameState } = useContext(GameStateContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/gallery-2");
@@ -88,7 +91,22 @@ const Gallery2 = () => {
         position={-22.5}
         withLabel
       />
-      <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      <Switch
+        position="35.25"
+        isOn={gameState.gallery2.isSwitchOn}
+        onToggle={() => {
+          updateGameState(
+            "gallery2",
+            "isSwitchOn",
+            !gameState.gallery2.isSwitchOn
+          );
+        }}
+      />
+      <Lamp
+        isOn={gameState.gallery2.isSwitchOn}
+        styles={{ color: "hsl(23, 10%, 26%)" }}
+        position="0"
+      />
     </div>
   );
 };

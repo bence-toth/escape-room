@@ -43,9 +43,20 @@ const CombinationRoom = () => {
       />
       <Switch
         position="-45"
-        isOn={gameState.combinationRoom.isSwitchOn}
+        isOn={gameState.combinationRoom.isRemoteSwitchOn}
         onToggle={() => {
           updateMessage("The switch does not seem to do anything");
+          updateGameState(
+            "combinationRoom",
+            "isRemoteSwitchOn",
+            !gameState.combinationRoom.isRemoteSwitchOn
+          );
+        }}
+      />
+      <Switch
+        position="-15.25"
+        isOn={gameState.combinationRoom.isSwitchOn}
+        onToggle={() => {
           updateGameState(
             "combinationRoom",
             "isSwitchOn",
@@ -72,7 +83,11 @@ const CombinationRoom = () => {
         }}
         isSmall
       />
-      <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      <Lamp
+        isOn={gameState.combinationRoom.isSwitchOn}
+        styles={{ color: "hsl(23, 10%, 26%)" }}
+        position="0"
+      />
     </div>
   );
 };

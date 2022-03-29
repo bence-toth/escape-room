@@ -68,8 +68,8 @@ const StartRoom = () => {
       <Plant
         showColors={
           isSwitchOn &&
-          gameState.gallery.isSwitchOn &&
-          gameState.combinationRoom.isSwitchOn
+          gameState.gallery4.isRemoteSwitchOn &&
+          gameState.combinationRoom.isRemoteSwitchOn
         }
       />
       <Switch
@@ -98,12 +98,12 @@ const StartRoom = () => {
         />
       )}
       <Lamp
-        isOn={gameState.gallery.isSwitchOn}
+        isOn={gameState.gallery4.isRemoteSwitchOn}
         styles={{ color: "hsl(50, 20%, 26%)" }}
         position="-30"
       />
       <Lamp
-        isOn={gameState.combinationRoom.isSwitchOn}
+        isOn={gameState.combinationRoom.isRemoteSwitchOn}
         styles={{ color: "hsl(50, 20%, 26%)" }}
         position="0"
       />

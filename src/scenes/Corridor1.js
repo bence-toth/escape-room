@@ -4,11 +4,14 @@ import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
+import Switch from "../objects/Switch";
 
 import { LocationChangeContext } from "../App";
+import { GameStateContext } from "../App";
 
 const CombinationRoom = () => {
   const navigate = useContext(LocationChangeContext);
+  const { gameState, updateGameState } = useContext(GameStateContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/corridor-1");
@@ -81,7 +84,22 @@ const CombinationRoom = () => {
         and who we claim to be.
         <br />
       </p>
-      <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      <Switch
+        position="-35.25"
+        isOn={gameState.corridor1.isSwitchOn}
+        onToggle={() => {
+          updateGameState(
+            "corridor1",
+            "isSwitchOn",
+            !gameState.corridor1.isSwitchOn
+          );
+        }}
+      />
+      <Lamp
+        isOn={gameState.corridor1.isSwitchOn}
+        styles={{ color: "hsl(23, 10%, 26%)" }}
+        position="0"
+      />
     </div>
   );
 };

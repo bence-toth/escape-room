@@ -22,7 +22,8 @@ const initialGameState = {
     isDoorOpen: false,
   },
   combinationRoom: {
-    isSwitchOn: false,
+    isSwitchOn: true,
+    isRemoteSwitchOn: false,
   },
   combination: {
     code: "                     ",
@@ -30,12 +31,53 @@ const initialGameState = {
   },
   planetRoom: {
     arePlanetsMoving: false,
+    isSwitchOn: true,
   },
   drawingRoom: {
     isSwitchOn: false,
   },
-  gallery: {
-    isSwitchOn: false,
+  gallery1: {
+    isSwitchOn: true,
+  },
+  gallery2: {
+    isSwitchOn: true,
+  },
+  gallery3: {
+    isSwitchOn: true,
+  },
+  gallery4: {
+    isSwitchOn: true,
+    isRemoteSwitchOn: false,
+  },
+  corridor1: {
+    isSwitchOn: true,
+  },
+  corridor2: {
+    isSwitchOn: true,
+  },
+  corridor3: {
+    isSwitchOn: true,
+  },
+  corridor4: {
+    isSwitchOn: true,
+  },
+  corridor5: {
+    isSwitchOn: true,
+  },
+  corridor6: {
+    isSwitchOn: true,
+  },
+  corridor7: {
+    isSwitchOn: true,
+  },
+  corridor8: {
+    isSwitchOn: true,
+  },
+  corridor9: {
+    isSwitchOn: true,
+  },
+  corridor10: {
+    isSwitchOn: true,
   },
 };
 
