@@ -26,6 +26,7 @@ import { LocationChangeContext } from "../App";
 // QR code for the game
 // Create wall writings on the corridor (day numbers should also be a code)
 // Add switch for every light
+// Add more drawings to random rooms
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);

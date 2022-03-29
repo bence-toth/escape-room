@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 
 import Room from "../objects/Room";
+import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Lever from "../objects/Lever";
@@ -12,6 +13,7 @@ import PlanetTextureRed from "../assets/PlanetTexture-Red.jpg";
 import PlanetTextureBlue from "../assets/PlanetTexture-Blue.jpg";
 import PlanetTextureCyan from "../assets/PlanetTexture-Cyan.jpg";
 import PlanetTextureYellow from "../assets/PlanetTexture-Yellow.jpg";
+import WallDrawing from "../assets/WallDrawing-Planets.png";
 
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
@@ -89,6 +91,19 @@ const PlanetRoom = () => {
           navigate("/gallery-4");
         }}
       />
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "60%",
+          top: "55%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          transition: "opacity 1s",
+          opacity: gameState.planetRoom.arePlanetsMoving ? 0 : 1,
+        }}
+      />
       <Lever
         position="0"
         isTurned={gameState.planetRoom.arePlanetsMoving}
@@ -101,6 +116,14 @@ const PlanetRoom = () => {
         }}
         hasLever
       />
+      <div
+        style={{
+          transition: "opacity 1s",
+          opacity: gameState.planetRoom.arePlanetsMoving ? 0 : 1,
+        }}
+      >
+        <Lamp isOn styles={{ color: "hsl(23, 10%, 26%)" }} position="0" />
+      </div>
       <div
         className="orbitWrapper"
         data-visible={gameState.planetRoom.arePlanetsMoving}
