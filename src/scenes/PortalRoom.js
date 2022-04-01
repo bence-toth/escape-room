@@ -64,7 +64,7 @@ const PortalRoom = () => {
       <TimeMachine
         position={27}
         onObserve={() => {
-          console.log("observe");
+          navigate("/portal-room-screen");
         }}
       />
       <Lamp
