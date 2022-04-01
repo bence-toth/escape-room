@@ -67,22 +67,21 @@ const Corridor4 = () => {
       >
         Day #4
         <br />
-        we could ever ask for...
         <br />
-        What do they believe?
+        I have traveled many times. I have seen many things.
         <br />
-        Where are all their fathers?
+        I have a difficulty telling timelines apart.
         <br />
-        Where are all their mothers?
+        I started feeling timesick.
         <br />
-        It's hard to reach across the
         <br />
-        unbelievable distances between
+        It's hard to reach across the distances between
         <br />
-        what we really are
+        what truth really is and what we claim it to be.
         <br />
-        and who we claim to be.
+        I could get stuck in the past. Will take make it my future?
         <br />
+        <br />I have to undo this. Did you help me? Would you?
       </p>
       <Switch
         position="-35.25"

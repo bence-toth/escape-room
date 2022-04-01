@@ -72,21 +72,6 @@ const Corridor6 = () => {
       >
         Day #6
         <br />
-        we could ever ask for...
-        <br />
-        What do they believe?
-        <br />
-        Where are all their fathers?
-        <br />
-        Where are all their mothers?
-        <br />
-        It's hard to reach across the
-        <br />
-        unbelievable distances between
-        <br />
-        what we really are
-        <br />
-        and who we claim to be.
         <br />
       </p>
       {!gameState.corridor6.isLeverHandleTaken && (

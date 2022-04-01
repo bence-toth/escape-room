@@ -67,22 +67,25 @@ const Corridor3 = () => {
       >
         Day #3
         <br />
-        we could ever ask for...
         <br />
-        What do they believe?
+        We got time wrong. Directionality is all wrong.
         <br />
-        Where are all their fathers?
+        Time is not going forward. Of backward. It's not even going.
         <br />
-        Where are all their mothers?
         <br />
-        It's hard to reach across the
+        I am able to jump between points in space-time
         <br />
-        unbelievable distances between
+        where our time crystals exist. Existed. Will exist. Would.
         <br />
-        what we really are
         <br />
-        and who we claim to be.
+        I am worried about the possible consequences.
         <br />
+        What happens to the past if we changed the present?
+        <br />
+        What if I got lost? Will you have found me?
+        <br />
+        <br />
+        Have I been going to go mad?
       </p>
       <Switch
         position="-35.25"

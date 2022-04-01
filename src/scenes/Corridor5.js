@@ -67,22 +67,12 @@ const Corridor5 = () => {
       >
         Day #5
         <br />
-        we could ever ask for...
         <br />
-        What do they believe?
+        Maybe it's also possible to travel to the future where
         <br />
-        Where are all their fathers?
+        the time crystals don't exist yet. By the time of my arrival,
         <br />
-        Where are all their mothers?
-        <br />
-        It's hard to reach across the
-        <br />
-        unbelievable distances between
-        <br />
-        what we really are
-        <br />
-        and who we claim to be.
-        <br />
+        they would already be there after all.
       </p>
       <Switch
         position="-35.25"

@@ -67,22 +67,22 @@ const Corridor9 = () => {
       >
         Day #9
         <br />
-        we could ever ask for...
         <br />
-        What do they believe?
+        Now it is your choice to make.
         <br />
-        Where are all their fathers?
+        Please save me. You have to meet me in the future.
         <br />
-        Where are all their mothers?
+        I was there, I saw how this was going to play out.
         <br />
-        It's hard to reach across the
+        <br />I left the space-time coordinates in the chest.
         <br />
-        unbelievable distances between
+        You will find the key all around in the past.
         <br />
-        what we really are
+        Our time crystals will guide you.
         <br />
-        and who we claim to be.
+        You need to be there. You need to meet me.
         <br />
+        <br />I know you will, I've been there and then already. I saw you.
       </p>
       <Switch
         position="-35.25"

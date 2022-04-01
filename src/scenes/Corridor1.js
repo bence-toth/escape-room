@@ -63,26 +63,31 @@ const Corridor1 = () => {
           fontSize: "2vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
+          width: "65%",
         }}
       >
         Day #1
         <br />
-        we could ever ask for...
         <br />
-        What do they believe?
+        One night while I was doing an experiment, I made a discovery.
         <br />
-        Where are all their fathers?
+        I wouldn't believe it at first, but the more I was thinking about it,
         <br />
-        Where are all their mothers?
+        the more it started to make sense.
         <br />
-        It's hard to reach across the
         <br />
-        unbelievable distances between
+        I cannot fully explain it yet. But I will try.
         <br />
-        what we really are
         <br />
-        and who we claim to be.
+        There is something special about you and me.
         <br />
+        As we were traveling, we left fractures in the fabric of
+        <br />
+        space-time. Like tiny footprints in the sand.
+        <br />
+        <br />
+        I started calling them time crystals.
+        <br />I am now sure that I will be able to build a time machine.
       </p>
       <Switch
         position="-35.25"

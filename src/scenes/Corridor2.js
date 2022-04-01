@@ -67,22 +67,24 @@ const Corridor2 = () => {
       >
         Day #2
         <br />
-        we could ever ask for...
         <br />
-        What do they believe?
+        I made the first trip. Or did I? I'm not sure. Maybe I will.
         <br />
-        Where are all their fathers?
         <br />
-        Where are all their mothers?
+        If the future is decided based on present events, free will
         <br />
-        It's hard to reach across the
+        must be nothing more than an illusion. Maybe all this is
         <br />
-        unbelievable distances between
+        destined to happen. Maybe you are my destiny.
         <br />
-        what we really are
+        Maybe you were all along. Whatever all along means.
         <br />
-        and who we claim to be.
+        I'm not sure anymore. I'm getting confused.
         <br />
+        <br />
+        Or do our choices form our future?
+        <br />
+        Can our past choices be unchosen?
       </p>
       <Switch
         position="-35.25"
