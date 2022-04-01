@@ -1,8 +1,7 @@
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useContext } from "react";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
-import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Portal from "../objects/Portal";
 import Switch from "../objects/Switch";
@@ -14,8 +13,6 @@ import { GameStateContext } from "../App";
 const PortalRoom = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
-
-  const [on, setOn] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/portal-room");
@@ -54,11 +51,25 @@ const PortalRoom = () => {
         }}
       />
       <Portal
-        isActive={on}
+        isActive={gameState.portalRoom.destination !== ""}
         position={-15}
         withBorder
         onWalkThrough={() => {
-          setOn(!on);
+          if (gameState.portalRoom.destination === "sweden") {
+            navigate("/corridor-10");
+          }
+          if (gameState.portalRoom.destination === "montenegro") {
+            navigate("/corridor-10");
+          }
+          if (gameState.portalRoom.destination === "hungary") {
+            navigate("/corridor-10");
+          }
+          if (gameState.portalRoom.destination === "egypt") {
+            navigate("/corridor-10");
+          }
+          if (gameState.portalRoom.destination === "poland") {
+            navigate("/corridor-10");
+          }
         }}
       />
       <TimeMachine

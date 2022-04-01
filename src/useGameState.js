@@ -51,31 +51,31 @@ const initialGameState = {
     isRemoteSwitchOn: false,
   },
   corridor1: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor2: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor3: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor4: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor5: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor6: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor7: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor8: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor9: {
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   corridor10: {
     isSwitchOn: true,
@@ -84,6 +84,8 @@ const initialGameState = {
   },
   portalRoom: {
     isSwitchOn: true,
+    isPinEntered: false,
+    destination: "",
   },
 };
 
