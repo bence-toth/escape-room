@@ -82,6 +82,9 @@ const initialGameState = {
     code: "00000",
     isPuzzleSolved: false,
   },
+  portalRoom: {
+    isSwitchOn: true,
+  },
 };
 
 const useGameState = () => {

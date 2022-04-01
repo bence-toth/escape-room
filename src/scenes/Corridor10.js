@@ -10,7 +10,7 @@ import Switch from "../objects/Switch";
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 
-const CombinationRoom = () => {
+const Corridor10 = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
@@ -48,7 +48,7 @@ const CombinationRoom = () => {
         withDoor
         isDoorOpen={gameState.corridor10.isPuzzleSolved}
         onWalkThrough={() => {
-          // navigate("/corridor-2");
+          navigate("/portal-room");
         }}
       />
       <PlanetLock
@@ -78,4 +78,4 @@ const CombinationRoom = () => {
   );
 };
 
-export default CombinationRoom;
+export default Corridor10;

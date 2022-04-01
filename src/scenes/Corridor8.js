@@ -9,7 +9,7 @@ import Switch from "../objects/Switch";
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 
-const CombinationRoom = () => {
+const Corridor8 = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
@@ -104,4 +104,4 @@ const CombinationRoom = () => {
   );
 };
 
-export default CombinationRoom;
+export default Corridor8;

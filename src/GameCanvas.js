@@ -35,6 +35,7 @@ import GalleryPicture10 from "./scenes/GalleryPicture10";
 import GalleryPicture11 from "./scenes/GalleryPicture11";
 import GalleryPicture12 from "./scenes/GalleryPicture12";
 import PlanetRoom from "./scenes/PlanetRoom";
+import PortalRoom from "./scenes/PortalRoom";
 
 import "./GameCanvas.css";
 
@@ -76,6 +77,7 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/gallery-picture-12" element={<GalleryPicture12 />} />
       <Route path="/planet-room" element={<PlanetRoom />} />
       <Route path="/planet-lock" element={<PlanetLock />} />
+      <Route path="/portal-room" element={<PortalRoom />} />
     </Routes>
   </div>
 );

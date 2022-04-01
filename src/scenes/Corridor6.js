@@ -12,7 +12,7 @@ import { GameStateContext } from "../App";
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
 
-const CombinationRoom = () => {
+const Corridor6 = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
   const inventory = useContext(InventoryContext);
@@ -119,4 +119,4 @@ const CombinationRoom = () => {
   );
 };
 
-export default CombinationRoom;
+export default Corridor6;
