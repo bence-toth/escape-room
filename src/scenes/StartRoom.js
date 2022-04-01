@@ -22,7 +22,12 @@ import { LocationChangeContext } from "../App";
 // Add missing paintings
 // Engagement survey number (send physical letter)
 // Add columns room
-// Add portal room
+// Add portal room and portal targets:
+//   - Sweden
+//   - Montenegro
+//   - Egypt
+//   - Poland?
+// Add chest to start room with final clue
 // QR code for the game
 
 // Cosmetics
