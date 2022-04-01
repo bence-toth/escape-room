@@ -18,18 +18,20 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
-// Add long carpets to gallery
-// Create wall writings on the corridor (day numbers should also be a code)
-// Add more drawings to random rooms
-
-// Engagement survey number (send physical letter)
-// Add random objects in random rooms
-// Add columns room
-// QR code for the game
-// Add random objects that can be picked up:
-//   - ring
-//   - apple
+// Create wall writings on the corridor
 // Add missing paintings
+// Engagement survey number (send physical letter)
+// Add columns room
+// Add portal room
+// QR code for the game
+
+// Cosmetics
+//   Add more drawings to random rooms
+//   Add random objects in random rooms
+//   Add long carpets to gallery
+//   Add random objects that can be picked up:
+//     - ring
+//     - apple
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
