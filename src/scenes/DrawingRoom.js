@@ -55,6 +55,7 @@ const CombinationRoom = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.1,
+          pointerEvents: "none",
         }}
       />
       <Switch

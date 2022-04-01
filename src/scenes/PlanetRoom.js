@@ -107,6 +107,7 @@ const PlanetRoom = () => {
           transform: "translate(-50%, -50%)",
           transition: "opacity 1s",
           opacity: gameState.planetRoom.arePlanetsMoving ? 0 : 1,
+          pointerEvents: "none",
         }}
       />
       <Lever
