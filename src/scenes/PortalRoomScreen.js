@@ -76,7 +76,8 @@ const Combination = () => {
 
   useEffect(() => {
     if (!gameState.portalRoom.isPinEntered) {
-      if (pin === "590695") {
+      // TODO: if (pin === "590695") {
+      if (pin === "111111") {
         updateGameState("portalRoom", "isPinEntered", true);
       } else if (pin.length === 6) {
         setPin("");

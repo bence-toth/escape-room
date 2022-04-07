@@ -1,0 +1,181 @@
+.pendulumClock {
+  width: 15%;
+  height: 58%;
+  background-color: red;
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 14%;
+}
+
+.pendulumClock .top,
+.pendulumClock .bottom {
+  width: 110%;
+  height: 5%;
+  background-color: antiquewhite;
+  position: absolute;
+  left: -5%;
+}
+
+.pendulumClock .top {
+  top: 0;
+}
+
+.pendulumClock .bottom {
+  bottom: 0;
+}
+
+.pendulumClock .clockFaceWrapper {
+  position: absolute;
+  width: 90%;
+  background-color: aqua;
+  aspect-ratio: 1 / 1;
+  left: 5%;
+  top: 7%;
+}
+
+.pendulumClock .clockFaceWrapper .clockFace {
+  position: absolute;
+  width: 90%;
+  background-color: green;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  left: 5%;
+  top: 5%;
+}
+
+.pendulumClock .clockFaceWrapper .clockFace .number {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  letter-spacing: -0.1em;
+  font-size: 1.2vh;
+}
+
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(1) {
+  transform: translateX(-50%) rotate(0deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(2) {
+  transform: translateX(-50%) rotate(30deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(3) {
+  transform: translateX(-50%) rotate(60deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(4) {
+  transform: translateX(-50%) rotate(90deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(5) {
+  transform: translateX(-50%) rotate(120deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(6) {
+  transform: translateX(-50%) rotate(150deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(7) {
+  transform: translateX(-50%) rotate(180deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(8) {
+  transform: translateX(-50%) rotate(210deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(9) {
+  transform: translateX(-50%) rotate(240deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(10) {
+  transform: translateX(-50%) rotate(270deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(11) {
+  transform: translateX(-50%) rotate(300deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(12) {
+  transform: translateX(-50%) rotate(330deg);
+}
+.pendulumClock .clockFaceWrapper .clockFace .number:nth-child(2) {
+  transform: translateX(-50%) rotate(30deg);
+}
+
+.pendulumClock .clockFaceWrapper .clockFace .hourHand {
+  height: 45%;
+  width: 5%;
+  background-color: pink;
+  position: absolute;
+  bottom: 50%;
+  left: 47.5%;
+  transform-origin: bottom;
+  border-radius: 1vh;
+}
+
+.pendulumClock .clockFaceWrapper .clockFace .minuteHand {
+  height: 30%;
+  width: 5%;
+  background-color: darkkhaki;
+  position: absolute;
+  bottom: 50%;
+  left: 47.5%;
+  transform-origin: bottom;
+  border-radius: 1vh;
+}
+
+.pendulumClock.working .clockFaceWrapper .clockFace .hourHand {
+  animation: clockHandRotate 14s infinite linear;
+}
+
+.pendulumClock.working .clockFaceWrapper .clockFace .minuteHand {
+  animation: clockHandRotate 6s infinite linear reverse;
+}
+
+.pendulumClock .middle {
+  position: absolute;
+  width: 90%;
+  height: 53%;
+  background-color: yellowgreen;
+  left: 5%;
+  bottom: 7%;
+  overflow: hidden;
+}
+
+.pendulumClock.working .middle .pendulum {
+  animation: pendulumSwing 1s infinite ease-in-out alternate;
+  animation-delay: -0.5s;
+}
+
+.pendulumClock .middle .pendulum {
+  position: absolute;
+  width: 30%;
+  height: 135%;
+  left: 35%;
+  top: -40%;
+  transform-origin: top;
+}
+
+.pendulumClock .middle .pendulum .string {
+  width: 6%;
+  height: 90%;
+  position: absolute;
+  left: 47%;
+  background-color: black;
+}
+
+.pendulumClock .middle .pendulum .head {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+@keyframes pendulumSwing {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes clockHandRotate {
+  from {
+    transform: rotate(0deg) translateY(10%);
+  }
+  to {
+    transform: rotate(360deg) translateY(10%);
+  }
+}

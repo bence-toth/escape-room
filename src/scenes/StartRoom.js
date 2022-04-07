@@ -9,6 +9,7 @@ import Key from "../objects/Key";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import TrapDoor from "../objects/TrapDoor";
+import PendulumClock from "../objects/PendulumClock";
 
 import starMap from "../assets/StarMap.png";
 
@@ -189,6 +190,7 @@ const StartRoom = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      <PendulumClock position={0} />
     </div>
   );
 };
