@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import PlanetLock from "../objects/PlanetLock";
 import Switch from "../objects/Switch";
+import DoorRight from "../objects/DoorRight";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -39,6 +40,15 @@ const Corridor10 = () => {
           navigate("/corridor-9");
         }}
       />
+      <PlanetLock
+        code={gameState.corridor10.code}
+        isSmall
+        onView={() => {
+          if (!gameState.corridor10.isPuzzleSolved) {
+            navigate("/planet-lock");
+          }
+        }}
+      />
       <WallRight
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
@@ -51,12 +61,24 @@ const Corridor10 = () => {
           navigate("/portal-room");
         }}
       />
-      <PlanetLock
-        code={gameState.corridor10.code}
-        isSmall
-        onView={() => {
-          navigate("/planet-lock");
+      <DoorRight
+        isOpen={false}
+        onOpen={() => {
+          // if (inventory.selectedItem === "key2") {
+          //   inventory.removeItem({ id: "key2" });
+          //   updateGameState("startRoom", "isRightDoorOpen", true);
+          // } else {
+          //   updateMessage("The door seems to be locked");
+          // }
         }}
+        onWalkThrough={() => {
+          // navigate("/combination-room");
+        }}
+        styles={{
+          frameColor: "hsl(23, 19%, 16%)",
+          doorColor: "hsl(23, 19%, 26%)",
+        }}
+        position="-15"
       />
       <Switch
         position="-35.25"

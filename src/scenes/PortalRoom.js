@@ -22,15 +22,15 @@ const PortalRoom = () => {
     <div className="scene">
       <Room
         styles={{
-          floorColor: "hsl(63, 19%, 36%)",
-          wallColor: "hsl(63, 19%, 46%)",
+          floorColor: "hsl(188, 66%, 39%)",
+          wallColor: "hsl(188, 49%, 42%)",
         }}
       />
       <WallLeft
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
-          frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          frameColor: "hsl(188, 19%, 16%)",
+          wallColor: "hsl(188, 49%, 38%)",
         }}
         withDoor
         isDoorOpen

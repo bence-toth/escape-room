@@ -105,8 +105,11 @@ const PlanetRoom = () => {
           top: "55%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          transition: "opacity 1s",
-          opacity: gameState.planetRoom.arePlanetsMoving ? 0 : 1,
+          opacity: gameState.planetRoom.arePlanetsMoving
+            ? 0
+            : gameState.planetRoom.isSwitchOn
+            ? 1
+            : 0.1,
           pointerEvents: "none",
         }}
       />

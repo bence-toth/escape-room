@@ -118,7 +118,7 @@ const Combination = () => {
   return (
     <div className="scene">
       <Wall
-        styles={{ color: "hsl(63, 19%, 46%)" }}
+        styles={{ color: "hsl(188, 49%, 42%)" }}
         onClick={() => {
           navigate("/portal-room");
         }}

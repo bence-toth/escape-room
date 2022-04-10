@@ -9,7 +9,6 @@ import Key from "../objects/Key";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import TrapDoor from "../objects/TrapDoor";
-import PendulumClock from "../objects/PendulumClock";
 
 import starMap from "../assets/StarMap.png";
 
@@ -177,7 +176,7 @@ const StartRoom = () => {
       {!isGalleryKeyTaken && (
         <Key
           onPickUp={() => {
-            inventory.addItem({ id: "key3", picture: "key" });
+            inventory.addItem({ id: "key2", picture: "key" });
             updateGameState("startRoom", "isGalleryKeyTaken", true);
             updateMessage("You found a key");
           }}
@@ -190,7 +189,6 @@ const StartRoom = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
-      <PendulumClock position={0} />
     </div>
   );
 };

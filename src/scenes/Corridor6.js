@@ -26,15 +26,15 @@ const Corridor6 = () => {
     <div className="scene">
       <Room
         styles={{
-          floorColor: "hsl(63, 19%, 36%)",
-          wallColor: "hsl(63, 19%, 46%)",
+          floorColor: "hsl(63, 19%, 26%)",
+          wallColor: "hsl(63, 19%, 36%)",
         }}
       />
       <WallLeft
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          wallColor: "hsl(63, 19%, 30%)",
         }}
         withDoor
         isDoorOpen
@@ -47,7 +47,7 @@ const Corridor6 = () => {
         styles={{
           doorColor: "hsl(23, 19%, 26%)",
           frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 40%)",
+          wallColor: "hsl(63, 19%, 30%)",
         }}
         withDoor
         isDoorOpen
@@ -58,7 +58,8 @@ const Corridor6 = () => {
       />
       <p
         style={{
-          color: "rgb(62, 55, 50)",
+          color: "rgb(32, 32, 32)",
+          opacity: gameState.corridor6.isSwitchOn ? 1 : 0.1,
           position: "absolute",
           top: "50%",
           left: "50%",

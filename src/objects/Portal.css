@@ -19,8 +19,8 @@
 }
 
 .portal[data-with-border="true"] {
-  border: 0.25vh solid hsl(0, 0%, 12%);
-  outline: 2px solid hsl(0, 0%, 6%);
+  border: 0.25vh solid hsl(188, 49%, 22%);
+  outline: 2px solid hsl(188, 49%, 18%);
 }
 
 .portal .eventHorizon {

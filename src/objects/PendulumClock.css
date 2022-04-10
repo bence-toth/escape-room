@@ -1,7 +1,7 @@
 .pendulumClock {
   width: 15%;
   height: 58%;
-  background-color: red;
+  background-color: hsl(23, 19%, 18%);
   position: absolute;
   transform: translateX(-50%);
   bottom: 14%;
@@ -11,7 +11,7 @@
 .pendulumClock .bottom {
   width: 110%;
   height: 5%;
-  background-color: antiquewhite;
+  background-color: hsl(23, 19%, 22%);
   position: absolute;
   left: -5%;
 }
@@ -27,7 +27,7 @@
 .pendulumClock .clockFaceWrapper {
   position: absolute;
   width: 90%;
-  background-color: aqua;
+  background-color: hsl(23, 19%, 12%);
   aspect-ratio: 1 / 1;
   left: 5%;
   top: 7%;
@@ -36,7 +36,8 @@
 .pendulumClock .clockFaceWrapper .clockFace {
   position: absolute;
   width: 90%;
-  background-color: green;
+  background-color: hsl(47, 100%, 90%);
+  box-shadow: -3vh -3vh 2vh 0 hsla(0, 0%, 0%, 25%) inset;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   left: 5%;
@@ -48,7 +49,8 @@
   height: 100%;
   left: 50%;
   letter-spacing: -0.1em;
-  font-size: 1.2vh;
+  font-size: 1vh;
+  font-family: "Playfair Display", serif;
 }
 
 .pendulumClock .clockFaceWrapper .clockFace .number:nth-child(1) {
@@ -94,10 +96,11 @@
 .pendulumClock .clockFaceWrapper .clockFace .hourHand {
   height: 45%;
   width: 5%;
-  background-color: pink;
+  background-color: hsl(47, 100%, 50%);
   position: absolute;
   bottom: 50%;
   left: 47.5%;
+  transform: rotate(12deg) translateY(10%);
   transform-origin: bottom;
   border-radius: 1vh;
 }
@@ -105,27 +108,29 @@
 .pendulumClock .clockFaceWrapper .clockFace .minuteHand {
   height: 30%;
   width: 5%;
-  background-color: darkkhaki;
+  background-color: hsl(47, 100%, 45%);
   position: absolute;
   bottom: 50%;
   left: 47.5%;
+  transform: rotate(212deg) translateY(10%);
   transform-origin: bottom;
   border-radius: 1vh;
 }
 
 .pendulumClock.working .clockFaceWrapper .clockFace .hourHand {
-  animation: clockHandRotate 14s infinite linear;
+  animation: clockHandRotate 1.2s infinite linear;
 }
 
 .pendulumClock.working .clockFaceWrapper .clockFace .minuteHand {
-  animation: clockHandRotate 6s infinite linear reverse;
+  animation: clockHandRotate 0.8s infinite linear reverse;
 }
 
 .pendulumClock .middle {
   position: absolute;
   width: 90%;
   height: 53%;
-  background-color: yellowgreen;
+  background-color: hsl(23, 19%, 10%);
+  box-shadow: 0 0 2vh 2vh hsla(23, 19%, 2%, 80%) inset;
   left: 5%;
   bottom: 7%;
   overflow: hidden;
@@ -150,7 +155,7 @@
   height: 90%;
   position: absolute;
   left: 47%;
-  background-color: black;
+  background-color: hsl(47, 100%, 40%);
 }
 
 .pendulumClock .middle .pendulum .head {
@@ -158,7 +163,8 @@
   aspect-ratio: 1 / 1;
   position: absolute;
   bottom: 0;
-  background-color: blue;
+  background-color: hsl(47, 100%, 50%);
+  border-bottom: 1vh solid hsl(47, 100%, 45%);
   border-radius: 50%;
 }
 

@@ -32,7 +32,7 @@ const initialGameState = {
   planetRoom: {
     isLeverInPlace: false,
     arePlanetsMoving: false,
-    isSwitchOn: true,
+    isSwitchOn: false,
   },
   drawingRoom: {
     isSwitchOn: false,

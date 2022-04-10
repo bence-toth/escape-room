@@ -6,6 +6,7 @@ import DoorLeft from "../objects/DoorLeft";
 import WallRight from "../objects/WallRight";
 import CombinationLock from "../objects/CombinationLock";
 import Switch from "../objects/Switch";
+import PendulumClock from "../objects/PendulumClock";
 
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
@@ -63,6 +64,10 @@ const CombinationRoom = () => {
             !gameState.combinationRoom.isSwitchOn
           );
         }}
+      />
+      <PendulumClock
+        position={17}
+        isWorking={gameState.combination.isPuzzleSolved}
       />
       <WallRight
         styles={{

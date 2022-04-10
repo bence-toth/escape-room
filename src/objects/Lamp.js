@@ -32,7 +32,7 @@ const Lamp = ({ isOn, styles, position }) => (
     )}
     <circle
       style={{
-        fill: isOn ? "#fff5cc" : "hsla(0, 0%, 100%, 0.5)",
+        fill: isOn ? "#fff5cc" : "hsla(0, 0%, 100%, 0.25)",
         stroke: "none",
         strokeWidth: 0,
       }}
