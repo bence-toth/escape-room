@@ -26,7 +26,9 @@ import { LocationChangeContext } from "../App";
 //   - Sweden
 //   - Montenegro
 //   - Egypt
-//   - Poland?
+//   - Gdansk
+//   - Hungary
+//   - ???
 // Add chest to start room with final clue
 // QR code for the game
 
