@@ -21,27 +21,32 @@
   width: 80%;
   aspect-ratio: 1 / 1;
   background-color: hsl(0, 0%, 25%);
+  box-shadow: 0 0 2vh 1vh hsla(0, 0%, 25%, 0);
   border: 2px solid hsl(0, 0%, 20%);
   border-radius: 50%;
-  transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s;
 }
 
 .colorLock > button.red > div {
   background-color: hsl(0, 100%, 35%);
   border-color: hsl(0, 100%, 20%);
+  box-shadow: 0 0 2vh 1vh hsla(0, 100%, 35%, 0.5);
 }
 
 .colorLock > button.green > div {
   background-color: hsl(120, 100%, 35%);
   border-color: hsl(120, 100%, 20%);
+  box-shadow: 0 0 2vh 1vh hsla(120, 100%, 35%, 0.5);
 }
 
 .colorLock > button.blue > div {
   background-color: hsl(200, 100%, 35%);
   border-color: hsl(200, 100%, 20%);
+  box-shadow: 0 0 2vh 1vh hsla(200, 100%, 35%, 0.5);
 }
 
 .colorLock > button.yellow > div {
   background-color: hsl(50, 100%, 35%);
   border-color: hsl(50, 100%, 20%);
+  box-shadow: 0 0 2vh 1vh hsla(50, 100%, 35%, 0.5);
 }

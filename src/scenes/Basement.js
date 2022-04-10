@@ -15,7 +15,7 @@ import { LocationChangeContext } from "../App";
 
 let wasCatLogged = false;
 
-const StartRoom = () => {
+const Basement = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
@@ -105,9 +105,21 @@ const StartRoom = () => {
       <ColorLock
         colors={colors}
         updateColors={(colors) => {
+          if (gameState.basement.isDoorOpen) {
+            return;
+          }
           updateGameState("basement", "colors", colors);
           if (colors.join(",") === "red,green,yellow,red,blue") {
             updateGameState("basement", "isDoorOpen", true);
+            setTimeout(() => {
+              updateGameState("basement", "colors", [
+                "green",
+                "green",
+                "green",
+                "green",
+                "green",
+              ]);
+            }, 500);
           }
         }}
       />
@@ -141,4 +153,4 @@ const StartRoom = () => {
   );
 };
 
-export default StartRoom;
+export default Basement;

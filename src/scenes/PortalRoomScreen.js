@@ -25,7 +25,7 @@ const months = [
   "Dec",
 ];
 
-const Combination = () => {
+const PortalRoomScreen = () => {
   const navigate = useContext(LocationChangeContext);
 
   const [pin, setPin] = useState("");
@@ -219,4 +219,4 @@ const Combination = () => {
   );
 };
 
-export default Combination;
+export default PortalRoomScreen;

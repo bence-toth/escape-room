@@ -12,7 +12,7 @@ import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
-const StartRoom = () => {
+const PlantRoom = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
@@ -116,4 +116,4 @@ const StartRoom = () => {
   );
 };
 
-export default StartRoom;
+export default PlantRoom;

@@ -11,7 +11,7 @@ import WallDrawing from "../assets/WallDrawing.png";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
-const CombinationRoom = () => {
+const DrawingRoom = () => {
   const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
@@ -78,4 +78,4 @@ const CombinationRoom = () => {
   );
 };
 
-export default CombinationRoom;
+export default DrawingRoom;
