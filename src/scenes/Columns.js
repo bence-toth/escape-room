@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import Room from "../objects/Room";
 import DoorRight from "../objects/DoorRight";
 import Column from "../objects/Column";
+import ColumnFragment from "../objects/ColumnFragment";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
@@ -30,13 +31,48 @@ const Columns = () => {
           wallColor: "hsl(45, 14%, 45%)",
         }}
       />
-      <Column position={-40} />
-      <Column position={-30} />
-      <Column position={-20} />
-      <Column position={-10} />
-      <Column position={0} />
-      <Column position={10} />
-      <Column position={20} />
+      <Column
+        position={-40}
+        fragment={
+          <ColumnFragment letters="Wda a b  m " header="J" footer="☿" />
+        }
+      />
+      <Column
+        position={-30}
+        fragment={
+          <ColumnFragment letters="erwsn up ea" header="O" footer="♄" />
+        }
+      />
+      <Column
+        position={-20}
+        fragment={
+          <ColumnFragment letters=" iapdtta rg" header="U" footer="♆" />
+        }
+      />
+      <Column
+        position={-10}
+        fragment={
+          <ColumnFragment letters="hfya i twga" header="R" footer="☉" />
+        }
+      />
+      <Column
+        position={0}
+        fragment={
+          <ColumnFragment letters="at c mohiei" header="N" footer="♀" />
+        }
+      />
+      <Column
+        position={10}
+        fragment={
+          <ColumnFragment letters="veie eusl n" header="E" footer="♅" />
+        }
+      />
+      <Column
+        position={20}
+        fragment={
+          <ColumnFragment letters="edn  ,r l ." header="Y" footer="♃" />
+        }
+      />
       <DoorRight
         isOpen={gameState.basement.isDoorOpen}
         styles={{
@@ -51,6 +87,14 @@ const Columns = () => {
         }}
         position="38"
         isBack
+      />
+      <ColumnFragment
+        letters="edn  ,r l ."
+        header="Y"
+        footer="♃"
+        styles={{
+          transform: "translateX(850%) translateY(30%) rotate(20deg)",
+        }}
       />
     </div>
   );

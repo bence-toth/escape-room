@@ -5,6 +5,8 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import ColumnFragment from "../objects/ColumnFragment";
+import columnWritings from "../objects/columnWritings";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -94,6 +96,65 @@ const Corridor9 = () => {
             "isSwitchOn",
             !gameState.corridor9.isSwitchOn
           );
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[0].letters}
+        header={columnWritings[0].header}
+        footer={columnWritings[0].footer}
+        styles={{
+          transform: "translateX(850%) translateY(30%) rotate(20deg)",
+        }}
+        onPickUp={() => {
+          console.log("picked up fragment 0");
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[1].letters}
+        header={columnWritings[1].header}
+        footer={columnWritings[1].footer}
+        styles={{
+          transform: "translateX(700%) translateY(30%) rotate(20deg)",
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[2].letters}
+        header={columnWritings[2].header}
+        footer={columnWritings[2].footer}
+        styles={{
+          transform: "translateX(550%) translateY(30%) rotate(20deg)",
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[3].letters}
+        header={columnWritings[3].header}
+        footer={columnWritings[3].footer}
+        styles={{
+          transform: "translateX(400%) translateY(30%) rotate(20deg)",
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[4].letters}
+        header={columnWritings[4].header}
+        footer={columnWritings[4].footer}
+        styles={{
+          transform: "translateX(250%) translateY(30%) rotate(20deg)",
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[5].letters}
+        header={columnWritings[5].header}
+        footer={columnWritings[5].footer}
+        styles={{
+          transform: "translateX(100%) translateY(30%) rotate(20deg)",
+        }}
+      />
+      <ColumnFragment
+        letters={columnWritings[6].letters}
+        header={columnWritings[6].header}
+        footer={columnWritings[6].footer}
+        styles={{
+          transform: "translateX(-50%) translateY(30%) rotate(20deg)",
         }}
       />
       <Lamp

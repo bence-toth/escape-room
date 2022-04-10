@@ -1,0 +1,62 @@
+.columnFragment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "Playfair Display", serif;
+  color: #615634;
+}
+
+.columnFragment .fragment {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4vh;
+  top: 18%;
+  height: 56%;
+}
+
+.columnFragment .fragmentTransform {
+  line-height: 0.5;
+  width: 100%;
+  height: 100%;
+  border-radius: 2vh;
+  background-color: #d8cca4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh 1fr 5vh;
+}
+
+.columnFragment header,
+.columnFragment footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vh;
+  position: relative;
+}
+
+.columnFragment header:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: #a69d80;
+  bottom: 0;
+}
+
+.columnFragment footer:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: #a69d80;
+  top: 0;
+}
+
+.columnFragment .letters {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.75vh;
+}
