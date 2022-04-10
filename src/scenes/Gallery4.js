@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useCallback } from "react";
 
 import Room from "../objects/Room";
 import Lamp from "../objects/Lamp";
@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
+import LightLock from "../objects/LightLock";
 
 import Blank1 from "../assets/10-Blank.jpg";
 import Blank2 from "../assets/11-Blank.jpg";
@@ -24,6 +25,20 @@ const Gallery4 = () => {
     localStorage.setItem("game-location", "/gallery-4");
   }, []);
 
+  const onChangeCode = useCallback(
+    (code) => {
+      if (gameState.gallery4.isPuzzleSolved) {
+        return;
+      }
+      updateGameState("gallery4", "code", code);
+      if (code === "1111111111111111") {
+        updateMessage("You hear something clicking");
+        updateGameState("gallery4", "isPuzzleSolved", true);
+      }
+    },
+    [gameState.gallery4.isPuzzleSolved, updateGameState, updateMessage]
+  );
+
   return (
     <div className="scene">
       <Room
@@ -39,7 +54,7 @@ const Gallery4 = () => {
           wallColor: "hsl(175, 19%, 40%)",
         }}
         withDoor
-        isDoorOpen
+        isDoorOpen={gameState.gallery4.isPuzzleSolved}
         isBack
         onWalkThrough={() => {
           navigate("/planet-room");
@@ -115,6 +130,15 @@ const Gallery4 = () => {
             !gameState.gallery4.isSwitchOn
           );
         }}
+      />
+      <LightLock
+        code={gameState.gallery4.code}
+        isPuzzleSolved={gameState.gallery4.isPuzzleSolved}
+        onChangeCode={onChangeCode}
+        onView={() => {
+          navigate("/gallery-4-lock");
+        }}
+        isSmall
       />
       <Lamp
         isOn={gameState.gallery4.isSwitchOn}

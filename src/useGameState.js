@@ -49,6 +49,8 @@ const initialGameState = {
   gallery4: {
     isSwitchOn: true,
     isRemoteSwitchOn: false,
+    isPuzzleSolved: false,
+    code: "0000000000110100",
   },
   corridor1: {
     isSwitchOn: false,

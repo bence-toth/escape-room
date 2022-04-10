@@ -6,6 +6,7 @@ const CombinationLock = ({
   onChangeCode = () => {},
   isSmall,
   onView = () => {},
+  isPuzzleSolved,
 }) => {
   const [areInteractionsSetUp, setAreInteractionsSetUp] = useState(false);
 
@@ -21,6 +22,10 @@ const CombinationLock = ({
         });
         allInputs.forEach((input, inputIndex) => {
           input.addEventListener("keydown", (event) => {
+            if (isPuzzleSolved) {
+              event.preventDefault();
+              return;
+            }
             if (!["Tab"].includes(event.key)) {
               event.preventDefault();
             }
@@ -48,7 +53,7 @@ const CombinationLock = ({
         setAreInteractionsSetUp(true);
       }
     },
-    [areInteractionsSetUp, code, onChangeCode]
+    [areInteractionsSetUp, code, isPuzzleSolved, onChangeCode]
   );
 
   return (

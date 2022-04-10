@@ -34,6 +34,7 @@ import GalleryPicture9 from "./scenes/GalleryPicture9";
 import GalleryPicture10 from "./scenes/GalleryPicture10";
 import GalleryPicture11 from "./scenes/GalleryPicture11";
 import GalleryPicture12 from "./scenes/GalleryPicture12";
+import LightLock from "./scenes/LightLockClose";
 import PlanetRoom from "./scenes/PlanetRoom";
 import PortalRoom from "./scenes/PortalRoom";
 import PortalRoomScreen from "./scenes/PortalRoomScreen";
@@ -76,6 +77,8 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/gallery-picture-10" element={<GalleryPicture10 />} />
       <Route path="/gallery-picture-11" element={<GalleryPicture11 />} />
       <Route path="/gallery-picture-12" element={<GalleryPicture12 />} />
+      <Route path="/gallery-4-lock" element={<LightLock />} />
+      <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
       <Route path="/planet-room" element={<PlanetRoom />} />
       <Route path="/planet-lock" element={<PlanetLock />} />
       <Route path="/portal-room" element={<PortalRoom />} />

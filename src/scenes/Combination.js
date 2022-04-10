@@ -19,6 +19,9 @@ const Combination = () => {
 
   const onChangeCode = useCallback(
     (code) => {
+      if (gameState.combination.isPuzzleSolved) {
+        return;
+      }
       updateGameState("combination", "code", code);
       if (code === "111111111111111111111") {
         // TODO: Replace code "127492020397316804710"
@@ -26,7 +29,7 @@ const Combination = () => {
         updateGameState("combination", "isPuzzleSolved", true);
       }
     },
-    [updateGameState, updateMessage]
+    [gameState.combination.isPuzzleSolved, updateGameState, updateMessage]
   );
 
   return (
@@ -41,6 +44,7 @@ const Combination = () => {
         code={gameState.combination.code}
         onChangeCode={onChangeCode}
         isSmall={false}
+        isPuzzleSolved={gameState.combination.isPuzzleSolved}
       />
     </div>
   );

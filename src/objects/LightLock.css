@@ -1,0 +1,76 @@
+.lightLock.small {
+  transform: translate(-50%, -50%) scale(0.07) translateX(-840%)
+    translateY(200%);
+}
+
+.lightLock {
+  position: absolute;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  border: 0.5vh solid hsl(175, 19%, 26%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(175, 19%, 32%);
+  padding: 0.5vh;
+  border-radius: 1.5vh;
+}
+
+.lightLockInnerWrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1vh 1fr 1fr 1fr 1fr 1vh;
+  grid-template-rows: 1vh 1fr 1fr 1fr 1fr 1vh;
+  gap: 0.5vh;
+}
+
+.lightLock .indicator {
+  background-color: hsl(0, 81%, 46%);
+  border: 1px solid hsl(0, 82%, 39%);
+  border-radius: 0.5vh;
+}
+
+.lightLock .indicator.on {
+  background-color: hsl(89, 81%, 46%);
+  border: 1px solid hsl(89, 74%, 38%);
+  border-radius: 0.5vh;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.lightLock button {
+  border: 0.25vh solid hsl(175, 19%, 26%);
+  border-radius: 0.5vh;
+  background-color: hsla(175, 19%, 16%, 0.85);
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.lightLock button:nth-of-type(1) {
+  border-top-left-radius: 1vh;
+}
+
+.lightLock button:nth-of-type(4) {
+  border-top-right-radius: 1vh;
+}
+
+.lightLock button:nth-of-type(13) {
+  border-bottom-left-radius: 1vh;
+}
+
+.lightLock button:nth-of-type(16) {
+  border-bottom-right-radius: 1vh;
+}
+
+.lightLock button.on {
+  background-color: hsl(175, 19%, 62%);
+  border-color: hsl(175, 19%, 72%);
+}
+
+.lightLock.solved button {
+  transition-duration: 1.5s;
+}
+
+.lightLock.solved button.on {
+  background-color: hsl(89, 81%, 46%);
+  border-color: hsl(89, 74%, 38%);
+}

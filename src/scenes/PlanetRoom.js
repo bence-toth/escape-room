@@ -108,7 +108,7 @@ const PlanetRoom = () => {
           opacity: gameState.planetRoom.arePlanetsMoving
             ? 0
             : gameState.planetRoom.isSwitchOn
-            ? 1
+            ? 0.8
             : 0.1,
           pointerEvents: "none",
         }}
