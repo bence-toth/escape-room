@@ -18,10 +18,10 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
+// Add columns room
 // Create wall writings on the corridor
 // Add missing paintings
 // Engagement survey number (send physical letter)
-// Add columns room
 // Add portal room and portal targets:
 //   - Sweden
 //   - Montenegro
@@ -31,6 +31,7 @@ import { LocationChangeContext } from "../App";
 //   - ???
 // Add chest to start room with final clue
 // QR code for the game
+// Add door close messages
 
 // Cosmetics
 //   Add more drawings to random rooms
@@ -39,6 +40,7 @@ import { LocationChangeContext } from "../App";
 //   Add random objects that can be picked up:
 //     - ring
 //     - apple
+//   Add random non-useful messages to objects
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);

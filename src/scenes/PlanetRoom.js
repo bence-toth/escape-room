@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Lever from "../objects/Lever";
 import Switch from "../objects/Switch";
+import Key from "../objects/Key";
 
 import "./PlanetRoom.css";
 import Stars from "../assets/Stars.jpg";
@@ -133,6 +134,17 @@ const PlanetRoom = () => {
         }}
         hasLever={gameState.planetRoom.isLeverInPlace}
       />
+      {!gameState.planetRoom.isKeyTaken && (
+        <Key
+          onPickUp={() => {
+            inventory.addItem({ id: "key4", picture: "key" });
+            updateGameState("planetRoom", "isKeyTaken", true);
+            updateMessage("You found a key");
+          }}
+          position={"-40"}
+          styles={{ color: "hsl(40, 100%, 44%)" }}
+        />
+      )}
       <div
         style={{
           transition: "opacity 1s",

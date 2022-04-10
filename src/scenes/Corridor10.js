@@ -10,8 +10,12 @@ import DoorRight from "../objects/DoorRight";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
+import { InventoryContext } from "../App";
+import { MessageContext } from "../App";
 
 const Corridor10 = () => {
+  const inventory = useContext(InventoryContext);
+  const updateMessage = useContext(MessageContext);
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
@@ -62,23 +66,23 @@ const Corridor10 = () => {
         }}
       />
       <DoorRight
-        isOpen={false}
+        isOpen={gameState.corridor10.isDoorOpen}
         onOpen={() => {
-          // if (inventory.selectedItem === "key2") {
-          //   inventory.removeItem({ id: "key2" });
-          //   updateGameState("startRoom", "isRightDoorOpen", true);
-          // } else {
-          //   updateMessage("The door seems to be locked");
-          // }
+          if (inventory.selectedItem === "key4") {
+            inventory.removeItem({ id: "key4" });
+            updateGameState("corridor10", "isDoorOpen", true);
+          } else {
+            updateMessage("The door seems to be locked");
+          }
         }}
         onWalkThrough={() => {
-          // navigate("/combination-room");
+          navigate("/columns");
         }}
         styles={{
           frameColor: "hsl(23, 19%, 16%)",
           doorColor: "hsl(23, 19%, 26%)",
         }}
-        position="-15"
+        position="-21"
       />
       <Switch
         position="-35.25"
