@@ -18,7 +18,6 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
-// Add columns room
 // Create wall writings on the corridor
 // Add missing paintings
 // Engagement survey number (send physical letter)
@@ -29,17 +28,14 @@ import { LocationChangeContext } from "../App";
 //   - Gdansk
 //   - Hungary
 //   - ???
+// Time machine screw positions (add screwdriver and drawing as hint)
 // Add chest to start room with final clue
 // QR code for the game
-// Add door close messages
 
 // Cosmetics
 //   Add more drawings to random rooms
 //   Add random objects in random rooms
 //   Add long carpets to gallery
-//   Add random objects that can be picked up:
-//     - ring
-//     - apple
 //   Add random non-useful messages to objects
 
 const StartRoom = () => {

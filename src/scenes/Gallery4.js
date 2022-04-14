@@ -56,6 +56,9 @@ const Gallery4 = () => {
         withDoor
         isDoorOpen={gameState.gallery4.isPuzzleSolved}
         isBack
+        onOpen={() => {
+          updateMessage("The door seems to be locked");
+        }}
         onWalkThrough={() => {
           navigate("/planet-room");
         }}

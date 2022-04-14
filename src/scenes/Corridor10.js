@@ -64,6 +64,9 @@ const Corridor10 = () => {
         onWalkThrough={() => {
           navigate("/portal-room");
         }}
+        onOpen={() => {
+          updateMessage("The door seems to be locked");
+        }}
       />
       <DoorRight
         isOpen={gameState.corridor10.isDoorOpen}

@@ -76,7 +76,7 @@ const PortalRoomScreen = () => {
 
   useEffect(() => {
     if (!gameState.portalRoom.isPinEntered) {
-      // TODO: if (pin === "590695") {
+      // TODO: Replace code "590695"
       if (pin === "111111") {
         updateGameState("portalRoom", "isPinEntered", true);
       } else if (pin.length === 6) {

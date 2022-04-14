@@ -80,6 +80,9 @@ const CombinationRoom = () => {
         onWalkThrough={() => {
           navigate("/corridor-1");
         }}
+        onOpen={() => {
+          updateMessage("The door seems to be locked");
+        }}
       />
       <CombinationLock
         code={gameState.combination.code}
