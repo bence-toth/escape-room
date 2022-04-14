@@ -126,7 +126,7 @@ const PlanetRoom = () => {
         }}
         onTouch={() => {
           if (inventory.selectedItem === "leverHandle") {
-            inventory.removeItem({ id: "leverHandle" });
+            inventory.removeItem("leverHandle");
             updateGameState("planetRoom", "isLeverInPlace", true);
           } else {
             updateMessage("Something is missing from here");

@@ -10,10 +10,14 @@ import columnWritings from "../objects/columnWritings";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
+import { InventoryContext } from "../App";
+import { MessageContext } from "../App";
 
 const Corridor9 = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
+  const inventory = useContext(InventoryContext);
+  const updateMessage = useContext(MessageContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/corridor-9");
@@ -98,65 +102,146 @@ const Corridor9 = () => {
           );
         }}
       />
-      <ColumnFragment
-        letters={columnWritings[0].letters}
-        header={columnWritings[0].header}
-        footer={columnWritings[0].footer}
-        styles={{
-          transform: "translateX(850%) translateY(30%) rotate(20deg)",
-        }}
-        onPickUp={() => {
-          console.log("picked up fragment 0");
-        }}
-      />
-      <ColumnFragment
-        letters={columnWritings[1].letters}
-        header={columnWritings[1].header}
-        footer={columnWritings[1].footer}
-        styles={{
-          transform: "translateX(700%) translateY(30%) rotate(20deg)",
-        }}
-      />
-      <ColumnFragment
-        letters={columnWritings[2].letters}
-        header={columnWritings[2].header}
-        footer={columnWritings[2].footer}
-        styles={{
-          transform: "translateX(550%) translateY(30%) rotate(20deg)",
-        }}
-      />
-      <ColumnFragment
-        letters={columnWritings[3].letters}
-        header={columnWritings[3].header}
-        footer={columnWritings[3].footer}
-        styles={{
-          transform: "translateX(400%) translateY(30%) rotate(20deg)",
-        }}
-      />
-      <ColumnFragment
-        letters={columnWritings[4].letters}
-        header={columnWritings[4].header}
-        footer={columnWritings[4].footer}
-        styles={{
-          transform: "translateX(250%) translateY(30%) rotate(20deg)",
-        }}
-      />
-      <ColumnFragment
-        letters={columnWritings[5].letters}
-        header={columnWritings[5].header}
-        footer={columnWritings[5].footer}
-        styles={{
-          transform: "translateX(100%) translateY(30%) rotate(20deg)",
-        }}
-      />
-      <ColumnFragment
-        letters={columnWritings[6].letters}
-        header={columnWritings[6].header}
-        footer={columnWritings[6].footer}
-        styles={{
-          transform: "translateX(-50%) translateY(30%) rotate(20deg)",
-        }}
-      />
+      {!gameState.columnFragments.isColumnFragment1Taken && (
+        <ColumnFragment
+          letters={columnWritings[0].letters}
+          header={columnWritings[0].header}
+          footer={columnWritings[0].footer}
+          styles={{
+            transform: "translateX(850%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment1",
+              picture: "columnFragment1",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment1Taken", true);
+          }}
+        />
+      )}
+      {!gameState.columnFragments.isColumnFragment2Taken && (
+        <ColumnFragment
+          letters={columnWritings[1].letters}
+          header={columnWritings[1].header}
+          footer={columnWritings[1].footer}
+          styles={{
+            transform: "translateX(700%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment2",
+              picture: "columnFragment2",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment2Taken", true);
+          }}
+        />
+      )}
+      {!gameState.columnFragments.isColumnFragment3Taken && (
+        <ColumnFragment
+          letters={columnWritings[2].letters}
+          header={columnWritings[2].header}
+          footer={columnWritings[2].footer}
+          styles={{
+            transform: "translateX(550%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment3",
+              picture: "columnFragment3",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment3Taken", true);
+          }}
+        />
+      )}
+      {!gameState.columnFragments.isColumnFragment4Taken && (
+        <ColumnFragment
+          letters={columnWritings[3].letters}
+          header={columnWritings[3].header}
+          footer={columnWritings[3].footer}
+          styles={{
+            transform: "translateX(400%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment4",
+              picture: "columnFragment4",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment4Taken", true);
+          }}
+        />
+      )}
+      {!gameState.columnFragments.isColumnFragment5Taken && (
+        <ColumnFragment
+          letters={columnWritings[4].letters}
+          header={columnWritings[4].header}
+          footer={columnWritings[4].footer}
+          styles={{
+            transform: "translateX(250%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment5",
+              picture: "columnFragment5",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment5Taken", true);
+          }}
+        />
+      )}
+      {!gameState.columnFragments.isColumnFragment6Taken && (
+        <ColumnFragment
+          letters={columnWritings[5].letters}
+          header={columnWritings[5].header}
+          footer={columnWritings[5].footer}
+          styles={{
+            transform: "translateX(100%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment6",
+              picture: "columnFragment6",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment6Taken", true);
+          }}
+        />
+      )}
+      {!gameState.columnFragments.isColumnFragment7Taken && (
+        <ColumnFragment
+          letters={columnWritings[6].letters}
+          header={columnWritings[6].header}
+          footer={columnWritings[6].footer}
+          styles={{
+            transform: "translateX(-50%) translateY(30%) rotate(20deg)",
+          }}
+          onPickUp={() => {
+            inventory.addItem({
+              id: "columnFragment7",
+              picture: "columnFragment7",
+            });
+            updateMessage(
+              "You found a weird marble fragment with some letters on it."
+            );
+            updateGameState("columnFragments", "isColumnFragment7Taken", true);
+          }}
+        />
+      )}
       <Lamp
         isOn={gameState.corridor9.isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

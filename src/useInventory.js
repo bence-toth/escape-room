@@ -13,12 +13,15 @@ const useInventory = () => {
 
   const addItem = (itemToAdd) => {
     if (!items.some((item) => item.id === itemToAdd.id)) {
-      setItems([...items, itemToAdd]);
+      setItems((previousItems) => [...previousItems, itemToAdd]);
     }
   };
 
   const removeItem = (itemToRemove) => {
-    setItems(items.filter((item) => item.id !== itemToRemove.id));
+    setSelectedItem(null);
+    setItems((previousItems) =>
+      previousItems.filter((item) => item.id !== itemToRemove)
+    );
   };
 
   const hasItem = (itemToCheck) =>

@@ -4,6 +4,7 @@ import Room from "../objects/Room";
 import DoorRight from "../objects/DoorRight";
 import Column from "../objects/Column";
 import ColumnFragment from "../objects/ColumnFragment";
+import columnWritings from "../objects/columnWritings";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
@@ -14,8 +15,6 @@ const Columns = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
-
-  const { isKeyTaken, colors } = gameState.basement;
 
   const navigate = useContext(LocationChangeContext);
 
@@ -31,50 +30,66 @@ const Columns = () => {
           wallColor: "hsl(45, 14%, 45%)",
         }}
       />
-      <Column
-        position={-40}
-        fragment={
-          <ColumnFragment letters="Wda a b  m " header="J" footer="☿" />
-        }
-      />
-      <Column
-        position={-30}
-        fragment={
-          <ColumnFragment letters="erwsn up ea" header="O" footer="♄" />
-        }
-      />
-      <Column
-        position={-20}
-        fragment={
-          <ColumnFragment letters=" iapdtta rg" header="U" footer="♆" />
-        }
-      />
-      <Column
-        position={-10}
-        fragment={
-          <ColumnFragment letters="hfya i twga" header="R" footer="☉" />
-        }
-      />
-      <Column
-        position={0}
-        fragment={
-          <ColumnFragment letters="at c mohiei" header="N" footer="♀" />
-        }
-      />
-      <Column
-        position={10}
-        fragment={
-          <ColumnFragment letters="veie eusl n" header="E" footer="♅" />
-        }
-      />
-      <Column
-        position={20}
-        fragment={
-          <ColumnFragment letters="edn  ,r l ." header="Y" footer="♃" />
-        }
-      />
+      {[0, 1, 2, 3, 4, 5, 6].map((columnIndex) => (
+        <Column
+          key={columnIndex}
+          position={(columnIndex - 4) * 10}
+          onPlaceFragment={() => {
+            const selectedItem = inventory.selectedItem;
+            if (
+              !selectedItem &&
+              gameState.columns.slots[columnIndex] !== null
+            ) {
+              inventory.addItem({
+                id: `columnFragment${gameState.columns.slots[columnIndex] + 1}`,
+                picture: `columnFragment${
+                  gameState.columns.slots[columnIndex] + 1
+                }`,
+              });
+              const newSlots = [...gameState.columns.slots];
+              newSlots[columnIndex] = null;
+              updateGameState("columns", "slots", newSlots);
+            } else if (
+              selectedItem &&
+              selectedItem.startsWith("columnFragment")
+            ) {
+              if (gameState.columns.slots[columnIndex] !== null) {
+                inventory.addItem({
+                  id: `columnFragment${
+                    gameState.columns.slots[columnIndex] + 1
+                  }`,
+                  picture: `columnFragment${
+                    gameState.columns.slots[columnIndex] + 1
+                  }`,
+                });
+              }
+              const newSlots = [...gameState.columns.slots];
+              newSlots[columnIndex] = +selectedItem.slice(-1) - 1;
+              inventory.removeItem(selectedItem);
+              updateGameState("columns", "slots", newSlots);
+              updateMessage("You place the fragment in the column.");
+            }
+          }}
+          fragment={
+            gameState.columns.slots[columnIndex] !== null ? (
+              <ColumnFragment
+                letters={
+                  columnWritings[gameState.columns.slots[columnIndex]].letters
+                }
+                header={
+                  columnWritings[gameState.columns.slots[columnIndex]].header
+                }
+                footer={
+                  columnWritings[gameState.columns.slots[columnIndex]].footer
+                }
+                ignorePointerEvents
+              />
+            ) : null
+          }
+        />
+      ))}
       <DoorRight
-        isOpen={gameState.basement.isDoorOpen}
+        isOpen
         styles={{
           frameColor: "hsl(45, 14%, 55%)",
           doorColor: "hsl(23, 19%, 16%)",
@@ -87,14 +102,6 @@ const Columns = () => {
         }}
         position="38"
         isBack
-      />
-      <ColumnFragment
-        letters="edn  ,r l ."
-        header="Y"
-        footer="♃"
-        styles={{
-          transform: "translateX(850%) translateY(30%) rotate(20deg)",
-        }}
       />
     </div>
   );

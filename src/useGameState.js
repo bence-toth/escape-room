@@ -89,6 +89,18 @@ const initialGameState = {
     isPinEntered: false,
     destination: "",
   },
+  columnFragments: {
+    isColumnFragment1Taken: false,
+    isColumnFragment2Taken: false,
+    isColumnFragment3Taken: false,
+    isColumnFragment4Taken: false,
+    isColumnFragment5Taken: false,
+    isColumnFragment6Taken: false,
+    isColumnFragment7Taken: false,
+  },
+  columns: {
+    slots: [null, null, null, null, null, null, null],
+  },
 };
 
 const useGameState = () => {

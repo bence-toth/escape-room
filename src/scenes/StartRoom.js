@@ -74,8 +74,8 @@ const StartRoom = () => {
       <DoorLeft
         isOpen={isLeftDoorOpen}
         onOpen={() => {
-          if (inventory.selectedItem === "key") {
-            inventory.removeItem({ id: "key" });
+          if (inventory.selectedItem === "key1") {
+            inventory.removeItem("key1");
             updateGameState("startRoom", "isLeftDoorOpen", true);
           } else {
             updateMessage("The door seems to be locked");
@@ -94,7 +94,7 @@ const StartRoom = () => {
         isOpen={isRightDoorOpen}
         onOpen={() => {
           if (inventory.selectedItem === "key2") {
-            inventory.removeItem({ id: "key2" });
+            inventory.removeItem("key2");
             updateGameState("startRoom", "isRightDoorOpen", true);
           } else {
             updateMessage("The door seems to be locked");
@@ -112,7 +112,7 @@ const StartRoom = () => {
       {!isKeyTaken && (
         <Key
           onPickUp={() => {
-            inventory.addItem({ id: "key", picture: "key" });
+            inventory.addItem({ id: "key1", picture: "key" });
             updateGameState("startRoom", "isKeyTaken", true);
             updateMessage("You found a key");
           }}
@@ -145,7 +145,7 @@ const StartRoom = () => {
             updateGameState("startRoom", "isTrapDoorOpen", true);
             updateGameState("plantRoom", "isRemoteSwitchOn", false);
           } else if (inventory.selectedItem === "trapDoorHandle") {
-            inventory.removeItem({ id: "trapDoorHandle" });
+            inventory.removeItem("trapDoorHandle");
             updateGameState("startRoom", "isTrapDoorHandleInPlace", true);
           } else {
             updateMessage("The trap door seems to be stuck");

@@ -50,7 +50,7 @@ const PlantRoom = () => {
         isOpen={isDoorOpen}
         onOpen={() => {
           if (inventory.selectedItem === "key3") {
-            inventory.removeItem({ id: "key3" });
+            inventory.removeItem("key3");
             updateGameState("plantRoom", "isDoorOpen", true);
           } else {
             updateMessage("The door seems to be locked");

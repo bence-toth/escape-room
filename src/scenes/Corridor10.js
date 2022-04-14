@@ -69,7 +69,7 @@ const Corridor10 = () => {
         isOpen={gameState.corridor10.isDoorOpen}
         onOpen={() => {
           if (inventory.selectedItem === "key4") {
-            inventory.removeItem({ id: "key4" });
+            inventory.removeItem("key4");
             updateGameState("corridor10", "isDoorOpen", true);
           } else {
             updateMessage("The door seems to be locked");
