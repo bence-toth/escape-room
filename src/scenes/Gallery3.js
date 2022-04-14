@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
+import CarpetBig from "../objects/CarpetBig";
 
 import MountainOfTheDead from "../assets/07-MountainOfTheDead.jpg";
 import Alexandria from "../assets/08-Alexandria.jpg";
@@ -54,6 +55,13 @@ const Gallery3 = () => {
         isBack
         onWalkThrough={() => {
           navigate("/gallery-2");
+        }}
+      />
+      <CarpetBig
+        position={0}
+        styles={{
+          color: "hsl(341, 90%, 23%)",
+          borderColor: "hsl(340, 73%, 36%)",
         }}
       />
       <Picture

@@ -35,7 +35,6 @@ import { LocationChangeContext } from "../App";
 // Cosmetics
 //   Add more drawings to random rooms
 //   Add random objects in random rooms
-//   Add long carpets to gallery
 //   Add random non-useful messages to objects
 
 const StartRoom = () => {

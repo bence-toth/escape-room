@@ -7,6 +7,7 @@ import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import LightLock from "../objects/LightLock";
+import CarpetBig from "../objects/CarpetBig";
 
 import Blank1 from "../assets/10-Blank.jpg";
 import Blank2 from "../assets/11-Blank.jpg";
@@ -74,6 +75,13 @@ const Gallery4 = () => {
         isBack
         onWalkThrough={() => {
           navigate("/gallery-3");
+        }}
+      />
+      <CarpetBig
+        position={0}
+        styles={{
+          color: "hsl(341, 90%, 23%)",
+          borderColor: "hsl(340, 73%, 36%)",
         }}
       />
       <Picture

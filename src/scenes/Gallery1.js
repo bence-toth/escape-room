@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
+import CarpetBig from "../objects/CarpetBig";
 
 import Kullaberg from "../assets/01-Kullaberg.jpg";
 import DeerPark from "../assets/02-DeerPark.jpg";
@@ -54,6 +55,13 @@ const Gallery1 = () => {
         isBack
         onWalkThrough={() => {
           navigate("/plant-room");
+        }}
+      />
+      <CarpetBig
+        position={0}
+        styles={{
+          color: "hsl(341, 90%, 23%)",
+          borderColor: "hsl(340, 73%, 36%)",
         }}
       />
       <Picture
