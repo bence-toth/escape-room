@@ -7,6 +7,7 @@ import WallRight from "../objects/WallRight";
 import CombinationLock from "../objects/CombinationLock";
 import Switch from "../objects/Switch";
 import PendulumClock from "../objects/PendulumClock";
+import WallDrawing from "../assets/WallDrawing-Screws.png";
 
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
@@ -41,6 +42,19 @@ const CombinationRoom = () => {
           doorColor: "hsl(23, 19%, 26%)",
         }}
         position="-30"
+      />
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "10%",
+          top: "32%",
+          left: "20.5%",
+          transform: "translate(-50%, -50%)",
+          opacity: gameState.combinationRoom.isSwitchOn ? 1 : 0.3,
+          pointerEvents: "none",
+        }}
       />
       <Switch
         position="-45"

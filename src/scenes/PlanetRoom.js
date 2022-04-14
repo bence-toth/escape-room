@@ -102,14 +102,14 @@ const PlanetRoom = () => {
         src={WallDrawing}
         style={{
           position: "absolute",
-          height: "60%",
+          height: "50%",
           top: "55%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           opacity: gameState.planetRoom.arePlanetsMoving
             ? 0
             : gameState.planetRoom.isSwitchOn
-            ? 0.8
+            ? 1
             : 0.1,
           pointerEvents: "none",
         }}
