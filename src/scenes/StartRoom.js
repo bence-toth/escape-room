@@ -10,6 +10,7 @@ import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import TrapDoor from "../objects/TrapDoor";
 import WallDrawing from "../assets/Wall-Drawing-Random-1.png";
+import Safe from "../objects/Safe";
 
 import starMap from "../assets/StarMap.png";
 
@@ -195,6 +196,7 @@ const StartRoom = () => {
           pointerEvents: "none",
         }}
       />
+      <Safe />
       <Lamp
         isOn={isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}
