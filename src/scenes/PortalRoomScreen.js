@@ -124,97 +124,99 @@ const PortalRoomScreen = () => {
         }}
       />
       <TimeMachineScreen />
-      <div
-        style={{
-          position: "absolute",
-          top: "19.3%",
-          left: "20.6%",
-          width: "58.7%",
-          height: "55.2%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          gap: "2vh",
-          fontFamily: "'Source Code Pro', monospace",
-          color: "white",
-          fontSize: "2.5vh",
-          borderRadius: "5vh",
-          overflow: "hidden",
-        }}
-      >
-        {!gameState.portalRoom.isPinEntered && (
-          <>
-            <img
-              src={TigressLogo}
-              alt="Tigress"
-              style={{ width: "50%", marginBottom: "10vh" }}
-            />
-            <p>Enter PIN</p>
-            <p>{pin.padEnd(6, "_").split("").join(" ")}</p>
-          </>
-        )}
-        {gameState.portalRoom.isPinEntered && (
-          <>
-            <Map location={location} onSetLocation={setLocation} />
-            <div
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                width: "40%",
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
+      {gameState.portalRoom.areScrewsInPlace && (
+        <div
+          style={{
+            position: "absolute",
+            top: "19.3%",
+            left: "20.6%",
+            width: "58.7%",
+            height: "55.2%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            gap: "2vh",
+            fontFamily: "'Source Code Pro', monospace",
+            color: "white",
+            fontSize: "2.5vh",
+            borderRadius: "5vh",
+            overflow: "hidden",
+          }}
+        >
+          {!gameState.portalRoom.isPinEntered && (
+            <>
+              <img
+                src={TigressLogo}
+                alt="Tigress"
+                style={{ width: "50%", marginBottom: "10vh" }}
+              />
+              <p>Enter PIN</p>
+              <p>{pin.padEnd(6, "_").split("").join(" ")}</p>
+            </>
+          )}
+          {gameState.portalRoom.isPinEntered && (
+            <>
+              <Map location={location} onSetLocation={setLocation} />
+              <div
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "40%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <button
+                  style={{
+                    padding: "1vh",
+                    fontSize: "3vh",
+                    background: "transparent",
+                    border: 0,
+                    color: "white",
+                    fontFamily: "inherit",
+                  }}
+                  onClick={rotateMonth}
+                >
+                  {month}
+                </button>
+                <button
+                  style={{
+                    padding: "1vh",
+                    fontSize: "3vh",
+                    background: "transparent",
+                    border: 0,
+                    color: "white",
+                    fontFamily: "inherit",
+                  }}
+                  onClick={rotateYear}
+                >
+                  {year}
+                </button>
+              </div>
               <button
                 style={{
-                  padding: "1vh",
-                  fontSize: "3vh",
+                  position: "absolute",
+                  bottom: "2vh",
+                  padding: "0.5vh 1vh",
+                  fontSize: "2vh",
                   background: "transparent",
-                  border: 0,
+                  border: "1px solid white",
                   color: "white",
                   fontFamily: "inherit",
                 }}
-                onClick={rotateMonth}
+                onClick={openPortal}
               >
-                {month}
+                Open portal
               </button>
-              <button
-                style={{
-                  padding: "1vh",
-                  fontSize: "3vh",
-                  background: "transparent",
-                  border: 0,
-                  color: "white",
-                  fontFamily: "inherit",
-                }}
-                onClick={rotateYear}
-              >
-                {year}
-              </button>
-            </div>
-            <button
-              style={{
-                position: "absolute",
-                bottom: "2vh",
-                padding: "0.5vh 1vh",
-                fontSize: "2vh",
-                background: "transparent",
-                border: "1px solid white",
-                color: "white",
-                fontFamily: "inherit",
-              }}
-              onClick={openPortal}
-            >
-              Open portal
-            </button>
-          </>
-        )}
-      </div>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 };

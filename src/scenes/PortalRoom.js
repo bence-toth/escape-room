@@ -10,14 +10,41 @@ import WallDrawing from "../assets/Wall-Drawing-Random-4.png";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
+import { InventoryContext } from "../App";
+import { MessageContext } from "../App";
+
+import "./PortalRoom.css";
 
 const PortalRoom = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
+  const inventory = useContext(InventoryContext);
+  const updateMessage = useContext(MessageContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/portal-room");
   }, []);
+
+  useEffect(() => {
+    if (
+      !gameState.portalRoom.areScrewsInPlace &&
+      gameState.portalRoom.screw1position % 4 === 2 &&
+      gameState.portalRoom.screw2position % 4 === 1 &&
+      gameState.portalRoom.screw3position % 4 === 3
+    ) {
+      updateMessage("The machine starts to vibrate");
+      updateGameState("portalRoom", "areScrewsInPlace", true);
+      inventory.removeItem("screwdriver");
+    }
+  }, [
+    gameState.portalRoom.areScrewsInPlace,
+    gameState.portalRoom.screw1position,
+    gameState.portalRoom.screw2position,
+    gameState.portalRoom.screw3position,
+    inventory,
+    updateGameState,
+    updateMessage,
+  ]);
 
   return (
     <div className="scene">
@@ -92,6 +119,71 @@ const PortalRoom = () => {
           navigate("/portal-room-screen");
         }}
       />
+      <div className="timeMachineScrews">
+        <div
+          className="timeMachineScrew"
+          style={{
+            transform: `rotate(${gameState.portalRoom.screw1position * 45}deg)`,
+          }}
+          onClick={() => {
+            if (!gameState.portalRoom.areScrewsInPlace) {
+              if (inventory.selectedItem === "screwdriver") {
+                updateGameState(
+                  "portalRoom",
+                  "screw1position",
+                  gameState.portalRoom.screw1position + 1
+                );
+              } else {
+                updateMessage(
+                  "It's very difficult to get a grasp of the screw with your hand"
+                );
+              }
+            }
+          }}
+        ></div>
+        <div
+          className="timeMachineScrew"
+          style={{
+            transform: `rotate(${gameState.portalRoom.screw2position * 45}deg)`,
+          }}
+          onClick={() => {
+            if (!gameState.portalRoom.areScrewsInPlace) {
+              if (inventory.selectedItem === "screwdriver") {
+                updateGameState(
+                  "portalRoom",
+                  "screw2position",
+                  gameState.portalRoom.screw2position + 1
+                );
+              } else {
+                updateMessage(
+                  "It's very difficult to get a grasp of the screw with your hand"
+                );
+              }
+            }
+          }}
+        ></div>
+        <div
+          className="timeMachineScrew"
+          style={{
+            transform: `rotate(${gameState.portalRoom.screw3position * 45}deg)`,
+          }}
+          onClick={() => {
+            if (!gameState.portalRoom.areScrewsInPlace) {
+              if (inventory.selectedItem === "screwdriver") {
+                updateGameState(
+                  "portalRoom",
+                  "screw3position",
+                  gameState.portalRoom.screw3position + 1
+                );
+              } else {
+                updateMessage(
+                  "It's very difficult to get a grasp of the screw with your hand"
+                );
+              }
+            }
+          }}
+        ></div>
+      </div>
       <Lamp
         isOn={gameState.portalRoom.isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

@@ -1,0 +1,36 @@
+.timeMachineScrews {
+  position: absolute;
+  width: 12vh;
+  height: 3vh;
+  left: 82%;
+  top: 76.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeMachineScrew {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.timeMachineScrew:before {
+  content: "";
+  width: 80%;
+  height: 80%;
+  background-color: #546978;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+}
+
+.timeMachineScrew:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background-color: #38454f;
+  top: 42.5%;
+}

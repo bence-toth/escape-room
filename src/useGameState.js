@@ -36,6 +36,7 @@ const initialGameState = {
   },
   drawingRoom: {
     isSwitchOn: false,
+    isScrewdriverTaken: false,
   },
   gallery1: {
     isSwitchOn: true,
@@ -88,6 +89,9 @@ const initialGameState = {
     isSwitchOn: true,
     isPinEntered: false,
     destination: "",
+    screw1position: 0,
+    screw2position: 0,
+    screw3position: 0,
   },
   columnFragments: {
     isColumnFragment1Taken: false,

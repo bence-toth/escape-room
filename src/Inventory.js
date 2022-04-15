@@ -11,6 +11,7 @@ import columnFragment4 from "./inventoryItems/column-fragment-4.png";
 import columnFragment5 from "./inventoryItems/column-fragment-5.png";
 import columnFragment6 from "./inventoryItems/column-fragment-6.png";
 import columnFragment7 from "./inventoryItems/column-fragment-7.png";
+import screwdriver from "./inventoryItems/screwdriver.png";
 
 import "./Inventory.css";
 
@@ -27,6 +28,7 @@ const inventoryItems = {
   columnFragment5,
   columnFragment6,
   columnFragment7,
+  screwdriver,
 };
 
 const Inventory = () => {

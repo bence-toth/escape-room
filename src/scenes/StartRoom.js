@@ -19,7 +19,6 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
-// Time machine screw positions (add screwdriver and drawing as hint)
 // Add chest to start room with final clue
 // Engagement survey number (send physical letter)
 // Add missing paintings
@@ -30,6 +29,7 @@ import { LocationChangeContext } from "../App";
 //   - Gdansk
 //   - Hungary
 //   - ???
+// Scatter column fragments
 // QR code for the game
 
 // Cosmetics

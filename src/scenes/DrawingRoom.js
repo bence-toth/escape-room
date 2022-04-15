@@ -5,14 +5,19 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import Screwdriver from "../objects/Screwdriver";
 
 import WallDrawing from "../assets/WallDrawing.png";
 
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
+import { InventoryContext } from "../App";
+import { MessageContext } from "../App";
 
 const DrawingRoom = () => {
   const navigate = useContext(LocationChangeContext);
+  const inventory = useContext(InventoryContext);
+  const updateMessage = useContext(MessageContext);
 
   useEffect(() => {
     localStorage.setItem("game-location", "/drawing-room");
@@ -69,6 +74,16 @@ const DrawingRoom = () => {
           );
         }}
       />
+      {!gameState.drawingRoom.isScrewdriverTaken && (
+        <Screwdriver
+          position={37}
+          onPickUp={() => {
+            inventory.addItem({ id: "screwdriver", picture: "screwdriver" });
+            updateGameState("drawingRoom", "isScrewdriverTaken", true);
+            updateMessage("You found a screwdriver");
+          }}
+        />
+      )}
       <Lamp
         isOn={gameState.drawingRoom.isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}
