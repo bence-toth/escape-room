@@ -7,6 +7,7 @@ import WallLeft from "../objects/WallLeft";
 import PlanetLock from "../objects/PlanetLock";
 import Switch from "../objects/Switch";
 import DoorRight from "../objects/DoorRight";
+import WallDrawing from "../assets/Wall-Drawing-Random-5.png";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -29,6 +30,19 @@ const Corridor10 = () => {
         styles={{
           floorColor: "hsl(63, 19%, 36%)",
           wallColor: "hsl(63, 19%, 46%)",
+        }}
+      />
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "30%",
+          top: "39%",
+          left: "39%",
+          transform: "translate(-50%, -50%)",
+          opacity: gameState.corridor10.isSwitchOn ? 1 : 0.15,
+          pointerEvents: "none",
         }}
       />
       <WallLeft

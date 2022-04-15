@@ -6,6 +6,7 @@ import WallLeft from "../objects/WallLeft";
 import Portal from "../objects/Portal";
 import Switch from "../objects/Switch";
 import TimeMachine from "../objects/TimeMachine";
+import WallDrawing from "../assets/Wall-Drawing-Random-4.png";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -24,6 +25,19 @@ const PortalRoom = () => {
         styles={{
           floorColor: "hsl(188, 66%, 39%)",
           wallColor: "hsl(188, 49%, 42%)",
+        }}
+      />
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "60%",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          opacity: gameState.portalRoom.isSwitchOn ? 1 : 0.15,
+          pointerEvents: "none",
         }}
       />
       <WallLeft

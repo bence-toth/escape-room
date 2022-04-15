@@ -8,6 +8,7 @@ import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import LightLock from "../objects/LightLock";
 import CarpetBig from "../objects/CarpetBig";
+import WallDrawing from "../assets/Wall-Drawing-Random-2.png";
 
 import Blank1 from "../assets/10-Blank.jpg";
 import Blank2 from "../assets/11-Blank.jpg";
@@ -84,6 +85,19 @@ const Gallery4 = () => {
           borderColor: "hsl(340, 73%, 36%)",
         }}
       />
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "30%",
+          top: "29%",
+          left: "75%",
+          transform: "translate(-50%, -50%) rotate(-10deg)",
+          opacity: gameState.gallery4.isSwitchOn ? 0.7 : 0.1,
+          pointerEvents: "none",
+        }}
+      />
       <Picture
         onObserve={() => {
           navigate("/gallery-picture-10");
@@ -151,6 +165,7 @@ const Gallery4 = () => {
         }}
         isSmall
       />
+
       <Lamp
         isOn={gameState.gallery4.isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

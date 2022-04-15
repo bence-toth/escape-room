@@ -5,6 +5,8 @@ import DoorRight from "../objects/DoorRight";
 import Column from "../objects/Column";
 import ColumnFragment from "../objects/ColumnFragment";
 import columnWritings from "../objects/columnWritings";
+import WallDrawing from "../assets/Wall-Drawing-Random-6.png";
+import CarpetBig from "../objects/CarpetBig";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
@@ -30,10 +32,30 @@ const Columns = () => {
           wallColor: "hsl(45, 14%, 45%)",
         }}
       />
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "60%",
+          top: "50%",
+          left: "22%",
+          transform: "translate(-50%, -50%) rotate(-10deg)",
+          pointerEvents: "none",
+          opacity: 0.5,
+        }}
+      />
+      <CarpetBig
+        position={0}
+        styles={{
+          color: "hsl(341, 90%, 23%)",
+          borderColor: "hsl(340, 73%, 36%)",
+        }}
+      />
       {[0, 1, 2, 3, 4, 5, 6].map((columnIndex) => (
         <Column
           key={columnIndex}
-          position={(columnIndex - 4) * 10}
+          position={(columnIndex - 3.5) * 8}
           onPlaceFragment={() => {
             const selectedItem = inventory.selectedItem;
             if (
@@ -100,7 +122,7 @@ const Columns = () => {
         onWalkThrough={() => {
           navigate("/corridor-10");
         }}
-        position="38"
+        position="37"
         isBack
       />
     </div>

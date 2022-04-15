@@ -32,13 +32,29 @@ const Picture = ({
       y="74.033035"
     />
     {withLabel && (
-      <rect
-        style={{ fill: "hsl(0, 0%, 90%)" }}
-        width="10"
-        height="3"
-        x="114"
-        y="102"
-      />
+      <>
+        <rect
+          style={{ fill: "hsl(0, 0%, 90%)" }}
+          width="10"
+          height="3"
+          x="114"
+          y="102"
+        />
+        <rect
+          style={{ fill: "hsla(0, 0%, 20%, 0.4)" }}
+          width="9"
+          height="0.5"
+          x="114.5"
+          y="102.8"
+        />
+        <rect
+          style={{ fill: "hsla(0, 0%, 20%, 0.4)" }}
+          width="7"
+          height="0.5"
+          x="116.5"
+          y="103.6"
+        />
+      </>
     )}
   </svg>
 );

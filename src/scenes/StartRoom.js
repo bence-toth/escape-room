@@ -9,6 +9,7 @@ import Key from "../objects/Key";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import TrapDoor from "../objects/TrapDoor";
+import WallDrawing from "../assets/Wall-Drawing-Random-1.png";
 
 import starMap from "../assets/StarMap.png";
 
@@ -33,7 +34,6 @@ import { LocationChangeContext } from "../App";
 // QR code for the game
 
 // Cosmetics
-//   Add more drawings to random rooms
 //   Add random objects in random rooms
 //   Add random non-useful messages to objects
 
@@ -183,6 +183,19 @@ const StartRoom = () => {
           styles={{ color: "hsl(40, 100%, 44%)" }}
         />
       )}
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "20%",
+          top: "25%",
+          left: "65%",
+          transform: "translate(-50%, -50%) rotate(-10deg)",
+          opacity: gameState.startRoom.isSwitchOn ? 0.7 : 0.1,
+          pointerEvents: "none",
+        }}
+      />
       <Lamp
         isOn={isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

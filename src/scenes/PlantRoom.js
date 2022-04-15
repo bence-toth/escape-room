@@ -6,6 +6,7 @@ import DoorRight from "../objects/DoorRight";
 import Plant from "../objects/Plant";
 import Switch from "../objects/Switch";
 import TrapDoorHandle from "../objects/TrapDoorHandle";
+import WallDrawing from "../assets/Wall-Drawing-Random-3.png";
 
 import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
@@ -97,6 +98,26 @@ const PlantRoom = () => {
           styles={{ handleColor: "hsl(23, 55%, 43%)" }}
         />
       )}
+      <img
+        alt=""
+        src={WallDrawing}
+        style={{
+          position: "absolute",
+          height: "12%",
+          top: "28%",
+          left: "40%",
+          transform: "translate(-50%, -50%) rotate(5deg)",
+          opacity:
+            [
+              gameState.plantRoom.isSwitchOn,
+              gameState.gallery4.isRemoteSwitchOn,
+              gameState.combinationRoom.isRemoteSwitchOn,
+            ].filter(Boolean).length *
+              0.15 +
+            0.1,
+          pointerEvents: "none",
+        }}
+      />
       <Lamp
         isOn={gameState.gallery4.isRemoteSwitchOn}
         styles={{ color: "hsl(50, 20%, 26%)" }}
