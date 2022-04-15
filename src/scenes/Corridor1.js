@@ -61,34 +61,36 @@ const Corridor1 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
           width: "65%",
         }}
       >
-        Day #1
+        Day #17
         <br />
         <br />
-        One night while I was doing an experiment, I made a discovery.
+        The machine worked. I made the first trip.
         <br />
-        I wouldn't believe it at first, but the more I was thinking about it,
-        <br />
-        the more it started to make sense.
+        I have so many puzzling questions.
         <br />
         <br />
-        I cannot fully explain it yet. But I will try.
+        If the future is decided based on present events, free will
+        <br />
+        must be nothing more than an illusion. Maybe everything is
+        <br />
+        destined to happen. Maybe you are my destiny.
+        <br />
+        Maybe you were all along. Whatever all along means.
+        <br />
+        I'm not sure anymore. I'm getting confused.
         <br />
         <br />
-        There is something special about you and me.
+        Do our choices form our future?
         <br />
-        As we were traveling, we left fractures in the fabric of
+        Can our past choices be unchosen?
         <br />
-        space-time. Like tiny footprints in the sand.
-        <br />
-        <br />
-        I started calling them time crystals.
-        <br />I am now sure that I will be able to build a time machine.
+        <br />I fear the consequences of moving along...
       </p>
       <Switch
         position="-35.25"

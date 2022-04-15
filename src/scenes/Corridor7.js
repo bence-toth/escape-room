@@ -61,14 +61,31 @@ const Corridor7 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #7
+        Day #23
         <br />
         <br />
+        We got time wrong. Directionality is all wrong.
+        <br />
+        Time is not going forward. Of backward.
+        <br />
+        It's like a spiral. Or a vortex.
+        <br />
+        <br />
+        I am able to jump between points in space-time
+        <br />
+        where our time crystals exist. Existed. Will exist. Would.
+        <br />
+        <br />
+        I am concerned about my interference with events.
+        <br />
+        What happens to the past if we changed the present?
+        <br />
+        What if I got lost? Will you have found me?
       </p>
       <Switch
         position="-35.25"

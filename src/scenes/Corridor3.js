@@ -61,32 +61,30 @@ const Corridor3 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #3
+        Day #37
         <br />
         <br />
-        We got time wrong. Directionality is all wrong.
+        I have traveled many times. I will have seen many things.
         <br />
-        Time is not going forward. Of backward. It's not even going.
+        I was going to have a difficulty telling timelines apart.
         <br />
-        <br />
-        I am able to jump between points in space-time
-        <br />
-        where our time crystals exist. Existed. Will exist. Would.
+        I started feeling timesick. Have I been going to go mad?
         <br />
         <br />
-        I am worried about the possible consequences.
+        It's hard to reach across the distances between
         <br />
-        What happens to the past if we changed the present?
+        what truth really is and what we claim it to be.
         <br />
-        What if I got lost? Will you have found me?
+        I could get stuck in a past that never happened.
         <br />
+        Would that make that my future?
         <br />
-        Have I been going to go mad?
+        <br />I have to undo this. Did you help me? Would you?
       </p>
       <Switch
         position="-35.25"

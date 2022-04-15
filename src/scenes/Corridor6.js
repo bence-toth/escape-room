@@ -66,14 +66,30 @@ const Corridor6 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #6
+        Day #77
+        <br />
+        <br />I am making slowly my peace with this messy world.
+        <br />
+        I can see the possibilities. The potential. It's like fiber.
         <br />
         <br />
+        Together, we can straighten things out again,
+        <br />
+        and then we would have a chance to continue where we left off.
+        <br />
+        <br />
+        This is the only way forward.
+        <br />
+        You would have to make it happen.
+        <br />
+        And you will need my guidance.
+        <br />
+        <br />I will do my very best to help you help me.
       </p>
       {!gameState.corridor6.isLeverHandleTaken && (
         <LeverHandle

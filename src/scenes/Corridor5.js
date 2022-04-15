@@ -61,19 +61,35 @@ const Corridor5 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #5
+        Day #1
         <br />
         <br />
-        Maybe it's also possible to travel to the future where
+        One night while I was doing an experiment, I made a discovery.
         <br />
-        the time crystals don't exist yet. By the time of my arrival,
+        I wouldn't believe it at first, but the more I was thinking about it,
         <br />
-        they would already be there after all.
+        the more it started to make sense.
+        <br />
+        <br />
+        I cannot fully explain it yet. But I will try.
+        <br />
+        Human language might be too limiting.
+        <br />
+        <br />
+        There is something special about you and me.
+        <br />
+        As we were traveling, we left fractures in the fabric of
+        <br />
+        space-time. Like tiny footprints in the sand.
+        <br />
+        <br />
+        I started calling them time crystals.
+        <br />I am now sure that I will be able to build a time machine.
       </p>
       <Switch
         position="-35.25"

@@ -61,28 +61,32 @@ const Corridor4 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #4
+        Day #127
         <br />
         <br />
-        I have traveled many times. I have seen many things.
+        Now it is your choice to make.
         <br />
-        I have a difficulty telling timelines apart.
+        Please save me. You have to meet me in the future.
         <br />
-        I started feeling timesick.
+        I was there, I saw how this was going to play out.
+        <br />
+        <br />I left the space-time coordinates in the locker.
+        <br />
+        You will find some fragments of our past all around in our history.
+        <br />
+        Our time crystals will guide you.
+        <br />
+        You need to be there. You need to meet me.
+        <br />
+        <br />I know you will, I've been there and then already. I saw you.
         <br />
         <br />
-        It's hard to reach across the distances between
-        <br />
-        what truth really is and what we claim it to be.
-        <br />
-        I could get stuck in the past. Will take make it my future?
-        <br />
-        <br />I have to undo this. Did you help me? Would you?
+        Please hurry. This is a race against time.
       </p>
       <Switch
         position="-35.25"

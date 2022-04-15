@@ -61,31 +61,29 @@ const Corridor2 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #2
+        Day #101
         <br />
         <br />
-        I made the first trip. Or did I? I'm not sure. Maybe I will.
+        Things started to make sense again.
         <br />
         <br />
-        If the future is decided based on present events, free will
+        Such an interesting experience, remembering the future.
         <br />
-        must be nothing more than an illusion. Maybe all this is
-        <br />
-        destined to happen. Maybe you are my destiny.
-        <br />
-        Maybe you were all along. Whatever all along means.
-        <br />
-        I'm not sure anymore. I'm getting confused.
+        It's not written yet, but it will be.
         <br />
         <br />
-        Or do our choices form our future?
+        Getting a glimpse of future possibilities is mind boggling.
         <br />
-        Can our past choices be unchosen?
+        But that's all what they are. Possibilities.
+        <br />
+        Chances, which have the potential of becoming reality
+        <br />
+        along the choices that we make.
       </p>
       <Switch
         position="-35.25"

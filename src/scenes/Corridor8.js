@@ -61,14 +61,28 @@ const Corridor8 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #8
+        Day #61
         <br />
         <br />
+        I tried to go back in time to prevent myself
+        <br />
+        from discovering time travel in the first place.
+        <br />
+        It seemed like the only reasonable course of action.
+        <br />
+        <br />
+        But it backfired. I'm stuck in a timeline where I don't belong.
+        <br /> I do not have the means of undoing the undoing.
+        <br />
+        <br />
+        Only you can help me now.
+        <br />
+        Now... that word lost its meaning by now.
       </p>
       <Switch
         position="-35.25"

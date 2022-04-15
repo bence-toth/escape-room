@@ -67,29 +67,28 @@ const Corridor9 = () => {
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2vh",
+          fontSize: "2.3vh",
           fontFamily: "'Shadows Into Light', cursive",
           lineHeight: 1.25,
         }}
       >
-        Day #9
+        Day #27
         <br />
         <br />
-        Now it is your choice to make.
+        Maybe it was also possible to travel to the future where
         <br />
-        Please save me. You have to meet me in the future.
+        the time crystals didn't exist yet. By the time of my arrival,
         <br />
-        I was there, I saw how this was going to play out.
+        they would have already been there after all.
         <br />
-        <br />I left the space-time coordinates in the chest.
         <br />
-        You will find the key all around in the past.
+        Timelines are getting distorted as I keep traveling.
+        <br />I cannot tell what will happen. But I can see it if I wanted to.
         <br />
-        Our time crystals will guide you.
         <br />
-        You need to be there. You need to meet me.
+        You've got to go back in time from time to time
         <br />
-        <br />I know you will, I've been there and then already. I saw you.
+        if you want to move forward.
       </p>
       <Switch
         position="-35.25"
