@@ -1,8 +1,7 @@
 .inventory {
-  height: 12.5%;
-  width: 100%;
+  grid-area: 1 / 2 / 3 / 3;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   gap: 0.5vh;
   padding: 0.5vh;
   background-color: hsl(0, 0%, 10%);
@@ -17,6 +16,8 @@
 
 .inventory .slot img {
   transform: scale(0.8);
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .inventory .slot[data-selected="true"] {

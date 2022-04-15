@@ -31,8 +31,8 @@ const GalleryPicture5 = () => {
         style={{
           position: "absolute",
           backgroundColor: "hsl(0, 0%, 90%)",
-          right: "13.5vh",
-          bottom: "1.3vh",
+          right: "17vh",
+          bottom: "3vh",
           height: "5vh",
           fontSize: "1.15vh",
           padding: "0.75vh 1.25vh",

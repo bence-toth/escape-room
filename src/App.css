@@ -8,10 +8,10 @@
 }
 
 .game {
-  height: 90%;
-  aspect-ratio: 1 / 1;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
+  height: 98%;
+  aspect-ratio: 9 / 7;
+  display: grid;
+  grid-template-columns: 1fr 11.5vh;
+  grid-template-rows: 1fr 7fr;
   background-color: hsl(0, 0%, 10%);
 }
