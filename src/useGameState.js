@@ -12,6 +12,7 @@ const initialGameState = {
     isGalleryKeyTaken: false,
     safeCode: "0000000",
     isPuzzleSolved: false,
+    isNoteTaken: false,
   },
   plantRoom: {
     isSwitchOn: false,

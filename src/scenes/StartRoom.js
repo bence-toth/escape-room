@@ -207,6 +207,58 @@ const StartRoom = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      {gameState.startRoom.isPuzzleSolved && (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              opacity: !gameState.startRoom.isNoteTaken ? 0 : 0.75,
+              backdropFilter: "blur(10px)",
+              background: "black",
+              transition: "opacity 2s",
+              pointerEvents: "none",
+            }}
+          ></div>
+          <div
+            onClick={() => {
+              if (!gameState.startRoom.isNoteTaken) {
+                updateGameState("startRoom", "isNoteTaken", true);
+              } else {
+                updateGameState("startRoom", "isNoteTaken", false);
+              }
+            }}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              background:
+                "linear-gradient(145deg, rgba(255,255,204,1) 0%, rgba(226,226,162,1) 100%)",
+              height: "60vh",
+              width: "60vh",
+              padding: "1em",
+              boxShadow: "3vh 3vh 6vh rgba(33,33,33,.7)",
+              transform: !gameState.startRoom.isNoteTaken
+                ? "translate(-50%, -10%) scale(0.05) rotate(-10deg)"
+                : "translate(-50%, -50%)",
+              transition: "transform 1s",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            Meet me at
+            <br />
+            29384729384729347298347
+            <br />
+            at
+            <br />
+            32423423423, 234234234234
+          </div>
+        </>
+      )}
     </div>
   );
 };
