@@ -39,6 +39,7 @@ import PlanetRoom from "./scenes/PlanetRoom";
 import PortalRoom from "./scenes/PortalRoom";
 import PortalRoomScreen from "./scenes/PortalRoomScreen";
 import Columns from "./scenes/Columns";
+import SafeClose from "./scenes/SafeClose";
 
 import "./GameCanvas.css";
 
@@ -85,6 +86,7 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/portal-room" element={<PortalRoom />} />
       <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
       <Route path="/columns" element={<Columns />} />
+      <Route path="/safe" element={<SafeClose />} />
     </Routes>
   </div>
 );

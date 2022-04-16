@@ -1,4 +1,4 @@
-const Safe = ({ position, isOpen = false }) => (
+const Safe = ({ position, isOpen = false, onObserve }) => (
   <svg
     className="gameObject"
     viewBox="0 0 211.66667 158.75"
@@ -167,6 +167,17 @@ const Safe = ({ position, isOpen = false }) => (
           x="110.12672"
           y="98.555199"
           ry="0.26959014"
+        />
+        <rect
+          style={{
+            fill: "transparent",
+            pointerEvents: "auto",
+          }}
+          onClick={onObserve}
+          width="65"
+          height="50"
+          x="61"
+          y="74"
         />
       </g>
     )}

@@ -10,6 +10,8 @@ const initialGameState = {
     isTrapDoorHandleInPlace: false,
     isTrapDoorOpen: false,
     isGalleryKeyTaken: false,
+    safeCode: "0000000",
+    isPuzzleSolved: false,
   },
   plantRoom: {
     isSwitchOn: false,

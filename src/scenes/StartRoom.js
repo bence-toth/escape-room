@@ -149,7 +149,7 @@ const StartRoom = () => {
         onWalkThrough={() => {
           navigate("/basement");
         }}
-        position="0"
+        position="-0.5"
         styles={{
           frameColor: "hsl(23, 19%, 16%)",
           doorColor: "hsl(23, 19%, 26%)",
@@ -196,7 +196,12 @@ const StartRoom = () => {
           pointerEvents: "none",
         }}
       />
-      <Safe />
+      <Safe
+        isOpen={gameState.startRoom.isPuzzleSolved}
+        onObserve={() => {
+          navigate("/safe");
+        }}
+      />
       <Lamp
         isOn={isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}
