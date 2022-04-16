@@ -218,7 +218,7 @@ const StartRoom = () => {
               backdropFilter: "blur(10px)",
               background: "black",
               transition: "opacity 2s",
-              pointerEvents: "none",
+              pointerEvents: !gameState.startRoom.isNoteTaken ? "none" : "auto",
             }}
           ></div>
           <div
@@ -247,15 +247,17 @@ const StartRoom = () => {
               justifyContent: "center",
               alignItems: "center",
               textAlign: "center",
+              fontFamily: "'Reenie Beanie', cursive",
+              fontSize: "10vh",
+              flexDirection: "column",
+              gap: "2vh",
+              lineHeight: 0.8,
+              letterSpacing: "0.07em",
             }}
           >
-            Meet me at
-            <br />
-            29384729384729347298347
-            <br />
-            at
-            <br />
-            32423423423, 234234234234
+            <div>1672063800</div>
+            <div>46°05'21.7"N</div>
+            <div>18°10'46.0"E</div>
           </div>
         </>
       )}

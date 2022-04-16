@@ -139,7 +139,7 @@ const Basement = () => {
           pointerEvents: "none",
           textAlign: "center",
           fontSize: "2.5vh",
-          fontFamily: "'Shadows Into Light', cursive",
+          fontFamily: "'Reenie Beanie', cursive",
           letterSpacing: "0.1em",
         }}
       >

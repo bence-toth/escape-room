@@ -68,7 +68,7 @@ const Corridor9 = () => {
           pointerEvents: "none",
           textAlign: "center",
           fontSize: "2.3vh",
-          fontFamily: "'Shadows Into Light', cursive",
+          fontFamily: "'Reenie Beanie', cursive",
           lineHeight: 1.25,
         }}
       >
