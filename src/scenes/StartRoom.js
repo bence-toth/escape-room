@@ -20,7 +20,6 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 // TODO:
-// Add chest to start room with final clue
 // Engagement survey number (send physical letter)
 // Add missing paintings
 // Add portal room and portal targets:
