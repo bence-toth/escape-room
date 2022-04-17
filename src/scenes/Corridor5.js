@@ -56,14 +56,14 @@ const Corridor5 = () => {
           color: "rgb(32, 32, 32)",
           opacity: gameState.corridor5.isSwitchOn ? 1 : 0.1,
           position: "absolute",
-          top: "50%",
+          top: "53%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2.3vh",
+          fontSize: "2.6vh",
           fontFamily: "'Reenie Beanie', cursive",
-          lineHeight: 1.25,
+          lineHeight: 1.1,
         }}
       >
         Day #1
@@ -71,9 +71,9 @@ const Corridor5 = () => {
         <br />
         One night while I was doing an experiment, I made a discovery.
         <br />
-        I wouldn't believe it at first, but the more I was thinking about it,
+        I wouldn't believe it at first, but the more I was thinking
         <br />
-        the more it started to make sense.
+        about it, the more it started to make sense.
         <br />
         <br />
         I cannot fully explain it yet. But I will try.

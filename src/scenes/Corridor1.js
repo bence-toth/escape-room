@@ -56,14 +56,14 @@ const Corridor1 = () => {
           color: "rgb(32, 32, 32)",
           opacity: gameState.corridor1.isSwitchOn ? 1 : 0.1,
           position: "absolute",
-          top: "50%",
+          top: "53%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2.3vh",
+          fontSize: "2.7vh",
           fontFamily: "'Reenie Beanie', cursive",
-          lineHeight: 1.25,
+          lineHeight: 1.1,
           width: "65%",
         }}
       >

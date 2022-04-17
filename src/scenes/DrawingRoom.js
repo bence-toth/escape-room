@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
 import Screwdriver from "../objects/Screwdriver";
+import SpiderWeb from "../objects/SpiderWeb";
 
 import WallDrawing from "../assets/WallDrawing.png";
 
@@ -56,10 +57,10 @@ const DrawingRoom = () => {
         style={{
           position: "absolute",
           height: "60%",
-          top: "52%",
-          left: "50%",
+          top: "54%",
+          left: "49%",
           transform: "translate(-50%, -50%)",
-          opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.15,
+          opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.1,
           pointerEvents: "none",
         }}
       />
@@ -84,9 +85,16 @@ const DrawingRoom = () => {
           }}
         />
       )}
+      <SpiderWeb
+        position={33.5}
+        verticalPosition={9.5}
+        styles={{
+          opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.5,
+        }}
+      />
       <Lamp
         isOn={gameState.drawingRoom.isSwitchOn}
-        styles={{ color: "hsl(23, 10%, 26%)" }}
+        styles={{ color: "hsl(23, 10%, 16%)" }}
         position="0"
       />
     </div>

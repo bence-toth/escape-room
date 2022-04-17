@@ -62,14 +62,14 @@ const Corridor9 = () => {
           color: "rgb(32, 32, 32)",
           opacity: gameState.corridor9.isSwitchOn ? 1 : 0.1,
           position: "absolute",
-          top: "50%",
+          top: "53%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2.3vh",
+          fontSize: "2.7vh",
           fontFamily: "'Reenie Beanie', cursive",
-          lineHeight: 1.25,
+          lineHeight: 1.1,
         }}
       >
         Day #27
@@ -83,7 +83,9 @@ const Corridor9 = () => {
         <br />
         <br />
         Timelines are getting distorted as I keep traveling.
-        <br />I cannot tell what will happen. But I can see it if I wanted to.
+        <br />I cannot tell what will happen.
+        <br />
+        But I can see it if I wanted to.
         <br />
         <br />
         You've got to go back in time from time to time

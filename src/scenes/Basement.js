@@ -138,7 +138,7 @@ const Basement = () => {
           transform: "translateX(-50%) rotate(-5deg)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2.5vh",
+          fontSize: "3.5vh",
           fontFamily: "'Reenie Beanie', cursive",
           letterSpacing: "0.1em",
         }}

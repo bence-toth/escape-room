@@ -61,14 +61,14 @@ const Corridor6 = () => {
           color: "rgb(32, 32, 32)",
           opacity: gameState.corridor6.isSwitchOn ? 1 : 0.1,
           position: "absolute",
-          top: "50%",
+          top: "52%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           textAlign: "center",
-          fontSize: "2.3vh",
+          fontSize: "2.8vh",
           fontFamily: "'Reenie Beanie', cursive",
-          lineHeight: 1.25,
+          lineHeight: 1.1,
         }}
       >
         Day #77
@@ -80,7 +80,9 @@ const Corridor6 = () => {
         <br />
         Together, we can straighten things out again,
         <br />
-        and then we would have a chance to continue where we left off.
+        and then we would have a chance to continue
+        <br />
+        where we left off.
         <br />
         <br />
         This is the only way forward.
