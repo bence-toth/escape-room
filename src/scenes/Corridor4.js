@@ -76,9 +76,11 @@ const Corridor4 = () => {
         <br />
         I was there, I saw how this was going to play out.
         <br />
-        <br />I left the space-time coordinates in the locker.
+        <br />I left the space-time coordinates in the safe.
         <br />
-        You will find some fragments of our past all around in our history.
+        You will find some fragments of our
+        <br />
+        past all around in our history.
         <br />
         Our time crystals will guide you.
         <br />
