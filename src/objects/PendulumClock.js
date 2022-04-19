@@ -1,10 +1,11 @@
 import "./PendulumClock.css";
 
-const PendulumClock = ({ isWorking, position }) => {
+const PendulumClock = ({ isWorking, position, onObserve }) => {
   return (
     <div
       className={`pendulumClock ${isWorking ? "working" : ""}`}
       style={{ left: `${position + 50}%` }}
+      onClick={onObserve}
     >
       <div className="top" />
       <div className="clockFaceWrapper">

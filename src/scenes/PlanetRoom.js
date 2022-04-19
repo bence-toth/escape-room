@@ -7,6 +7,7 @@ import WallLeft from "../objects/WallLeft";
 import Lever from "../objects/Lever";
 import Switch from "../objects/Switch";
 import Key from "../objects/Key";
+import Telescope from "../objects/Telescope";
 
 import "./PlanetRoom.css";
 import Stars from "../assets/Stars.jpg";
@@ -134,6 +135,7 @@ const PlanetRoom = () => {
         }}
         hasLever={gameState.planetRoom.isLeverInPlace}
       />
+      <Telescope position={-21} />
       {!gameState.planetRoom.isKeyTaken && (
         <Key
           onPickUp={() => {

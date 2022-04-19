@@ -5,6 +5,7 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import Carpet from "../objects/Carpet";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -94,6 +95,13 @@ const Corridor2 = () => {
             "isSwitchOn",
             !gameState.corridor2.isSwitchOn
           );
+        }}
+      />
+      <Carpet
+        position={0}
+        styles={{
+          color: "hsl(199, 90%, 23%)",
+          borderColor: "hsl(40, 73%, 36%)",
         }}
       />
       <Lamp

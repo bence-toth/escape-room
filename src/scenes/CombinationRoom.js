@@ -82,6 +82,13 @@ const CombinationRoom = () => {
       <PendulumClock
         position={17}
         isWorking={gameState.combination.isPuzzleSolved}
+        onObserve={() => {
+          if (gameState.combination.isPuzzleSolved) {
+            updateMessage("The clock aims to misbehave");
+          } else {
+            updateMessage("The clock is not working");
+          }
+        }}
       />
       <WallRight
         styles={{

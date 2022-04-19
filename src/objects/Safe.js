@@ -170,6 +170,16 @@ const Safe = ({ position, isOpen = false, onObserve }) => (
         />
         <rect
           style={{
+            fill: "red",
+          }}
+          width="2.5"
+          height="1"
+          x="106.6"
+          y="99"
+          ry="0.26959014"
+        />
+        <rect
+          style={{
             fill: "transparent",
             pointerEvents: "auto",
           }}

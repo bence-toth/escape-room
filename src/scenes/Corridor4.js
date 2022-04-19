@@ -5,6 +5,7 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import Chair from "../objects/Chair";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -99,6 +100,7 @@ const Corridor4 = () => {
           );
         }}
       />
+      <Chair position={31} />
       <Lamp
         isOn={gameState.corridor4.isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

@@ -7,6 +7,7 @@ import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import CarpetBig from "../objects/CarpetBig";
+import Chair from "../objects/Chair";
 
 import Kullaberg from "../assets/01-Kullaberg.jpg";
 import DeerPark from "../assets/02-DeerPark.jpg";
@@ -99,6 +100,7 @@ const Gallery1 = () => {
         position={-22.5}
         withLabel
       />
+      <Chair position={-34} />
       <Switch
         position="35.25"
         isOn={gameState.gallery1.isSwitchOn}
