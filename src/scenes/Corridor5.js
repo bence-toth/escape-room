@@ -21,15 +21,15 @@ const Corridor5 = () => {
     <div className="scene">
       <Room
         styles={{
-          floorColor: "hsl(63, 19%, 26%)",
-          wallColor: "hsl(63, 19%, 36%)",
+          floorColor: "hsl(300, 12%, 26%)",
+          wallColor: "hsl(300, 12%, 36%)",
         }}
       />
       <WallLeft
         styles={{
-          doorColor: "hsl(23, 19%, 26%)",
-          frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 30%)",
+          doorColor: "hsl(23, 12%, 26%)",
+          frameColor: "hsl(23, 12%, 16%)",
+          wallColor: "hsl(300, 12%, 30%)",
         }}
         withDoor
         isDoorOpen
@@ -40,9 +40,9 @@ const Corridor5 = () => {
       />
       <WallRight
         styles={{
-          doorColor: "hsl(23, 19%, 26%)",
-          frameColor: "hsl(23, 19%, 16%)",
-          wallColor: "hsl(63, 19%, 30%)",
+          doorColor: "hsl(23, 12%, 26%)",
+          frameColor: "hsl(23, 12%, 16%)",
+          wallColor: "hsl(300, 12%, 30%)",
         }}
         withDoor
         isDoorOpen
