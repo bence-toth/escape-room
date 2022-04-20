@@ -6,6 +6,8 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
 import LeverHandle from "../objects/LeverHandle";
+import Armchair from "../objects/Armchair";
+import Carpet from "../objects/Carpet";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -103,6 +105,15 @@ const Corridor6 = () => {
           }}
         />
       )}
+      <Carpet
+        position={0}
+        styles={{
+          color: "#3b8d42",
+          borderColor: "#30773a",
+        }}
+      />
+      <Armchair position={30} />
+      <Armchair position={-30} />
       <Switch
         position="-35.25"
         isOn={gameState.corridor6.isSwitchOn}

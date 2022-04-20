@@ -5,6 +5,7 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import Bonsai from "../objects/Bonsai";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -97,6 +98,7 @@ const Corridor8 = () => {
           );
         }}
       />
+      <Bonsai position={32} />
       <Lamp
         isOn={gameState.corridor8.isSwitchOn}
         styles={{ color: "hsl(23, 10%, 26%)" }}

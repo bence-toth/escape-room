@@ -30,7 +30,6 @@ const SafeClose = () => {
         currentCode[index] = 0;
       }
       const newCode = currentCode.join("");
-      console.log(newCode);
       updateGameState("startRoom", "safeCode", newCode);
       // TODO: if (newCode === "1784964") {
       if (newCode === "1111111") {
