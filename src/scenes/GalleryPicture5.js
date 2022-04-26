@@ -39,7 +39,8 @@ const GalleryPicture5 = () => {
           textAlign: "right",
         }}
       >
-        It is all about the <em>one</em> on the top of the pyramid.
+        Hierarchical structures are all about the <em>one</em> on the top of the
+        pyramid.
         <br />
         <em>Cairo, Egypt</em>
       </p>

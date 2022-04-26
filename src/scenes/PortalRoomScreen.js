@@ -49,7 +49,7 @@ const PortalRoomScreen = () => {
     }
   }, [month]);
 
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState("denmark");
 
   useEffect(() => {
     localStorage.setItem("game-location", "/portal-room-screen");
@@ -96,10 +96,6 @@ const PortalRoomScreen = () => {
       location === "montenegro"
     ) {
       updateGameState("portalRoom", "destination", "montenegro");
-      updateMessage("The portal opens");
-      navigate("/portal-room");
-    } else if (month === "Dec" && year === "2021" && location === "hungary") {
-      updateGameState("portalRoom", "destination", "hungary");
       updateMessage("The portal opens");
       navigate("/portal-room");
     } else if (month === "Jan" && year === "2022" && location === "egypt") {

@@ -227,11 +227,19 @@ const Map = ({ onSetLocation, location }) => (
         d="m 471.14,167.88 3.57,-0.58 v -2.52 l 2.99,-0.49 1.64,1.65 1.73,0.19 2.7,-1.17 2.41,0.68 2.12,1.84 0.29,6.89 2.12,2.82 -2.79,0.39 -4.63,2.91 0.39,0.97 4.14,3.88 -0.29,1.94 -3.85,1.94 -3.57,0.1 -0.87,1.84 h -1.83 l -0.87,-1.94 -3.18,-0.78 -0.1,-3.2 -2.7,-1.84 0.29,-2.33 -1.83,-2.52 0.48,-3.3 2.5,-1.17 z"
       />
       <path
-        style={{ fill: "#000000" }}
+        style={{
+          pointerEvents: "auto",
+          fill: location === "denmark" ? "#ffffff" : "#000000",
+        }}
+        onClick={() => onSetLocation("denmark")}
         d="m 476.77,151.5 -4.15,4.59 -0.15,2.99 1.89,4.93 2.96,-0.56 -0.37,-4.03 2.04,-2.28 -0.04,-1.79 -1.44,-3.73 z"
       />
       <path
-        style={{ fill: "#000000" }}
+        style={{
+          pointerEvents: "auto",
+          fill: location === "denmark" ? "#ffffff" : "#000000",
+        }}
+        onClick={() => onSetLocation("denmark")}
         d="m 481.44,159.64 -0.93,-0.04 -1.22,1.12 0.15,1.75 2.89,0.08 0.15,-1.98 z"
       />
       <path
@@ -255,11 +263,7 @@ const Map = ({ onSetLocation, location }) => (
         d="m 480.63,190.12 -0.65,1.35 0.56,0.96 2.33,-0.48 h 1.98 l 2.15,1.82 4.57,-0.83 3.36,-2 0.86,-1.35 -0.13,-1.74 -3.02,-2.26 -4.05,0.04 -0.34,2.3 -4.26,2.08 z"
       />
       <path
-        style={{
-          pointerEvents: "auto",
-          fill: location === "hungary" ? "#ffffff" : "#000000",
-        }}
-        onClick={() => onSetLocation("hungary")}
+        style={{ fill: "#000000" }}
         d="m 496.74,189.6 -1.16,1.82 0.09,2.78 1.85,0.95 5.69,0.17 7.93,-6.68 0.04,-1.48 -0.86,-0.43 -5.73,2.6 z"
       />
       <path
@@ -277,6 +281,17 @@ const Map = ({ onSetLocation, location }) => (
         }}
         onClick={() => onSetLocation("montenegro")}
         d="m 494.8,198.94 -0.37,0.61 6.71,6.92 2.46,-3.62 -0.09,-1.43 -2.15,-2.61 z"
+      />
+      <rect
+        x="498"
+        y="201"
+        style={{
+          pointerEvents: "auto",
+          fill: "transparent",
+        }}
+        onClick={() => onSetLocation("montenegro")}
+        width="10"
+        height="10"
       />
       <path
         style={{ fill: "#000000" }}

@@ -90,6 +90,8 @@ const Columns = () => {
               inventory.removeItem(selectedItem);
               updateGameState("columns", "slots", newSlots);
               updateMessage("You place the fragment in the column.");
+            } else if (!selectedItem) {
+              updateMessage("It looks like something is missing here.");
             }
           }}
           fragment={
