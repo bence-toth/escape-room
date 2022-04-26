@@ -40,6 +40,8 @@ import PortalRoom from "./scenes/PortalRoom";
 import PortalRoomScreen from "./scenes/PortalRoomScreen";
 import Columns from "./scenes/Columns";
 import SafeClose from "./scenes/SafeClose";
+import DjoserOutside from "./scenes/DjoserOutside";
+import DjoserInside from "./scenes/DjoserInside";
 
 import "./GameCanvas.css";
 
@@ -87,6 +89,8 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
       <Route path="/columns" element={<Columns />} />
       <Route path="/safe" element={<SafeClose />} />
+      <Route path="/djoser-outside" element={<DjoserOutside />} />
+      <Route path="/djoser-inside" element={<DjoserInside />} />
     </Routes>
   </div>
 );

@@ -5,6 +5,7 @@ const Portal = ({
   isActive,
   onWalkThrough = () => {},
   position = 0,
+  transform = "scaleX(1)",
   withBorder,
 }) => (
   <div
@@ -12,7 +13,10 @@ const Portal = ({
     data-with-border={withBorder}
     data-is-active={isActive}
     onClick={onWalkThrough}
-    style={{ left: `${50 + position}%` }}
+    style={{
+      left: `${50 + position}%`,
+      transform: `translateX(-50%) ${transform}`,
+    }}
   >
     <div
       className="eventHorizon"

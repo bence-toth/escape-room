@@ -143,26 +143,6 @@ const Corridor9 = () => {
           }}
         />
       )}
-      {!gameState.columnFragments.isColumnFragment3Taken && (
-        <ColumnFragment
-          letters={columnWritings[2].letters}
-          header={columnWritings[2].header}
-          footer={columnWritings[2].footer}
-          styles={{
-            transform: "translateX(550%) translateY(30%) rotate(20deg)",
-          }}
-          onPickUp={() => {
-            inventory.addItem({
-              id: "columnFragment3",
-              picture: "columnFragment3",
-            });
-            updateMessage(
-              "You found a weird marble fragment with some letters on it."
-            );
-            updateGameState("columnFragments", "isColumnFragment3Taken", true);
-          }}
-        />
-      )}
       {!gameState.columnFragments.isColumnFragment4Taken && (
         <ColumnFragment
           letters={columnWritings[3].letters}

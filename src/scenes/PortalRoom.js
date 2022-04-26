@@ -106,7 +106,7 @@ const PortalRoom = () => {
             navigate("/corridor-10");
           }
           if (gameState.portalRoom.destination === "egypt") {
-            navigate("/corridor-10");
+            navigate("/djoser-outside");
           }
           if (gameState.portalRoom.destination === "poland") {
             navigate("/corridor-10");

@@ -4,7 +4,6 @@
   position: absolute;
   bottom: 18%;
   left: 50%;
-  transform: translateX(-50%);
   border-radius: 6vh;
   overflow: hidden;
   box-shadow: 0 10vh 10vh rgba(255, 217, 0, 0),

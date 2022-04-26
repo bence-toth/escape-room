@@ -4,6 +4,7 @@
   transition: opacity 0.15s;
   border-left: 0.5vh solid transparent;
   border-bottom: 0.5vh solid transparent;
+  border-right: 0.3vh solid transparent;
 }
 
 .gameCanvas[data-rendered="false"] {
