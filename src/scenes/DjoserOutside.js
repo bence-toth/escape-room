@@ -8,6 +8,8 @@ import Clouds from "../objects/Clouds";
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 
+import DjoserOutsidePicture from "../assets/djoser-outside.png";
+
 const DjoserOutside = () => {
   const navigate = useContext(LocationChangeContext);
   const { gameState } = useContext(GameStateContext);
@@ -24,15 +26,15 @@ const DjoserOutside = () => {
         }}
       />
       <Clouds />
-      <PyramidOutside
-        onEnter={() => {
-          navigate("/djoser-inside");
-        }}
+      <img
+        src={DjoserOutsidePicture}
+        alt=""
+        style={{ position: "absolute", height: "100%" }}
       />
       <Portal
         isActive={gameState.portalRoom.destination !== ""}
-        position={35}
-        transform="scale(0.2) translateY(150%)"
+        position={40}
+        transform="scale(0.4) translateY(120%)"
         onWalkThrough={() => {
           navigate("/portal-room");
         }}
