@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Alexandria from "../assets/08-Alexandria.jpg";
+import Mostar from "../assets/08-Mostar.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -25,7 +25,7 @@ const GalleryPicture8 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Alexandria}
+        src={Mostar}
       />
       <p
         style={{
@@ -39,9 +39,9 @@ const GalleryPicture8 = () => {
           textAlign: "right",
         }}
       >
-        I am a library. Will you burn me?
+        Building bridges for fighting the divide.
         <br />
-        <em>Alexandria, Egypt</em>
+        <em>Mostar, Bosnia</em>
       </p>
     </div>
   );

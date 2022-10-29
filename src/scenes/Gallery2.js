@@ -8,9 +8,9 @@ import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import CarpetBig from "../objects/CarpetBig";
 
-import EgerVolgy from "../assets/04-Egervolgy.jpg";
-import Pyramids from "../assets/05-Pyramids.jpg";
-import Oasis from "../assets/06-Oasis.jpg";
+import Egervolgy from "../assets/03-Egervolgy.jpg";
+import Giza from "../assets/04-Giza.jpg";
+import Alexandria from "../assets/05-Alexandria.jpg";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -66,14 +66,25 @@ const Gallery2 = () => {
       />
       <Picture
         onObserve={() => {
+          navigate("/gallery-picture-3");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={Egervolgy}
+        position={22.5}
+        withLabel
+      />
+      <Picture
+        onObserve={() => {
           navigate("/gallery-picture-4");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={EgerVolgy}
-        position={22.5}
+        src={Giza}
         withLabel
       />
       <Picture
@@ -84,18 +95,7 @@ const Gallery2 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Pyramids}
-        withLabel
-      />
-      <Picture
-        onObserve={() => {
-          navigate("/gallery-picture-6");
-        }}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={Oasis}
+        src={Alexandria}
         position={-22.5}
         withLabel
       />

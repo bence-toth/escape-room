@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import MountainOfTheDead from "../assets/07-MountainOfTheDead.jpg";
+import Sarajevo from "../assets/07-Sarajevo.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -25,7 +25,7 @@ const GalleryPicture7 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={MountainOfTheDead}
+        src={Sarajevo}
       />
       <p
         style={{
@@ -39,9 +39,9 @@ const GalleryPicture7 = () => {
           textAlign: "right",
         }}
       >
-        I am a mass tomb. Will you desecrate me?
+        The sunset reveals how the Yellow Bastion got its name.
         <br />
-        <em>Siwa, Egypt</em>
+        <em>Sarajevo, Bosnia</em>
       </p>
     </div>
   );

@@ -10,9 +10,9 @@ import LightLock from "../objects/LightLock";
 import CarpetBig from "../objects/CarpetBig";
 import WallDrawing from "../assets/Wall-Drawing-Random-2.png";
 
-import Blank1 from "../assets/10-Blank.jpg";
-import Blank2 from "../assets/11-Blank.jpg";
-import Future from "../assets/12-Future.jpg";
+import Lumbarda from "../assets/09-Lumbarda.jpg";
+import Dijarbakir from "../assets/10-Dijarbakir.jpg";
+import Future from "../assets/11-Future.jpg";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -100,30 +100,30 @@ const Gallery4 = () => {
       />
       <Picture
         onObserve={() => {
+          navigate("/gallery-picture-9");
+        }}
+        styles={{
+          frameColor: "hsl(23, 55%, 43%)",
+          hangerColor: "hsl(23, 10%, 26%)",
+        }}
+        src={Lumbarda}
+        position={22.5}
+        withLabel
+      />
+      <Picture
+        onObserve={() => {
           navigate("/gallery-picture-10");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Blank1}
-        position={22.5}
+        src={Dijarbakir}
         withLabel
       />
       <Picture
         onObserve={() => {
           navigate("/gallery-picture-11");
-        }}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
-        src={Blank2}
-        withLabel
-      />
-      <Picture
-        onObserve={() => {
-          navigate("/gallery-picture-12");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",

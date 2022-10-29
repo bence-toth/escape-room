@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Blank from "../assets/11-Blank.jpg";
+import Future from "../assets/11-Future.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -25,23 +25,20 @@ const GalleryPicture11 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Blank}
+        src={Future}
       />
       <p
         style={{
           position: "absolute",
           backgroundColor: "hsl(0, 0%, 90%)",
           right: "17vh",
-          bottom: "3vh",
-          height: "5vh",
+          bottom: "4vh",
           fontSize: "1.15vh",
           padding: "0.75vh 1.25vh",
           textAlign: "right",
         }}
       >
-        --
-        <br />
-        <em>--, --</em>
+        Some of our memories are in the future.
       </p>
     </div>
   );

@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import DeerPark from "../assets/02-DeerPark.jpg";
+import Kotor from "../assets/02-Kotor.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -25,7 +25,7 @@ const GalleryPicture2 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={DeerPark}
+        src={Kotor}
       />
       <p
         style={{
@@ -39,9 +39,9 @@ const GalleryPicture2 = () => {
           textAlign: "right",
         }}
       >
-        I am a deer. Will you feed me?
+        Climbing the stairs for a spectacular view...
         <br />
-        <em>Dyrehaven, Denmark</em>
+        <em>Kotor, Montenegro</em>
       </p>
     </div>
   );

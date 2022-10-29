@@ -39,7 +39,7 @@ const GalleryPicture1 = () => {
           textAlign: "right",
         }}
       >
-        I am a mountain. Will you climb me?
+        Sitting by the light tower, watching the sea...
         <br />
         <em>Kullaberg, Sweden</em>
       </p>

@@ -22,6 +22,7 @@ import Gallery1 from "./scenes/Gallery1";
 import Gallery2 from "./scenes/Gallery2";
 import Gallery3 from "./scenes/Gallery3";
 import Gallery4 from "./scenes/Gallery4";
+import GalleryIntroClose from "./scenes/GalleryIntroClose";
 import GalleryPicture1 from "./scenes/GalleryPicture1";
 import GalleryPicture2 from "./scenes/GalleryPicture2";
 import GalleryPicture3 from "./scenes/GalleryPicture3";
@@ -33,7 +34,6 @@ import GalleryPicture8 from "./scenes/GalleryPicture8";
 import GalleryPicture9 from "./scenes/GalleryPicture9";
 import GalleryPicture10 from "./scenes/GalleryPicture10";
 import GalleryPicture11 from "./scenes/GalleryPicture11";
-import GalleryPicture12 from "./scenes/GalleryPicture12";
 import LightLock from "./scenes/LightLockClose";
 import PlanetRoom from "./scenes/PlanetRoom";
 import PortalRoom from "./scenes/PortalRoom";
@@ -69,6 +69,7 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/gallery-2" element={<Gallery2 />} />
       <Route path="/gallery-3" element={<Gallery3 />} />
       <Route path="/gallery-4" element={<Gallery4 />} />
+      <Route path="/gallery-intro" element={<GalleryIntroClose />} />
       <Route path="/gallery-picture-1" element={<GalleryPicture1 />} />
       <Route path="/gallery-picture-2" element={<GalleryPicture2 />} />
       <Route path="/gallery-picture-3" element={<GalleryPicture3 />} />
@@ -80,7 +81,6 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/gallery-picture-9" element={<GalleryPicture9 />} />
       <Route path="/gallery-picture-10" element={<GalleryPicture10 />} />
       <Route path="/gallery-picture-11" element={<GalleryPicture11 />} />
-      <Route path="/gallery-picture-12" element={<GalleryPicture12 />} />
       <Route path="/gallery-4-lock" element={<LightLock />} />
       <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
       <Route path="/planet-room" element={<PlanetRoom />} />

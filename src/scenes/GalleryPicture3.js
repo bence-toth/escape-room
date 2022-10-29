@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Kotor from "../assets/03-Kotor.jpg";
+import Egervolgy from "../assets/03-Egervolgy.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -16,32 +16,35 @@ const GalleryPicture3 = () => {
 
   return (
     <div className="scene">
-      <Wall styles={{ color: "hsl(100, 19%, 46%)" }} />
+      <Wall styles={{ color: "hsl(125, 19%, 46%)" }} />
       <PictureBig
         onLeave={() => {
-          navigate("/gallery-1");
+          navigate("/gallery-2");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Kotor}
+        src={Egervolgy}
       />
       <p
         style={{
           position: "absolute",
           backgroundColor: "hsl(0, 0%, 90%)",
           right: "17vh",
-          bottom: "3vh",
-          height: "5vh",
+          bottom: "1vh",
+          height: "7vh",
           fontSize: "1.15vh",
           padding: "0.75vh 1.25vh",
           textAlign: "right",
+          outline: "0.5vh solid #e2ad0e",
         }}
       >
-        I am a fort. Will you occupy me?
+        Snowdrops are white. But any flower will
         <br />
-        <em>Kotor, Montenegro</em>
+        show its true colors <em>if they get enough light</em>.
+        <br />
+        <em>Égervölgy, Pécs, Hungary</em>
       </p>
     </div>
   );

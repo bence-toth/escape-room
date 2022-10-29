@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Blank from "../assets/10-Blank.jpg";
+import Dijarbakir from "../assets/10-Dijarbakir.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -25,7 +25,7 @@ const GalleryPicture10 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Blank}
+        src={Dijarbakir}
       />
       <p
         style={{
@@ -39,9 +39,9 @@ const GalleryPicture10 = () => {
           textAlign: "right",
         }}
       >
-        --
+        Some structures can prevail for thousands of years.
         <br />
-        <em>--, --</em>
+        <em>Amed, Kurdistan</em>
       </p>
     </div>
   );

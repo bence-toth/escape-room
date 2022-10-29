@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import Oasis from "../assets/06-Oasis.jpg";
+import Gdansk from "../assets/06-Gdansk.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -16,16 +16,16 @@ const GalleryPicture6 = () => {
 
   return (
     <div className="scene">
-      <Wall styles={{ color: "hsl(125, 19%, 46%)" }} />
+      <Wall styles={{ color: "hsl(150, 19%, 46%)" }} />
       <PictureBig
         onLeave={() => {
-          navigate("/gallery-2");
+          navigate("/gallery-3");
         }}
         styles={{
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={Oasis}
+        src={Gdansk}
       />
       <p
         style={{
@@ -39,9 +39,9 @@ const GalleryPicture6 = () => {
           textAlign: "right",
         }}
       >
-        I am an oasis. Will you rest with me?
+        Amber mill. Remember.
         <br />
-        <em>Siwa, Egypt</em>
+        <em>Gdansk, Poland</em>
       </p>
     </div>
   );

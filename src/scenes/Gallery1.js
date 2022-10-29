@@ -8,17 +8,15 @@ import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import CarpetBig from "../objects/CarpetBig";
 import Chair from "../objects/Chair";
+import GalleryIntro from "../objects/GalleryIntro";
 
 import Kullaberg from "../assets/01-Kullaberg.jpg";
-import DeerPark from "../assets/02-DeerPark.jpg";
-import Kotor from "../assets/03-Kotor.jpg";
+import Kotor from "../assets/02-Kotor.jpg";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 
 const Gallery1 = () => {
-  // TODO: Add missing paintings / update paintings
-  // TODO: Replace first painting with description of the gallery
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
@@ -76,7 +74,6 @@ const Gallery1 = () => {
           hangerColor: "hsl(23, 10%, 26%)",
         }}
         src={Kullaberg}
-        position={22.5}
         withLabel
       />
       <Picture
@@ -87,20 +84,16 @@ const Gallery1 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={DeerPark}
-        withLabel
-      />
-      <Picture
-        onObserve={() => {
-          navigate("/gallery-picture-3");
-        }}
-        styles={{
-          frameColor: "hsl(23, 55%, 43%)",
-          hangerColor: "hsl(23, 10%, 26%)",
-        }}
         src={Kotor}
         position={-22.5}
         withLabel
+      />
+      <GalleryIntro
+        position={22.5}
+        isSmall
+        onClick={() => {
+          navigate("/gallery-intro");
+        }}
       />
       <Chair position={-34} />
       <Switch

@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import Wall from "../objects/Wall";
 import PictureBig from "../objects/PictureBig";
 
-import EgerVolgy from "../assets/04-Egervolgy.jpg";
+import Giza from "../assets/04-Giza.jpg";
 
 import { LocationChangeContext } from "../App";
 
@@ -25,24 +25,25 @@ const GalleryPicture4 = () => {
           frameColor: "hsl(23, 55%, 43%)",
           hangerColor: "hsl(23, 10%, 26%)",
         }}
-        src={EgerVolgy}
+        src={Giza}
       />
       <p
         style={{
           position: "absolute",
           backgroundColor: "hsl(0, 0%, 90%)",
           right: "17vh",
-          bottom: "1.5vh",
+          bottom: "1vh",
           fontSize: "1.15vh",
           padding: "0.5vh 1.25vh",
           textAlign: "right",
+          outline: "0.5vh solid #e2ad0e",
         }}
       >
-        I am a flower. I will show my true colors.
+        Hierarchical structures are always about
         <br />
-        Will you shed all the light on me?
+        the <em>one</em> on the top of the pyramid.
         <br />
-        <em>Égervölgy, Hungary</em>
+        <em>Giza, Egypt</em>
       </p>
     </div>
   );
