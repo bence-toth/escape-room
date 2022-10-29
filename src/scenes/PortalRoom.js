@@ -7,6 +7,7 @@ import Portal from "../objects/Portal";
 import Switch from "../objects/Switch";
 import TimeMachine from "../objects/TimeMachine";
 import WallDrawing from "../assets/Wall-Drawing-Random-4.png";
+import Static from "../assets/Static.png";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -16,7 +17,6 @@ import { MessageContext } from "../App";
 import "./PortalRoom.css";
 
 const PortalRoom = () => {
-  // TODO: Add static to screen when on
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
   const inventory = useContext(InventoryContext);
@@ -120,6 +120,11 @@ const PortalRoom = () => {
           navigate("/portal-room-screen");
         }}
       />
+      {gameState.portalRoom.areScrewsInPlace && (
+        <div className="timeMachineScreenStatic">
+          <img src={Static} alt="" />
+        </div>
+      )}
       <div className="timeMachineScrews">
         <div
           className="timeMachineScrew"

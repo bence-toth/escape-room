@@ -34,3 +34,32 @@
   background-color: #38454f;
   top: 42.5%;
 }
+
+.timeMachineScreenStatic {
+  width: 8%;
+  aspect-ratio: 9 / 6;
+  position: absolute;
+  top: 28.65%;
+  left: 60.35%;
+  background-size: 100% auto;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.timeMachineScreenStatic > img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  animation: static 0.8s steps(10) infinite;
+  top: -900%;
+}
+
+@keyframes static {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: -1000%;
+  }
+}
