@@ -1,4 +1,4 @@
-const Column = ({ position, fragment, onPlaceFragment = () => {} }) => {
+const Column = ({ position }) => {
   return (
     <>
       <svg
@@ -36,29 +36,7 @@ const Column = ({ position, fragment, onPlaceFragment = () => {} }) => {
           y="22.847513"
           ry="0.88166064"
         />
-        <rect
-          style={{ fill: "#a79d80", pointerEvents: "auto" }}
-          width="10.583333"
-          height="89.421074"
-          x="100.54167"
-          y="28.436331"
-          ry="5.2916665"
-          onClick={onPlaceFragment}
-        />
       </svg>
-      {fragment && (
-        <div
-          style={{
-            transform: `translateX(${position}%)`,
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            pointerEvents: "none",
-          }}
-        >
-          {fragment}
-        </div>
-      )}
     </>
   );
 };

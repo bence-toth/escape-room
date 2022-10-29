@@ -96,18 +96,6 @@ const initialGameState = {
     screw2position: 0,
     screw3position: 0,
   },
-  columnFragments: {
-    isColumnFragment1Taken: false,
-    isColumnFragment2Taken: false,
-    isColumnFragment3Taken: false,
-    isColumnFragment4Taken: false,
-    isColumnFragment5Taken: false,
-    isColumnFragment6Taken: false,
-    isColumnFragment7Taken: false,
-  },
-  columns: {
-    slots: [null, null, null, null, null, null, null],
-  },
 };
 
 const useGameState = () => {
