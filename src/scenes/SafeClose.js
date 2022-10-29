@@ -7,8 +7,7 @@ import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
 
-// TODO: Fix combination (8 instead of 7)
-const signs = ["♁", "☿", "♅", "☉", "♃", "⛢", "♅", "♄", "♆", "♀"];
+const signs = ["♁", "☿", "♅", "☉", "♃", "⛢", "🜚︎", "♄", "♆", "♀"];
 
 const SafeClose = () => {
   const navigate = useContext(LocationChangeContext);
@@ -32,8 +31,8 @@ const SafeClose = () => {
       }
       const newCode = currentCode.join("");
       updateGameState("startRoom", "safeCode", newCode);
-      // TODO: if (newCode === "1784964") {
-      if (newCode === "1111111") {
+      // TODO: Replace code: "27514890"
+      if (newCode === "44444444") {
         updateMessage("The safe opens");
         updateGameState("startRoom", "isPuzzleSolved", true);
         navigate("/");
@@ -77,6 +76,9 @@ const SafeClose = () => {
         </div>
         <div onClick={() => shiftSign(6)}>
           {signs[gameState.startRoom.safeCode.charAt(6)]}
+        </div>
+        <div onClick={() => shiftSign(7)}>
+          {signs[gameState.startRoom.safeCode.charAt(7)]}
         </div>
       </div>
       <div className="lockLight" />

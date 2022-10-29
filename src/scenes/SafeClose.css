@@ -27,24 +27,36 @@
   line-height: 1;
 }
 
-.safeLock > div:nth-child(2) {
-  transform: translateY(-170%) translateX(-70%);
+.safeLock > div:nth-child(1) {
+  transform: translateX(50%);
 }
 
-.safeLock > div:nth-child(6) {
-  transform: translateY(-170%) translateX(70%);
+.safeLock > div:nth-child(2) {
+  transform: translateY(-150%) translateX(-25%);
 }
 
 .safeLock > div:nth-child(3) {
-  transform: translateY(-300%) translateX(-50%);
-}
-
-.safeLock > div:nth-child(5) {
-  transform: translateY(-300%) translateX(50%);
+  transform: translateY(-300%) translateX(-40%);
 }
 
 .safeLock > div:nth-child(4) {
-  transform: translateY(-380%);
+  transform: translateY(-370%) translateX(-15%);
+}
+
+.safeLock > div:nth-child(5) {
+  transform: translateY(-370%) translateX(15%);
+}
+
+.safeLock > div:nth-child(6) {
+  transform: translateY(-300%) translateX(40%);
+}
+
+.safeLock > div:nth-child(7) {
+  transform: translateY(-150%) translateX(25%);
+}
+
+.safeLock > div:nth-child(8) {
+  transform: translateX(-50%);
 }
 
 .lockLight {

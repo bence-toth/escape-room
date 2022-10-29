@@ -10,7 +10,7 @@ const initialGameState = {
     isTrapDoorHandleInPlace: false,
     isTrapDoorOpen: false,
     isGalleryKeyTaken: false,
-    safeCode: "0000000",
+    safeCode: "33333333",
     isPuzzleSolved: false,
     isNoteTaken: false,
   },
