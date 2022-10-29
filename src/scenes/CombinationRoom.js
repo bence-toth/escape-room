@@ -8,13 +8,13 @@ import CombinationLock from "../objects/CombinationLock";
 import Switch from "../objects/Switch";
 import PendulumClock from "../objects/PendulumClock";
 import WallDrawing from "../assets/WallDrawing-Screws.png";
+import WallDrawingPyramids from "../assets/Wall-Drawing-Pyramids.png";
 
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 const CombinationRoom = () => {
-  // TODO: Add pyramids around combination lock
   const { gameState, updateGameState } = useContext(GameStateContext);
   const updateMessage = useContext(MessageContext);
 
@@ -52,6 +52,19 @@ const CombinationRoom = () => {
           height: "10%",
           top: "32%",
           left: "20.5%",
+          transform: "translate(-50%, -50%)",
+          opacity: gameState.combinationRoom.isSwitchOn ? 1 : 0.3,
+          pointerEvents: "none",
+        }}
+      />
+      <img
+        alt=""
+        src={WallDrawingPyramids}
+        style={{
+          position: "absolute",
+          height: "16%",
+          top: "54.1%",
+          left: "47.3%",
           transform: "translate(-50%, -50%)",
           opacity: gameState.combinationRoom.isSwitchOn ? 1 : 0.3,
           pointerEvents: "none",
