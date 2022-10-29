@@ -61,6 +61,7 @@ const Corridor10 = () => {
       <PlanetLock
         code={gameState.corridor10.code}
         isSmall
+        isPuzzleSolved={gameState.corridor10.isPuzzleSolved}
         onView={() => {
           if (!gameState.corridor10.isPuzzleSolved) {
             navigate("/planet-lock");

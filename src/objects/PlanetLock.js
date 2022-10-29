@@ -53,7 +53,12 @@ const PlanetLock = ({
   }, [onChangeCode, ring1, ring2, ring3, ring4]);
 
   return (
-    <div className={`planetLock ${isSmall ? "small" : ""}`} onClick={onView}>
+    <div
+      className={`planetLock ${isSmall ? "small" : ""} ${
+        isPuzzleSolved ? "solved" : ""
+      }`}
+      onClick={onView}
+    >
       <div
         className="ring ring1"
         style={{ transform: `rotate(${ring1 * 45}deg)` }}

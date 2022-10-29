@@ -22,32 +22,31 @@
   width: 50%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  transition: transform 2.5s;
-  /* transition-timing-function: cubic-bezier(0.46, -0.45, 0.35, 1); */
+  transition: transform 0.5s, background-color 3.5s;
 }
 
 .ring1 {
   width: 85%;
   background-color: hsl(235, 90%, 15%);
-  transition-duration: 0.5s;
+  transition: transform 0.5s, background-color 3.5s;
 }
 
 .ring2 {
   width: 70%;
   background-color: hsl(235, 80%, 20%);
-  transition-duration: 0.6s;
+  transition: transform 0.6s, background-color 3.5s;
 }
 
 .ring3 {
   width: 55%;
   background-color: hsl(235, 70%, 25%);
-  transition-duration: 0.7s;
+  transition: transform 0.7s, background-color 3.5s;
 }
 
 .ring4 {
   width: 40%;
   background-color: hsl(235, 60%, 30%);
-  transition-duration: 0.8s;
+  transition: transform 0.8s, background-color 3.5s;
 }
 
 .ring5 {
@@ -58,6 +57,10 @@
 .ring6 {
   width: 13%;
   border: 0.3vh solid hsla(0, 0%, 0%, 0.5);
+}
+
+.planetLock.solved .ring {
+  background-color: transparent;
 }
 
 .rectangle {
