@@ -19,22 +19,11 @@ import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
-// TODO:
-// Engagement survey number (send physical letter)
-// Add missing paintings
-// Add portal room and portal targets:
-//   - Sweden
-//   - Montenegro
-//   - Egypt
-//   - Gdansk
-//   - Hungary
-//   - ???
-// Scatter column fragments
-// QR code for the game
+// TODO: Add post-it notes here and there
+// TODO: Scatter column fragments
+// TODO: QR code for the game
 
-// Cosmetics
-//   Add random objects in random rooms
-//   Add random non-useful messages to objects
+// TODO: Add random non-useful messages to objects
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);

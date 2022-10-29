@@ -8,6 +8,7 @@ import { MessageContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 const Combination = () => {
+  // TODO: Add pyramids around combination lock
   const navigate = useContext(LocationChangeContext);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Combination = () => {
       }
       updateGameState("combination", "code", code);
       if (code === "111111111111111111111") {
-        // TODO: Replace code "127492020397316804710"
+        // TODO: Replace code
         updateMessage("You hear something clicking");
         updateGameState("combination", "isPuzzleSolved", true);
       }

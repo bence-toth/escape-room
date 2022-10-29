@@ -7,6 +7,7 @@ import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
 
+// TODO: Fix combination (8 instead of 7)
 const signs = ["♁", "☿", "♅", "☉", "♃", "⛢", "♅", "♄", "♆", "♀"];
 
 const SafeClose = () => {

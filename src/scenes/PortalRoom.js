@@ -16,6 +16,7 @@ import { MessageContext } from "../App";
 import "./PortalRoom.css";
 
 const PortalRoom = () => {
+  // TODO: Add static to screen when on
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
   const inventory = useContext(InventoryContext);

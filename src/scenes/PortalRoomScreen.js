@@ -26,6 +26,14 @@ const months = [
 ];
 
 const PortalRoomScreen = () => {
+  // TODO: Add portal room and portal targets:
+  //   - Sweden
+  //   - Montenegro / Kosovo / North Macedonia
+  //   - Egypt
+  //   - Gdansk
+  //   - Hungary
+  //   - Bosnia-Herzegovina / Croatia
+  //   - Turkey
   const navigate = useContext(LocationChangeContext);
 
   const [pin, setPin] = useState("");

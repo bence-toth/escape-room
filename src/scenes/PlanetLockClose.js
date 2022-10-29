@@ -8,6 +8,7 @@ import { GameStateContext } from "../App";
 import { MessageContext } from "../App";
 
 const PlanetLockClose = () => {
+  // TODO: Change planet lock background when solved
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 

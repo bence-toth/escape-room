@@ -10,6 +10,7 @@ import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 
 const Corridor1 = () => {
+  // TODO: Update wall drawings
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 

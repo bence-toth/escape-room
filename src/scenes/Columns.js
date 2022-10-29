@@ -14,6 +14,7 @@ import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 const Columns = () => {
+  // TODO: Remove columns, add clue
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);

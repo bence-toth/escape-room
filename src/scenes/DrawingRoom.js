@@ -16,6 +16,7 @@ import { InventoryContext } from "../App";
 import { MessageContext } from "../App";
 
 const DrawingRoom = () => {
+  // TODO: Update image
   const navigate = useContext(LocationChangeContext);
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);

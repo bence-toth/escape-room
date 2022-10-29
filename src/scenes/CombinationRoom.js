@@ -14,6 +14,7 @@ import { MessageContext } from "../App";
 import { LocationChangeContext } from "../App";
 
 const CombinationRoom = () => {
+  // TODO: Add pyramids around combination lock
   const { gameState, updateGameState } = useContext(GameStateContext);
   const updateMessage = useContext(MessageContext);
 
