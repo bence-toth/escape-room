@@ -8,10 +8,13 @@ import CarpetBig from "../objects/CarpetBig";
 
 import { MessageContext } from "../App";
 import { LocationChangeContext } from "../App";
+import { GameStateContext } from "../App";
+import PostIt from "../objects/PostIt";
 
 const Columns = () => {
   // TODO: Add clue for column fragment
   const updateMessage = useContext(MessageContext);
+  const { gameState, updateGameState } = useContext(GameStateContext);
 
   const navigate = useContext(LocationChangeContext);
 
@@ -64,6 +67,17 @@ const Columns = () => {
         position="37"
         isBack
       />
+      <PostIt
+        isObserved={gameState.startRoom.isNoteTaken}
+        onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+        onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+        transformIfNotObserved="translate(-12%, -75%) scale(0.05) rotate(8deg)"
+      >
+        <div>
+          Always believing in each other and supporting each other is one of the
+          things that makes our life together so special.
+        </div>
+      </PostIt>
     </div>
   );
 };

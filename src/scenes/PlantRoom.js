@@ -6,6 +6,7 @@ import DoorRight from "../objects/DoorRight";
 import Plant from "../objects/Plant";
 import Switch from "../objects/Switch";
 import TrapDoorHandle from "../objects/TrapDoorHandle";
+import PostIt from "../objects/PostIt";
 import WallDrawing from "../assets/Wall-Drawing-Random-3.png";
 
 import { InventoryContext } from "../App";
@@ -133,6 +134,16 @@ const PlantRoom = () => {
         styles={{ color: "hsl(50, 20%, 26%)" }}
         position="30"
       />
+      {isDoorOpen && (
+        <PostIt
+          isObserved={gameState.startRoom.isNoteTaken}
+          onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+          onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+          transformIfNotObserved="translate(-50%, -45%) scale(0.05) rotate(12deg)"
+        >
+          <div>I love you for how you help me grow as a person.</div>
+        </PostIt>
+      )}
     </div>
   );
 };

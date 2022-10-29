@@ -11,6 +11,7 @@ import Switch from "../objects/Switch";
 import TrapDoor from "../objects/TrapDoor";
 import WallDrawing from "../assets/Wall-Drawing-Random-1.png";
 import Safe from "../objects/Safe";
+import PostIt from "../objects/PostIt";
 
 import starMap from "../assets/StarMap.png";
 
@@ -19,10 +20,8 @@ import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
-// TODO: Add post-it notes here and there
 // TODO: Scatter column fragments
 // TODO: QR code for the game
-
 // TODO: Add random non-useful messages to objects
 // TODO: Add useless inventory items
 
@@ -197,58 +196,17 @@ const StartRoom = () => {
         position="0"
       />
       {gameState.startRoom.isPuzzleSolved && (
-        <>
-          <div
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              opacity: !gameState.startRoom.isNoteTaken ? 0 : 0.75,
-              backdropFilter: "blur(10px)",
-              background: "black",
-              transition: "opacity 2s",
-              pointerEvents: !gameState.startRoom.isNoteTaken ? "none" : "auto",
-            }}
-          ></div>
-          <div
-            onClick={() => {
-              if (!gameState.startRoom.isNoteTaken) {
-                updateGameState("startRoom", "isNoteTaken", true);
-              } else {
-                updateGameState("startRoom", "isNoteTaken", false);
-              }
-            }}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              background:
-                "linear-gradient(145deg, rgba(255,255,204,1) 0%, rgba(226,226,162,1) 100%)",
-              height: "60vh",
-              width: "60vh",
-              padding: "1em",
-              boxShadow: "3vh 3vh 6vh rgba(33,33,33,.7)",
-              transform: !gameState.startRoom.isNoteTaken
-                ? "translate(-50%, -10%) scale(0.05) rotate(-10deg)"
-                : "translate(-50%, -50%)",
-              transition: "transform 1s",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-              fontFamily: "'Reenie Beanie', cursive",
-              fontSize: "10vh",
-              flexDirection: "column",
-              gap: "2vh",
-              lineHeight: 0.8,
-              letterSpacing: "0.07em",
-            }}
-          >
-            <div>1672063800</div>
-            <div>46°05'21.7"N</div>
-            <div>18°10'46.0"E</div>
-          </div>
-        </>
+        <PostIt
+          isObserved={gameState.startRoom.isNoteTaken}
+          onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+          onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+          transformIfNotObserved="translate(-50%, -10%) scale(0.05) rotate(-10deg)"
+          withBigFont
+        >
+          <div>1672063800</div>
+          <div>46°05'21.7"N</div>
+          <div>18°10'46.0"E</div>
+        </PostIt>
       )}
     </div>
   );

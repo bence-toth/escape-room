@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
 import Bonsai from "../objects/Bonsai";
+import PostIt from "../objects/PostIt";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -102,6 +103,18 @@ const Corridor8 = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      {gameState.startRoom.isPuzzleSolved && (
+        <PostIt
+          isObserved={gameState.startRoom.isNoteTaken}
+          onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+          onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+          transformIfNotObserved="translate(11%, -45%) scale(0.05) rotate(-10deg)"
+        >
+          <div>
+            You make me want to become a better version of myself every day.
+          </div>
+        </PostIt>
+      )}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import WallLeft from "../objects/WallLeft";
 import Picture from "../objects/Picture";
 import Switch from "../objects/Switch";
 import CarpetBig from "../objects/CarpetBig";
+import PostIt from "../objects/PostIt";
 
 import Egervolgy from "../assets/03-Egervolgy.jpg";
 import Giza from "../assets/04-Giza.jpg";
@@ -115,6 +116,16 @@ const Gallery2 = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      {gameState.startRoom.isPuzzleSolved && (
+        <PostIt
+          isObserved={gameState.startRoom.isNoteTaken}
+          onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+          onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+          transformIfNotObserved="translate(17%, -53%) scale(0.05) rotate(2deg)"
+        >
+          <div>I am eternally grateful to have you in my life.</div>
+        </PostIt>
+      )}
     </div>
   );
 };

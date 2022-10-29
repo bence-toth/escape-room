@@ -8,6 +8,7 @@ import PlanetLock from "../objects/PlanetLock";
 import Switch from "../objects/Switch";
 import DoorRight from "../objects/DoorRight";
 import WallDrawing from "../assets/Wall-Drawing-Random-5.png";
+import PostIt from "../objects/PostIt";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -118,6 +119,16 @@ const Corridor10 = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      {gameState.corridor10.isDoorOpen && (
+        <PostIt
+          isObserved={gameState.startRoom.isNoteTaken}
+          onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+          onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+          transformIfNotObserved="translate(-52%, -45%) scale(0.05) rotate(-15deg)"
+        >
+          <div>You are a true inspiration.</div>
+        </PostIt>
+      )}
     </div>
   );
 };

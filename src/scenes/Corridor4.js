@@ -6,6 +6,7 @@ import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
 import Chair from "../objects/Chair";
+import PostIt from "../objects/PostIt";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -110,6 +111,15 @@ const Corridor4 = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      <PostIt
+        isObserved={gameState.startRoom.isNoteTaken}
+        onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+        onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+        transformIfNotObserved="translate(9%, -25%) scale(0.05) rotate(3deg)"
+      >
+        <div>You are my anchor when I need to stay still.</div>
+        <div>You are my compass when I have to go.</div>
+      </PostIt>
     </div>
   );
 };

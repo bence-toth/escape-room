@@ -5,6 +5,7 @@ import Lamp from "../objects/Lamp";
 import WallRight from "../objects/WallRight";
 import WallLeft from "../objects/WallLeft";
 import Switch from "../objects/Switch";
+import PostIt from "../objects/PostIt";
 
 import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
@@ -105,6 +106,16 @@ const Corridor5 = () => {
         styles={{ color: "hsl(23, 10%, 26%)" }}
         position="0"
       />
+      <PostIt
+        isObserved={gameState.startRoom.isNoteTaken}
+        onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
+        onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
+        transformIfNotObserved="translate(17%, -45%) scale(0.05) rotate(10deg)"
+      >
+        <div>
+          I love you for how deeply you care. You are such a fantastic person.
+        </div>
+      </PostIt>
     </div>
   );
 };
