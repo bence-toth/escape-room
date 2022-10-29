@@ -18,6 +18,7 @@ import { GameStateContext } from "../App";
 
 const Gallery1 = () => {
   // TODO: Add missing paintings / update paintings
+  // TODO: Replace first painting with description of the gallery
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 

@@ -24,6 +24,7 @@ import { LocationChangeContext } from "../App";
 // TODO: QR code for the game
 
 // TODO: Add random non-useful messages to objects
+// TODO: Add useless inventory items
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
