@@ -66,7 +66,7 @@ const Corridor7 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #23
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #9</span>
         <br />
         <br />
         We got time wrong. Directionality is all wrong.
@@ -76,9 +76,9 @@ const Corridor7 = () => {
         It's like a spiral. Or a vortex.
         <br />
         <br />
-        I am able to jump between points in space-time
+        I am able to jump between points in space-time where
         <br />
-        where our time crystals exist. Existed. Will exist. Would.
+        our footprints in time exist. Existed. Will exist. Would.
         <br />
         <br />
         I am concerned about my interference with events.

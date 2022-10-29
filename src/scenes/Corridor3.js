@@ -66,7 +66,7 @@ const Corridor3 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #37
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #19</span>
         <br />
         <br />
         I have traveled many times. I will have seen many things.
@@ -84,7 +84,7 @@ const Corridor3 = () => {
         <br />
         Would that make that my future?
         <br />
-        <br />I have to undo this. Did you help me? Would you?
+        <br />I have to undo this. Will you help me? Can you?
       </p>
       <Switch
         position="-35.25"

@@ -10,7 +10,6 @@ import { LocationChangeContext } from "../App";
 import { GameStateContext } from "../App";
 
 const Corridor1 = () => {
-  // TODO: Update wall drawings
   const navigate = useContext(LocationChangeContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
@@ -68,7 +67,7 @@ const Corridor1 = () => {
           width: "65%",
         }}
       >
-        Day #17
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #8</span>
         <br />
         <br />
         The machine worked. I made the first trip.

@@ -67,26 +67,28 @@ const Corridor4 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #127
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #39</span>
         <br />
         <br />
         Now it is your choice to make.
         <br />
         Please save me. You have to meet me in the future.
         <br />
-        I was there, I saw how this was going to play out.
+        Your future.
         <br />
         <br />I left the space-time coordinates in the safe.
         <br />
-        You will find some fragments of our
+        But it would be too dangerous to leave the code here.
         <br />
-        past all around in our history.
         <br />
-        Our time crystals will guide you.
+        I have left you some clues in the secret room at multiple
         <br />
-        You need to be there. You need to meet me.
+        memorable points in our past, in our history together.
         <br />
-        <br />I know you will, I've been there and then already. I saw you.
+        I made sure that you cannot interfere with your own past.
+        <br />
+        <br />
+        You have to use the time machine to find them.
         <br />
         <br />
         Please hurry. This is a race against time.

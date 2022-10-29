@@ -73,11 +73,11 @@ const Corridor6 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #77
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #28</span>
         <br />
         <br />I am making slowly my peace with this messy world.
         <br />
-        I can see the possibilities. The potential. It's like fiber.
+        I can see the possibilities. The potential. It's like fabric.
         <br />
         <br />
         Together, we can straighten things out again,

@@ -67,7 +67,7 @@ const Corridor8 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #61
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #26</span>
         <br />
         <br />
         I tried to go back in time to prevent myself
@@ -84,8 +84,6 @@ const Corridor8 = () => {
         <br />
         <br />
         Only you can help me now.
-        <br />
-        Now... that word lost its meaning by now.
       </p>
       <Switch
         position="-35.25"

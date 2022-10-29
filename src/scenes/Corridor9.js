@@ -66,14 +66,14 @@ const Corridor9 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #27
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #12</span>
         <br />
         <br />
         Maybe it was also possible to travel to the future where
         <br />
-        the time crystals didn't exist yet. By the time of my arrival,
+        the time footprints don't exist yet. By the time of my
         <br />
-        they would have already been there after all.
+        arrival, they would have already been there after all.
         <br />
         <br />
         Timelines are getting distorted as I keep traveling.

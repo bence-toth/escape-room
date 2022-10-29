@@ -66,7 +66,7 @@ const Corridor5 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #1
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #1</span>
         <br />
         <br />
         One night while I was doing an experiment, I made a discovery.
@@ -87,8 +87,6 @@ const Corridor5 = () => {
         <br />
         space-time. Like tiny footprints in the sand.
         <br />
-        <br />
-        I started calling them time crystals.
         <br />I am now sure that I will be able to build a time machine.
       </p>
       <Switch

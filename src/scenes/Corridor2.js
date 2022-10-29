@@ -67,7 +67,7 @@ const Corridor2 = () => {
           lineHeight: 1.1,
         }}
       >
-        Day #101
+        <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #32</span>
         <br />
         <br />
         Things started to make sense again.
