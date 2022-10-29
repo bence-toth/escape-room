@@ -40,8 +40,13 @@ import PortalRoom from "./scenes/PortalRoom";
 import PortalRoomScreen from "./scenes/PortalRoomScreen";
 import Columns from "./scenes/Columns";
 import SafeClose from "./scenes/SafeClose";
-import DjoserOutside from "./scenes/DjoserOutside";
-import DjoserInside from "./scenes/DjoserInside";
+import Egypt from "./scenes/Egypt";
+import BosniaHerzegovina from "./scenes/BosniaHerzegovina";
+import Hungary from "./scenes/Hungary";
+import Sweden from "./scenes/Sweden";
+import Montenegro from "./scenes/Montenegro";
+import Poland from "./scenes/Poland";
+import Turkey from "./scenes/Turkey";
 
 import "./GameCanvas.css";
 
@@ -89,8 +94,13 @@ const GameCanvas = ({ isRendered }) => (
       <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
       <Route path="/columns" element={<Columns />} />
       <Route path="/safe" element={<SafeClose />} />
-      <Route path="/djoser-outside" element={<DjoserOutside />} />
-      <Route path="/djoser-inside" element={<DjoserInside />} />
+      <Route path="/egypt" element={<Egypt />} />
+      <Route path="/bosnia-herzegovina" element={<BosniaHerzegovina />} />
+      <Route path="/hungary" element={<Hungary />} />
+      <Route path="/sweden" element={<Sweden />} />
+      <Route path="/poland" element={<Poland />} />
+      <Route path="/montenegro" element={<Montenegro />} />
+      <Route path="/turkey" element={<Turkey />} />
     </Routes>
   </div>
 );

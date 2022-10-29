@@ -103,7 +103,11 @@ const Map = ({ onSetLocation, location }) => (
         d="m 575.85156,216.1582 -0.42187,0.10157 -2.08985,2.39062 -3.68945,-0.70117 -1.2207,1.27148 0.12109,2.00977 1.51953,2.12891 5.39063,5.90039 -0.82032,2.35937 h -0.9414 l -0.46875,2.36133 2.62109,3.35351 z"
       />
       <path
-        style={{ fill: "#000000" }}
+        style={{
+          pointerEvents: "auto",
+          fill: location === "turkey" ? "#ffffff" : "#000000",
+        }}
+        onClick={() => onSetLocation("turkey")}
         d="m 558.7,209.19 -2.23,2.36 -8.2,-0.24 -4.92,-2.95 -4.8,-0.12 -5.51,3.9 -5.16,0.24 -0.47,2.95 h -5.86 l -2.34,2.13 v 1.18 l 1.41,1.18 v 1.3 l -0.59,1.54 0.59,1.3 1.88,-0.94 1.88,2.01 -0.47,1.42 -0.7,0.95 1.05,1.18 5.16,1.06 3.63,-1.54 v -2.24 l 1.76,0.35 4.22,2.48 4.57,-0.71 1.99,-1.89 1.29,0.47 v 2.13 h 1.76 l 1.52,-2.95 13.36,-1.42 5.83,-0.71 -1.54,-2.02 -0.03,-2.73 1.17,-1.4 -4.26,-3.42 0.23,-2.95 h -2.34 z"
       />
       <path
@@ -263,7 +267,11 @@ const Map = ({ onSetLocation, location }) => (
         d="m 480.63,190.12 -0.65,1.35 0.56,0.96 2.33,-0.48 h 1.98 l 2.15,1.82 4.57,-0.83 3.36,-2 0.86,-1.35 -0.13,-1.74 -3.02,-2.26 -4.05,0.04 -0.34,2.3 -4.26,2.08 z"
       />
       <path
-        style={{ fill: "#000000" }}
+        style={{
+          pointerEvents: "auto",
+          fill: location === "hungary" ? "#ffffff" : "#000000",
+        }}
+        onClick={() => onSetLocation("hungary")}
         d="m 496.74,189.6 -1.16,1.82 0.09,2.78 1.85,0.95 5.69,0.17 7.93,-6.68 0.04,-1.48 -0.86,-0.43 -5.73,2.6 z"
       />
       <path
@@ -271,27 +279,20 @@ const Map = ({ onSetLocation, location }) => (
         d="m 494.8,191.99 -2.54,1.52 -4.74,1.04 0.95,2.74 3.32,0.04 3.06,-2.56 z"
       />
       <path
-        style={{ fill: "#000000" }}
+        style={{
+          pointerEvents: "auto",
+          fill: location === "bosnia-herzegovina" ? "#ffffff" : "#000000",
+        }}
+        onClick={() => onSetLocation("bosnia-herzegovina")}
         d="m 495.62,195.16 -3.53,2.91 h -3.58 l -0.43,2.52 1.64,0.43 0.82,-1.22 1.29,1.13 1.03,3.6 7.07,3.3 0.7,-0.8 -7.17,-7.4 0.73,-1.35 6.81,-0.26 0.69,-2.17 -4.44,0.13 z"
       />
       <path
         style={{
           pointerEvents: "auto",
-          fill: "#000000",
+          fill: location === "bosnia-herzegovina" ? "#ffffff" : "#000000",
         }}
-        onClick={() => onSetLocation("montenegro")}
+        onClick={() => onSetLocation("bosnia-herzegovina")}
         d="m 494.8,198.94 -0.37,0.61 6.71,6.92 2.46,-3.62 -0.09,-1.43 -2.15,-2.61 z"
-      />
-      <rect
-        x="498"
-        y="201"
-        style={{
-          pointerEvents: "auto",
-          fill: "transparent",
-        }}
-        onClick={() => onSetLocation("montenegro")}
-        width="10"
-        height="10"
       />
       <path
         style={{ fill: "#000000" }}
@@ -328,7 +329,7 @@ const Map = ({ onSetLocation, location }) => (
       <path
         style={{
           pointerEvents: "auto",
-          fill: "#000000",
+          fill: location === "montenegro" ? "#ffffff" : "#000000",
         }}
         onClick={() => onSetLocation("montenegro")}
         d="M 505.55078,194.53906 503.5,196.08008 h -1 l -0.67969,2.11914 2.41992,2.81055 0.16016,2.23046 -0.3418,0.48243 1.63672,2.29882 0.0566,1.21875 1.17774,1.14063 3.83984,-1.16992 -0.32031,-5.46094 z"
@@ -342,11 +343,14 @@ const Map = ({ onSetLocation, location }) => (
           pointerEvents: "auto",
           fill: "#000000",
         }}
-        onClick={() => onSetLocation("montenegro")}
         d="m 504.02,209.76 v 4.61 l 1.32,2.49 0.95,-0.11 1.63,-2.97 -0.95,-1.33 -0.37,-3.29 -1.26,-1.17 z"
       />
       <path
-        style={{ fill: "#000000" }}
+        style={{
+          pointerEvents: "auto",
+          fill: location === "montenegro" ? "#ffffff" : "#000000",
+        }}
+        onClick={() => onSetLocation("montenegro")}
         d="m 510.92,208.01 -3.37,1.11 0.16,2.86 0.79,1.01 4,-1.86 z"
       />
       <path

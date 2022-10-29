@@ -98,19 +98,25 @@ const PortalRoom = () => {
         withBorder
         onWalkThrough={() => {
           if (gameState.portalRoom.destination === "sweden") {
-            navigate("/corridor-10");
-          }
-          if (gameState.portalRoom.destination === "montenegro") {
-            navigate("/corridor-10");
+            navigate("/sweden");
           }
           if (gameState.portalRoom.destination === "hungary") {
-            navigate("/corridor-10");
+            navigate("/hungary");
+          }
+          if (gameState.portalRoom.destination === "montenegro") {
+            navigate("/montenegro");
           }
           if (gameState.portalRoom.destination === "egypt") {
-            navigate("/djoser-outside");
+            navigate("/egypt");
           }
           if (gameState.portalRoom.destination === "poland") {
-            navigate("/corridor-10");
+            navigate("/poland");
+          }
+          if (gameState.portalRoom.destination === "bosnia-herzegovina") {
+            navigate("/bosnia-herzegovina");
+          }
+          if (gameState.portalRoom.destination === "turkey") {
+            navigate("/turkey");
           }
         }}
       />

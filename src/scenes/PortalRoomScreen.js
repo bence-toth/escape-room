@@ -26,14 +26,6 @@ const months = [
 ];
 
 const PortalRoomScreen = () => {
-  // TODO: Add portal room and portal targets:
-  //   - Sweden
-  //   - Montenegro / Kosovo / North Macedonia
-  //   - Egypt
-  //   - Gdansk
-  //   - Hungary
-  //   - Bosnia-Herzegovina / Croatia
-  //   - Turkey
   const navigate = useContext(LocationChangeContext);
 
   const [pin, setPin] = useState("");
@@ -94,24 +86,49 @@ const PortalRoomScreen = () => {
   }, [gameState.portalRoom.isPinEntered, pin, updateGameState]);
 
   const openPortal = () => {
+    // June 2021 - Sweden
     if (month === "Jun" && year === "2021" && location === "sweden") {
       updateGameState("portalRoom", "destination", "sweden");
       updateMessage("The portal opens");
       navigate("/portal-room");
-    } else if (
-      month === "Oct" &&
-      year === "2021" &&
-      location === "montenegro"
-    ) {
+    }
+    // July 2021 - Hungary
+    else if (month === "Jul" && year === "2021" && location === "hungary") {
+      updateGameState("portalRoom", "destination", "hungary");
+      updateMessage("The portal opens");
+      navigate("/portal-room");
+    }
+    // October 2021 - Montenegro / North Macedonia / Serbia
+    else if (month === "Oct" && year === "2021" && location === "montenegro") {
       updateGameState("portalRoom", "destination", "montenegro");
       updateMessage("The portal opens");
       navigate("/portal-room");
-    } else if (month === "Jan" && year === "2022" && location === "egypt") {
+    }
+    // January 2022 - Egypt
+    else if (month === "Jan" && year === "2022" && location === "egypt") {
       updateGameState("portalRoom", "destination", "egypt");
       updateMessage("The portal opens");
       navigate("/portal-room");
-    } else if (month === "Apr" && year === "2022" && location === "poland") {
+    }
+    // April 2022 - Poland
+    else if (month === "Apr" && year === "2022" && location === "poland") {
       updateGameState("portalRoom", "destination", "poland");
+      updateMessage("The portal opens");
+      navigate("/portal-room");
+    }
+    // August 2022 - Bosnia-Herzegovina / Croatia
+    else if (
+      month === "Aug" &&
+      year === "2022" &&
+      location === "bosnia-herzegovina"
+    ) {
+      updateGameState("portalRoom", "destination", "bosnia-herzegovina");
+      updateMessage("The portal opens");
+      navigate("/portal-room");
+    }
+    // October 2022 - Turkey
+    else if (month === "Oct" && year === "2022" && location === "turkey") {
+      updateGameState("portalRoom", "destination", "turkey");
       updateMessage("The portal opens");
       navigate("/portal-room");
     } else {
