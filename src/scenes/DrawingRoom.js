@@ -60,7 +60,7 @@ const DrawingRoom = () => {
           top: "54%",
           left: "49%",
           transform: "translate(-50%, -50%)",
-          opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.1,
+          opacity: gameState.drawingRoom.isSwitchOn ? 1 : 0.05,
           pointerEvents: "none",
         }}
       />
