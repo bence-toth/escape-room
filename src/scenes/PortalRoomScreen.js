@@ -110,8 +110,12 @@ const PortalRoomScreen = () => {
       updateMessage("The portal opens");
       navigate("/portal-room");
     }
-    // April 2022 - Poland
-    else if (month === "Apr" && year === "2022" && location === "poland") {
+    // April/May 2022 - Poland
+    else if (
+      (month === "Apr" || month === "May") &&
+      year === "2022" &&
+      location === "poland"
+    ) {
       updateGameState("portalRoom", "destination", "poland");
       updateMessage("The portal opens");
       navigate("/portal-room");

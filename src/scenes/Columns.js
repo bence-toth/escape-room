@@ -4,6 +4,7 @@ import Room from "../objects/Room";
 import DoorRight from "../objects/DoorRight";
 import Column from "../objects/Column";
 import WallDrawing from "../assets/Wall-Drawing-Random-6.png";
+import WallDrawingClue from "../assets/Wall-Drawing-Clue-1.png";
 import CarpetBig from "../objects/CarpetBig";
 
 import { MessageContext } from "../App";
@@ -12,7 +13,6 @@ import { GameStateContext } from "../App";
 import PostIt from "../objects/PostIt";
 
 const Columns = () => {
-  // TODO: Add clue for column fragment
   const updateMessage = useContext(MessageContext);
   const { gameState, updateGameState } = useContext(GameStateContext);
 
@@ -35,14 +35,47 @@ const Columns = () => {
         src={WallDrawing}
         style={{
           position: "absolute",
-          height: "60%",
-          top: "50%",
-          left: "38%",
+          height: "30%",
+          top: "30%",
+          left: "85%",
           transform: "translate(-50%, -50%) rotate(-10deg)",
+          pointerEvents: "none",
+          opacity: 0.7,
+        }}
+      />
+      <img
+        alt=""
+        src={WallDrawingClue}
+        style={{
+          position: "absolute",
+          height: "30%",
+          top: "43%",
+          left: "37.5%",
+          transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           opacity: 0.5,
         }}
       />
+      <p
+        style={{
+          color: "rgb(32, 32, 32)",
+          opacity: 0.5,
+          position: "absolute",
+          top: "68%",
+          left: "37.5%",
+          transform: "translate(-50%, -50%)",
+          pointerEvents: "none",
+          textAlign: "center",
+          fontSize: "3.5vh",
+          fontFamily: "'Reenie Beanie', cursive",
+          lineHeight: 1.1,
+          width: "65%",
+        }}
+      >
+        The first clue is here and now.
+        <br />
+        You only have to reach out for it.
+      </p>
       <CarpetBig
         position={0}
         styles={{
@@ -71,7 +104,7 @@ const Columns = () => {
         isObserved={gameState.startRoom.isNoteTaken}
         onObserve={() => updateGameState("startRoom", "isNoteTaken", true)}
         onLeave={() => updateGameState("startRoom", "isNoteTaken", false)}
-        transformIfNotObserved="translate(-12%, -75%) scale(0.05) rotate(8deg)"
+        transformIfNotObserved="translate(-12%, -40%) scale(0.05) rotate(8deg)"
       >
         <div>
           Always believing in each other and supporting each other is one of the

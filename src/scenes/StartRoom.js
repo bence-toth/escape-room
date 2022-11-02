@@ -20,10 +20,7 @@ import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
-// TODO: Scatter column fragments
-// TODO: QR code for the game
-// TODO: Add random non-useful messages to objects
-// TODO: Add useless inventory items
+// TODO: Add countdown
 
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
