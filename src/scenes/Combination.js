@@ -24,9 +24,7 @@ const Combination = () => {
         return;
       }
       updateGameState("combination", "code", code);
-      if (code === "111111111111111111111") {
-        // TODO: Find a place for the two digit code
-        // TODO: Replace code: "1 xx 492 9384 97316 804719"
+      if (code === "170492938497316804719") {
         updateMessage("You hear something clicking");
         updateGameState("combination", "isPuzzleSolved", true);
       }

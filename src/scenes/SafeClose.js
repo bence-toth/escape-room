@@ -31,8 +31,7 @@ const SafeClose = () => {
       }
       const newCode = currentCode.join("");
       updateGameState("startRoom", "safeCode", newCode);
-      // TODO: Replace code: "27514890"
-      if (newCode === "44444444") {
+      if (newCode === "27514890") {
         updateMessage("The safe opens");
         updateGameState("startRoom", "isPuzzleSolved", true);
         navigate("/");
