@@ -6,11 +6,19 @@ import Countdown, { startDate } from "./Countdown";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
-const isItTime = Date.now() > new Date(startDate).getTime();
+const isItTime =
+  Date.now() > new Date(startDate).getTime() ||
+  localStorage.getItem("game-run") === "true";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>{isItTime ? <App /> : <Countdown />}</BrowserRouter>
+    {process.env.NODE_ENV === "production" ? (
+      <BrowserRouter basename="/cc14d99e2ee3">
+        {isItTime ? <App /> : <Countdown />}
+      </BrowserRouter>
+    ) : (
+      <BrowserRouter>{isItTime ? <App /> : <Countdown />}</BrowserRouter>
+    )}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -50,59 +50,61 @@ import Turkey from "./scenes/Turkey";
 
 import "./GameCanvas.css";
 
-const GameCanvas = ({ isRendered }) => (
-  <div className="gameCanvas" data-rendered={isRendered}>
-    <Routes>
-      <Route path="/" element={<StartRoom />} />
-      <Route path="/star-map" element={<StarMap />} />
-      <Route path="/plant-room" element={<PlantRoom />} />
-      <Route path="/basement" element={<Basement />} />
-      <Route path="/combination-room" element={<CombinationRoom />} />
-      <Route path="/combination" element={<Combination />} />
-      <Route path="/drawing-room" element={<DrawingRoom />} />
-      <Route path="/corridor-1" element={<Corridor1 />} />
-      <Route path="/corridor-2" element={<Corridor2 />} />
-      <Route path="/corridor-3" element={<Corridor3 />} />
-      <Route path="/corridor-4" element={<Corridor4 />} />
-      <Route path="/corridor-5" element={<Corridor5 />} />
-      <Route path="/corridor-6" element={<Corridor6 />} />
-      <Route path="/corridor-7" element={<Corridor7 />} />
-      <Route path="/corridor-8" element={<Corridor8 />} />
-      <Route path="/corridor-9" element={<Corridor9 />} />
-      <Route path="/corridor-10" element={<Corridor10 />} />
-      <Route path="/gallery-1" element={<Gallery1 />} />
-      <Route path="/gallery-2" element={<Gallery2 />} />
-      <Route path="/gallery-3" element={<Gallery3 />} />
-      <Route path="/gallery-4" element={<Gallery4 />} />
-      <Route path="/gallery-intro" element={<GalleryIntroClose />} />
-      <Route path="/gallery-picture-1" element={<GalleryPicture1 />} />
-      <Route path="/gallery-picture-2" element={<GalleryPicture2 />} />
-      <Route path="/gallery-picture-3" element={<GalleryPicture3 />} />
-      <Route path="/gallery-picture-4" element={<GalleryPicture4 />} />
-      <Route path="/gallery-picture-5" element={<GalleryPicture5 />} />
-      <Route path="/gallery-picture-6" element={<GalleryPicture6 />} />
-      <Route path="/gallery-picture-7" element={<GalleryPicture7 />} />
-      <Route path="/gallery-picture-8" element={<GalleryPicture8 />} />
-      <Route path="/gallery-picture-9" element={<GalleryPicture9 />} />
-      <Route path="/gallery-picture-10" element={<GalleryPicture10 />} />
-      <Route path="/gallery-picture-11" element={<GalleryPicture11 />} />
-      <Route path="/gallery-4-lock" element={<LightLock />} />
-      <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
-      <Route path="/planet-room" element={<PlanetRoom />} />
-      <Route path="/planet-lock" element={<PlanetLock />} />
-      <Route path="/portal-room" element={<PortalRoom />} />
-      <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
-      <Route path="/columns" element={<Columns />} />
-      <Route path="/safe" element={<SafeClose />} />
-      <Route path="/egypt" element={<Egypt />} />
-      <Route path="/bosnia-herzegovina" element={<BosniaHerzegovina />} />
-      <Route path="/hungary" element={<Hungary />} />
-      <Route path="/sweden" element={<Sweden />} />
-      <Route path="/poland" element={<Poland />} />
-      <Route path="/montenegro" element={<Montenegro />} />
-      <Route path="/turkey" element={<Turkey />} />
-    </Routes>
-  </div>
-);
+const GameCanvas = ({ isRendered }) => {
+  return (
+    <div className="gameCanvas" data-rendered={isRendered}>
+      <Routes>
+        <Route path="/" element={<StartRoom />} />
+        <Route path="/star-map" element={<StarMap />} />
+        <Route path="/plant-room" element={<PlantRoom />} />
+        <Route path="/basement" element={<Basement />} />
+        <Route path="/combination-room" element={<CombinationRoom />} />
+        <Route path="/combination" element={<Combination />} />
+        <Route path="/drawing-room" element={<DrawingRoom />} />
+        <Route path="/corridor-1" element={<Corridor1 />} />
+        <Route path="/corridor-2" element={<Corridor2 />} />
+        <Route path="/corridor-3" element={<Corridor3 />} />
+        <Route path="/corridor-4" element={<Corridor4 />} />
+        <Route path="/corridor-5" element={<Corridor5 />} />
+        <Route path="/corridor-6" element={<Corridor6 />} />
+        <Route path="/corridor-7" element={<Corridor7 />} />
+        <Route path="/corridor-8" element={<Corridor8 />} />
+        <Route path="/corridor-9" element={<Corridor9 />} />
+        <Route path="/corridor-10" element={<Corridor10 />} />
+        <Route path="/gallery-1" element={<Gallery1 />} />
+        <Route path="/gallery-2" element={<Gallery2 />} />
+        <Route path="/gallery-3" element={<Gallery3 />} />
+        <Route path="/gallery-4" element={<Gallery4 />} />
+        <Route path="/gallery-intro" element={<GalleryIntroClose />} />
+        <Route path="/gallery-picture-1" element={<GalleryPicture1 />} />
+        <Route path="/gallery-picture-2" element={<GalleryPicture2 />} />
+        <Route path="/gallery-picture-3" element={<GalleryPicture3 />} />
+        <Route path="/gallery-picture-4" element={<GalleryPicture4 />} />
+        <Route path="/gallery-picture-5" element={<GalleryPicture5 />} />
+        <Route path="/gallery-picture-6" element={<GalleryPicture6 />} />
+        <Route path="/gallery-picture-7" element={<GalleryPicture7 />} />
+        <Route path="/gallery-picture-8" element={<GalleryPicture8 />} />
+        <Route path="/gallery-picture-9" element={<GalleryPicture9 />} />
+        <Route path="/gallery-picture-10" element={<GalleryPicture10 />} />
+        <Route path="/gallery-picture-11" element={<GalleryPicture11 />} />
+        <Route path="/gallery-4-lock" element={<LightLock />} />
+        <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
+        <Route path="/planet-room" element={<PlanetRoom />} />
+        <Route path="/planet-lock" element={<PlanetLock />} />
+        <Route path="/portal-room" element={<PortalRoom />} />
+        <Route path="/portal-room-screen" element={<PortalRoomScreen />} />
+        <Route path="/columns" element={<Columns />} />
+        <Route path="/safe" element={<SafeClose />} />
+        <Route path="/egypt" element={<Egypt />} />
+        <Route path="/bosnia-herzegovina" element={<BosniaHerzegovina />} />
+        <Route path="/hungary" element={<Hungary />} />
+        <Route path="/sweden" element={<Sweden />} />
+        <Route path="/poland" element={<Poland />} />
+        <Route path="/montenegro" element={<Montenegro />} />
+        <Route path="/turkey" element={<Turkey />} />
+      </Routes>
+    </div>
+  );
+};
 
 export default GameCanvas;
