@@ -20,8 +20,6 @@ import { MessageContext } from "../App";
 import { GameStateContext } from "../App";
 import { LocationChangeContext } from "../App";
 
-// TODO: Add countdown
-
 const StartRoom = () => {
   const inventory = useContext(InventoryContext);
   const updateMessage = useContext(MessageContext);

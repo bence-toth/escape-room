@@ -2,14 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Countdown, { startDate } from "./Countdown";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
+const isItTime = Date.now() > new Date(startDate).getTime();
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <BrowserRouter>{isItTime ? <App /> : <Countdown />}</BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

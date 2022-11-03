@@ -1,0 +1,12 @@
+.countdown {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  font-size: 6vmin;
+  line-height: 1.25;
+  text-align: center;
+}
