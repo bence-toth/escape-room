@@ -11,9 +11,9 @@ const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
 const Countdown = () => {
   return (
     <div className="countdown">
-      The game starts
+      This part of the game
       <br />
-      on 18 November.
+      starts on 18 November.
       <br />
       <br />
       {daysLeft === 0 && (
