@@ -75,7 +75,7 @@ const Corridor6 = () => {
       >
         <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>Day #28</span>
         <br />
-        <br />I am making slowly my peace with this messy world.
+        <br />I am slowly making my peace with this messy world.
         <br />
         I can see the possibilities. The potential. It's like fabric.
         <br />

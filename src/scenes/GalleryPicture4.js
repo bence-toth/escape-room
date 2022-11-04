@@ -41,7 +41,7 @@ const GalleryPicture4 = () => {
       >
         Hierarchical structures are always about
         <br />
-        the <em>one</em> on the top of the pyramid.
+        the <em>one on the top of the pyramid</em>.
         <br />
         <em>Giza, Egypt</em>
       </p>

@@ -24,7 +24,7 @@ const Combination = () => {
         return;
       }
       updateGameState("combination", "code", code);
-      if (code === "170492938497316804719") {
+      if (code === "170492938497316804710") {
         updateMessage("You hear something clicking");
         updateGameState("combination", "isPuzzleSolved", true);
       }

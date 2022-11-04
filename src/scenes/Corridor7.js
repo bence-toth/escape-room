@@ -71,7 +71,7 @@ const Corridor7 = () => {
         <br />
         We got time wrong. Directionality is all wrong.
         <br />
-        Time is not going forward. Of backward.
+        Time is not going forward. Or backward.
         <br />
         It's like a spiral. Or a vortex.
         <br />
