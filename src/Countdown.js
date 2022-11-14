@@ -1,6 +1,6 @@
 import "./Countdown.css";
 
-const startDate = "2022-11-18";
+const startDate = "2022-11-18 18:00";
 
 const timeLeft = new Date(startDate).getTime() - Date.now();
 
